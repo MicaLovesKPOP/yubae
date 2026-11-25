@@ -34,6 +34,33 @@ function createLearning(M,layout,curriculum){
   const layer=altgr?(e.shiftKey?'shift-altgr':'altgr'):(e.shiftKey?'shift':'base');
   return mappings.get(layer)[e.code.slice(-1).toLowerCase()]||null;
  }
+ // US-International reports Quote/Backquote (and sometimes shifted accent
+ // positions) as key='Dead'. In direct mode these are our own keys, not OS
+ // accent sequences. Keep normal IME handling outside the explicit mode.
+ const punctuation={Backquote:['`','~'],Quote:["'",'"'],Minus:['-','_'],Equal:['=','+'],BracketLeft:['[','{'],BracketRight:[']','}'],Backslash:['\\','|'],Semicolon:[';',':'],Comma:[',','<'],Period:['.','>'],Slash:['/','?'],Space:[' ',' '],Enter:['\n','\n']};
+ const shiftedDigits=')!@#$%^&*(';
+ function directAction(e,rightAlt=false,mac=false){
+  if(e.metaKey)return null;
+  const altgr=!!(e.getModifierState?.('AltGraph')||(rightAlt&&e.altKey)||(mac&&e.altKey&&!e.ctrlKey));
+  if(e.ctrlKey&&!altgr||e.altKey&&!altgr)return null;
+  // Explicit physical mode must still resolve a physical key when the OS
+  // reports it as composing because a dead key was pressed previously.
+  const physical={code:e.code,shiftKey:e.shiftKey,altKey:e.altKey,ctrlKey:e.ctrlKey,metaKey:e.metaKey,getModifierState:k=>e.getModifierState?.(k)};
+  const rid=resolvePhysical(physical,rightAlt,mac);
+  if(rid)return {kind:'root',id:rid};
+  if(/^Key[A-Z]$/.test(e.code))return {kind:'reserved'};
+  if(altgr)return null;
+  let char;
+  if(punctuation[e.code])char=punctuation[e.code][e.shiftKey?1:0];
+  else if(e.shiftKey&&/^Digit[0-9]$/.test(e.code))char=shiftedDigits[Number(e.code.slice(-1))];
+  else if(typeof e.key==='string'&&Object.hasOwn(M.data.modifierKeys||{},e.key))char=e.key;
+  if(char===undefined)return null;
+  // Honour ordinary printable punctuation on non-US layouts where possible.
+  // For Dead/Process/composing input, use the visible US physical position.
+  if(!e.isComposing&&e.key!=='Dead'&&e.key!=='Process'&&e.key!=='Unidentified'&&typeof e.key==='string'&&e.key.length===1&&/^[\x20-\x7E]$/.test(e.key))char=e.key;
+  // KeyDown Enter is mapped explicitly only for the writer, not quiz grading.
+  return Object.hasOwn(M.data.modifierKeys||{},char)?{kind:'marker',char,modifier:M.data.modifierKeys[char]}:{kind:'literal',char};
+ }
  function options(card){
   const lesson=lessons.get(card.lesson),target=M.byId.get(card.id);
   const ids=[...lesson.forms,...M.data.lexicon.filter(g=>!g.root_component).map(g=>g.id)];
@@ -68,7 +95,7 @@ function createLearning(M,layout,curriculum){
   }
   return issues;
  }
- return {layout,lessons,cards,locations,mappings,resolvePhysical,options,makeSession,grade,writingChecks};
+ return {layout,lessons,cards,locations,mappings,resolvePhysical,directAction,options,makeSession,grade,writingChecks};
 }
 const api={createLearning,LAYERS};if(typeof module!=='undefined'&&module.exports)module.exports=api;else global.YubaeLearning=api;
 })(typeof globalThis!=='undefined'?globalThis:this);

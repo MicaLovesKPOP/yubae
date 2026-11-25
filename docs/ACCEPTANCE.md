@@ -30,3 +30,5 @@ Geometry tests: 3/4 centerline square and both mirror axes; exact 90-degree rota
 
 ## Direct layout and learning (Studio alpha.6)
 PASS model: exactly 83 distinct root positions, four layer states, modifier/IME guards, 64 recognition and typing cards, distinct answer options, review interval calculation, and advisory writing notices. PASS Chromium desktop/mobile viewport: every mapped position, synthetic AltGr chords, actual ordinary/shift keypresses, optional postfix modifiers, punctuation, compact mnemonics, F2 picker, selecting advisory notices without rewriting, recognition and typing exercises, correct/incorrect feedback, local review persistence, Korean UI, touch keyboard exercise, preserved draft, no horizontal page overflow. Real hardware AltGr/Option, actual Korean IME, native Keyman and physical mobile acceptance remain pending.
+
+- Studio alpha.7: model, full Studio and learning-browser tests passed. Exact reported sequences replayed with ordinary and synthetic US-International dead-key/late composition events. Physical keyboard confirmation remains pending.

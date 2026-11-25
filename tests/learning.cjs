@@ -17,6 +17,13 @@ assert.equal(L.resolvePhysical({code:'KeyW',altKey:true}),null);
 assert.equal(L.resolvePhysical({code:'KeyW',altKey:true},true),'glass');
 assert.equal(L.resolvePhysical({code:'KeyW',altKey:true},false,true),'glass');
 assert.equal(L.resolvePhysical({code:'Digit1',shiftKey:true}),null);
+// Direct mode must not depend on the OS-produced character for physical
+// accent keys or letters received during a native dead-key sequence.
+assert.deepEqual(L.directAction({code:'Quote',key:'Dead',keyCode:229}),{kind:'marker',char:"'",modifier:'adjective'});
+assert.deepEqual(L.directAction({code:'Backquote',key:'Dead'}),{kind:'marker',char:String.fromCharCode(96),modifier:'adverb'});
+assert.deepEqual(L.directAction({code:'KeyA',key:'á',isComposing:true,keyCode:229}),{kind:'root',id:'and'});
+assert.equal(L.directAction({code:'KeyA',key:'a',ctrlKey:true}),null);
+assert.equal(L.directAction({code:'KeyA',key:'a',metaKey:true}),null);
 assert.equal(L.cards.length,64);
 for(const c of L.cards){const opts=L.options(c);assert.equal(opts.length,4);assert(opts.some(g=>g.id===c.id));assert.equal(new Set(opts.map(g=>g.en)).size,4);assert.equal(new Set(opts.map(g=>g.ko_key)).size,4)}
 const now=1700000000000,first=L.grade(null,true,now);
@@ -36,7 +43,7 @@ try{
  const p=await ctx.newPage(),errors=[];p.on('pageerror',e=>errors.push(e.message));
  await p.goto('file:///'+path.resolve('dist/Yubae_Studio.html').replaceAll('\\','/'));
  await p.waitForFunction(()=>document.fonts.check('32px Yubae','\uE003'));
- assert.equal(await p.locator('#version').textContent(),'0.5.0-alpha.6');
+ assert.equal(await p.locator('#version').textContent(),'0.5.0-alpha.7');
  const ed=p.locator('#editor');await ed.fill('');await p.locator('#direct-toggle').click();
  assert.equal(await p.locator('#direct-toggle').getAttribute('aria-pressed'),'true');
  await ed.press('w');assert.equal(await ed.inputValue(),bare('water'));await ed.press('-');assert.equal(await ed.inputValue(),cp('water'));
@@ -44,6 +51,61 @@ try{
  await ed.press('3');assert.equal(await ed.inputValue(),cp('water')+cp('blue')+cp('3'));
  await ed.press('Shift+Digit1');assert((await ed.inputValue()).endsWith('!'),JSON.stringify(await ed.inputValue()));
  await ed.press('F2');await p.locator('#quick-query').fill('human');await p.locator('#quick-query').press('Enter');await ed.press('-');assert((await ed.inputValue()).endsWith(cp('human')));
+ // Replay the user's exact sequences, first with ordinary key events,
+ // then with simulated US-International dead-key/late-composition events.
+ const sequences=["' 'a's'd'f'g ",String.fromCharCode(96)+' a'+['s','d','f','g'].map(c=>String.fromCharCode(96)+c).join(''),'- -a-s-d-f-g','. a.s.d.f.g'];
+ function expected(seq){
+  let out='',pending=null;
+  for(const c of seq){
+   const root=data.directLayout.layers[0].keys[c];
+   if(root){out+=bare(root);pending=root;continue}
+   const form=pending&&data.modifierKeys[c]&&M.rootForm(pending,data.modifierKeys[c]);
+   if(form){out=out.slice(0,-1)+form.char}else out+=c;
+   pending=null;
+  }
+  return out
+ }
+ for(const seq of sequences){
+  await ed.press('Control+a');await ed.fill('');
+  await ed.pressSequentially(seq);
+  assert.equal(await ed.inputValue(),expected(seq),JSON.stringify(seq));
+ }
+ for(const seq of sequences){
+  await ed.press('Control+a');await ed.fill('');
+  await ed.evaluate((field,seq)=>{
+   let dead=false;
+   const emit=(type,init)=>field.dispatchEvent(new CompositionEvent(type,{bubbles:true,...init}));
+   const key=(init)=>field.dispatchEvent(new KeyboardEvent('keydown',{bubbles:true,cancelable:true,...init}));
+   for(const c of seq){
+    const accent=c==="'"||c===String.fromCharCode(96);
+    const code=accent?(c==="'"?'Quote':'Backquote'):/^[a-z]$/.test(c)?'Key'+c.toUpperCase():c==='-'?'Minus':c==='.'?'Period':'Space';
+    if(accent){
+     if(key({code,key:'Dead',isComposing:dead}))throw Error('dead key was not captured');
+     emit('compositionstart',{data:''});emit('compositionupdate',{data:c});
+     const before=new InputEvent('beforeinput',{inputType:'insertCompositionText',data:c,isComposing:true,bubbles:true,cancelable:true});
+     if(field.dispatchEvent(before))throw Error('composition was not prevented');
+     dead=true;continue
+    }
+    if(key({code,key:dead?'Process':c,isComposing:dead}))throw Error('physical key was not captured');
+    if(dead){
+     // Some browsers deliver a committed insertText even when a previous
+     // beforeinput was prevented. Simulate this late native mutation.
+     emit('compositionend',{data:c});
+     const pos=field.selectionStart;
+     field.value=field.value.slice(0,pos)+c+field.value.slice(pos);
+     field.setSelectionRange(pos+1,pos+1);
+     field.dispatchEvent(new InputEvent('input',{inputType:'insertText',data:c,bubbles:true}));
+     dead=false
+    }
+   }
+   if(dead)emit('compositionend',{data:''});
+  },seq);
+  assert.equal(await ed.inputValue(),expected(seq),'dead-key replay '+JSON.stringify(seq));
+ }
+ await ed.press('Control+a');await ed.fill('');
+ await ed.pressSequentially("d' s. f- g-");
+ assert.equal(await ed.inputValue(),expected("d' s. f- g-"));
+ console.log('PASS all four reported sequences: plain and synthetic US-International events, no Latin leakage, postfix forms and unsupported literal punctuation.');
  // Each location is dispatched as a physical code; AltGr chords use synthetic events.
  for(const [rid,loc] of L.locations){
    await ed.fill('');const alt=loc.layer.includes('altgr');

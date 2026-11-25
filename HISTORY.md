@@ -18,3 +18,5 @@
 - Native 0.5.2 / Studio 0.5.0-alpha.5: normalized numeral 3 and 4 as symmetric square rotational pair; systematic geometry audit, original-floor pixel sample and 15-area secondary-source review. No new text symbols or shortcuts.
 
 - Studio 0.5.0-alpha.6: experimental direct QWERTY input for all 83 roots, four-layer visual keyboard, 64 bilingual recognition/typing cards and local spaced review, advisory registry writing notices. No native keyboard, glyph or encoding changes.
+
+- Studio 0.5.0-alpha.7: direct QWERTY input captures physical marker keys and isolates delayed US-International accent composition. Regression coverage includes all four reported punctuation/letter sequences. No mapping or native keyboard changes.
