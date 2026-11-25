@@ -6,3 +6,5 @@ Run python build_project.py. It compiles the package, checks package integrity, 
 Build the native package, then run \`python web/build_studio.py\` and \`node tests/studio.cjs --model-only\`. For browser checks see web/README.md. Full Chromium tests cover input, Korean/English search, ambiguity, form replacements, undo/redo, drafts, favourites, portable messages, link/clipboard behavior with test adapters, actual PNG download, safe shared reader, offline reload, approved update and a mobile viewport. They do not establish native device/IME acceptance.
 
 Root-first Studio regression checks every root and all six modifier slots, with actual browser insertion of all 93 legacy forms. All 498 combinations are checked for enabled/disabled state, and selection/cancel must not alter text.
+
+Run \`python tests/test_root_input.py\` for the experimental root-first postfix semantic reference. It tests all 498 root/form-slot combinations, 415 physical marker-key combinations, bare-root repetitions, punctuation and commit. No platform integration or new codepoint/font acceptance is implied.
