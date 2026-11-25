@@ -1,0 +1,78 @@
+// SPDX-License-Identifier: GPL-3.0-or-later
+// Model tests + isolated headless browser acceptance of the actual generated Studio.
+const fs=require('node:fs'),path=require('node:path'),http=require('node:http'),assert=require('node:assert/strict');
+const root=path.resolve(__dirname,'..'),D=path.join(root,'data'),site=path.join(root,'dist','site');
+const read=n=>JSON.parse(fs.readFileSync(path.join(D,n),'utf8'));
+const lex=read('lexicon.json'),mn=read('mnemonics.json'),composition=read('composition.json');
+const M=require('../web/model.js').createModel({lexicon:lex,mnemonics:mn,composition});
+const cp=id=>M.byId.get(id).char, human=cp('human'),water=cp('water'),god=cp('god'),divine=cp('divine');
+assert.equal(M.search('물')[0].id,'water');
+assert.equal(M.search('water')[0].id,'water');
+assert(M.search('ㅁ').some(g=>g.id==='water'));
+assert(M.search('팔').some(g=>g.id==='8')&&M.search('팔').some(g=>g.id==='hand'));
+for(const [shortcut,expected] of Object.entries(mn)){const text='x'+shortcut+'y';assert.equal(M.convert(text,text.length-1,text.length-1).text,'x'+expected+'y',shortcut)}
+for(const q of ['/팔;','/cry;','water;','/somewater;'])assert.equal(M.convert(q,q.length,q.length),null);
+for(const g of lex)for(const mod of ['noun','verb','adjective','adverb','colour']){
+ const r=M.changeForm('x'+g.char+'y',2,2,mod),target=composition[g.id]?.[mod];
+ assert.equal(r?.text,target?'x'+cp(target)+'y':undefined)
+}
+const message=human+' '+water+'\n한글 😀 & <test>';
+assert.equal(M.decode(M.encode(message)).text,message);
+assert.equal(M.readHash(M.hash(message)).text,message);
+const unknown=M.decode(JSON.stringify({schema:'yubae:1',tokens:[['g','future-word'],['g','water']]}));
+assert.deepEqual(unknown.unknown,['future-word']);assert.equal(unknown.text,'[future-word]'+water);
+for(const raw of ['{}','{"schema":"yubae:1","tokens":[["x","water"]]}','{"schema":"yubae:1","tokens":[["g","<script>"]]}'])assert.throws(()=>M.decode(raw));
+assert.throws(()=>M.encode('a'.repeat(3001)));
+console.log('PASS model: 608 mnemonic conversions, 465 modifier cases, bilingual/initial search, ambiguity, portable token roundtrip, validation and unknown-ID preservation.');
+if(process.argv.includes('--model-only'))process.exit(0);
+const {chromium}=require(process.env.YUBAE_PLAYWRIGHT||'playwright-core');
+const mime={'.html':'text/html; charset=utf-8','.js':'text/javascript; charset=utf-8','.webmanifest':'application/manifest+json','.png':'image/png','.md':'text/plain; charset=utf-8'};
+let next=false;
+const server=http.createServer((req,res)=>{
+ const u=new URL(req.url,'http://127.0.0.1'),rel=u.pathname==='/'?'index.html':decodeURIComponent(u.pathname.slice(1)),f=path.resolve(site,rel);
+ if(!f.startsWith(site+path.sep)||!fs.existsSync(f)||!fs.statSync(f).isFile()){res.writeHead(404);res.end();return}
+ let content=fs.readFileSync(f);
+ if(next&&rel==='sw.js')content=Buffer.from(content.toString().replace(/yubae-studio-[a-f0-9]+/,'yubae-studio-test-next'));
+ if(next&&rel==='index.html')content=Buffer.from(content.toString().replace('"version":"0.5.0-alpha.1"','"version":"0.5.0-alpha.2-test"'));
+ res.writeHead(200,{'Content-Type':mime[path.extname(f)]||'application/octet-stream','Cache-Control':'no-cache'});res.end(content)
+});
+async function run(){
+ await new Promise(r=>server.listen(0,'127.0.0.1',r));const url='http://127.0.0.1:'+server.address().port+'/';
+ const browser=await chromium.launch({executablePath:process.env.YUBAE_BROWSER||undefined,headless:true,args:['--disable-background-networking']});
+ try{
+ const ctx=await browser.newContext({viewport:{width:1280,height:840},locale:'en-US',acceptDownloads:true,permissions:['clipboard-read','clipboard-write']});
+ await ctx.addInitScript(()=>{let clip='';Object.defineProperty(navigator,'clipboard',{value:{writeText:async v=>{clip=v},readText:async()=>clip},configurable:true});Object.defineProperty(navigator,'share',{value:undefined,configurable:true});Object.defineProperty(navigator,'canShare',{value:()=>false,configurable:true})});
+ const page=await ctx.newPage(),errors=[];page.on('pageerror',e=>errors.push(e.message));page.on('dialog',d=>d.accept());
+ await page.goto(url);await page.waitForFunction(()=>document.fonts.check('32px Yubae','\uE00A'));await page.waitForFunction(()=>!!navigator.serviceWorker.controller);
+ assert.equal(await page.locator('#results .glyph-key').count(),93);assert.equal(await page.locator('#version').textContent(),'0.5.0-alpha.1');
+ await page.locator('#search').fill('water');assert.equal(await page.locator('#results .glyph-key').count(),1);await page.locator('#results [data-id=water]').click();
+ await page.locator('#reset-search').click();await page.locator('#lang-ko').click();assert.equal(await page.locator('html').getAttribute('lang'),'ko');await page.locator('#search').fill('사람');await page.locator('#results [data-id=human]').click();assert.equal(await page.locator('#editor').inputValue(),water+human);
+ await page.locator('#space').click();await page.locator('#search').fill('신');await page.locator('#results [data-id=god]').click();await page.locator('#form-buttons button').filter({hasText:'형용사'}).click();assert.equal(await page.locator('#editor').inputValue(),water+human+' '+divine);
+ await page.locator('#undo').click();assert.equal(await page.locator('#editor').inputValue(),water+human+' '+god);await page.locator('#redo').click();assert.equal(await page.locator('#editor').inputValue(),water+human+' '+divine);
+ await page.locator('#editor').fill('/물;');assert.equal(await page.locator('#editor').inputValue(),water);
+ await page.locator('#editor').fill('/팔;');assert.equal(await page.locator('#editor').inputValue(),'/팔;');
+ await page.locator('#editor').fill(human+' '+water);
+ await page.locator('#mode').click();await page.locator('#search').fill('물');await page.locator('#results [data-id=water]').click();await page.locator('#detail-fav').click();await page.locator('#categories [data-cat=favorites]').click();assert.equal(await page.locator('#results .glyph-key').count(),1);
+ await page.reload();assert.equal(await page.locator('#editor').inputValue(),human+' '+water);assert.equal(await page.locator('html').getAttribute('lang'),'ko');await page.locator('#categories [data-cat=favorites]').click();assert.equal(await page.locator('#results [data-id=water]').count(),1);
+ await page.locator('#portable').click();await page.waitForFunction(async()=> (await navigator.clipboard.readText()).includes('yubae:1'));const portable=await page.evaluate(()=>navigator.clipboard.readText());assert.equal(M.decode(portable).text,human+' '+water);
+ await page.locator('#share').click();await page.waitForFunction(async()=> (await navigator.clipboard.readText()).includes('#m='));const link=await page.evaluate(()=>navigator.clipboard.readText());assert.equal(M.readHash(new URL(link).hash).text,human+' '+water);
+ const [dl]=await Promise.all([page.waitForEvent('download'),page.locator('#png').click()]);await dl.saveAs(path.join(root,'dist','test-message.png'));const png=fs.readFileSync(path.join(root,'dist','test-message.png'));assert.equal(png.subarray(1,4).toString(),'PNG');assert.equal(png.readUInt32BE(16),1000);assert(png.length>1200);
+ // Shared messages never replace a locally saved draft unless explicitly requested.
+ await page.goto(url+M.hash(god+water));assert(await page.locator('#reader').isVisible());assert.equal(await page.locator('#read-message').textContent(),god+water);await page.locator('#read-toggle').click();assert(await page.locator('#read-gloss').isVisible());await page.locator('#read-reply').click();assert.equal(await page.locator('#editor').inputValue(),human+' '+water);
+ await page.locator('#import').click();await page.locator('#import-value').fill(M.encode(god));await page.locator('#import-apply').click();assert((await page.locator('#editor').inputValue()).includes(god));
+ await page.goto(url+M.hash('x'));await page.locator('#read-open').click();assert.equal(await page.locator('#editor').inputValue(),'x');
+ await page.locator('#editor').fill(human+' '+water);
+ await page.screenshot({path:path.join(root,'dist','studio-desktop.png'),fullPage:true});
+ await ctx.setOffline(true);await page.reload();assert.equal(await page.locator('#editor').inputValue(),human+' '+water);await page.locator('#search').fill('water');assert.equal(await page.locator('#results [data-id=water]').count(),1);await ctx.setOffline(false);
+ next=true;await page.evaluate(async()=>{const r=await navigator.serviceWorker.getRegistration();await r.update()});await page.locator('#update-banner').waitFor({state:'visible',timeout:20000});assert.equal(await page.locator('#version').textContent(),'0.5.0-alpha.1');await page.locator('#update').click();await page.waitForFunction(()=>document.getElementById('version').textContent==='0.5.0-alpha.2-test');assert.equal(await page.locator('#editor').inputValue(),human+' '+water);
+ assert.deepEqual(errors,[]);
+ console.log('PASS browser desktop: input, Korean search, forms, undo/redo, ambiguity, favourites/draft reload, portable copy, sharing, PNG download, shared reader, import, offline reload, approved update retains draft.');
+ await ctx.close();
+ next=false;const mobile=await browser.newContext({viewport:{width:390,height:844},deviceScaleFactor:2,isMobile:true,hasTouch:true,locale:'ko-KR'});
+ const mp=await mobile.newPage();await mp.goto(url);await mp.waitForFunction(()=>document.fonts.check('32px Yubae','\uE00A'));assert.equal(await mp.locator('html').getAttribute('lang'),'ko');assert.equal(await mp.locator('#version').textContent(),'0.5.0-alpha.1');assert(await mp.locator('#share-more').isVisible());assert(!(await mp.locator('#import').isVisible()));await mp.locator('#share-more').tap();assert(await mp.locator('#import').isVisible());await mp.locator('#share-more').tap();assert(!(await mp.locator('#import').isVisible()));await mp.locator('#search').fill('물');await mp.locator('#results [data-id=water]').tap();assert.equal(await mp.locator('#editor').inputValue(),water);assert(await mp.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1));await mp.screenshot({path:path.join(root,'dist','studio-mobile.png'),fullPage:true});await mobile.close();
+ console.log('PASS mobile viewport: Korean default, touch insertion, no horizontal overflow. Actual device installation remains untested.');
+ // The downloadable HTML must work without a server or service worker.
+ const offline=await browser.newContext({offline:true,viewport:{width:1000,height:800}}),op=await offline.newPage();await op.goto('file:///'+path.join(root,'dist','Yubae_Studio.html').replaceAll('\\','/'));await op.waitForFunction(()=>document.fonts.check('32px Yubae','\uE00A'));await op.locator('#search').fill('water');await op.locator('#results [data-id=water]').click();assert.equal(await op.locator('#editor').inputValue(),water);await offline.close();console.log('PASS offline standalone HTML.');
+ }finally{await browser.close();server.close()}
+}
+run().catch(e=>{console.error(e);server.close();process.exitCode=1});

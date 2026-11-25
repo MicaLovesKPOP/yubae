@@ -24,3 +24,6 @@ Do not send anything yet. Use official site contact link at https://stella-jang.
 현재 손글씨 자료를 바탕으로 여러 운영체제에서 작동하는 입력기를 만들었지만, 원전과 글자 뜻을 정확하게 확인하고 싶습니다. 혹시 공개할 수 있는 전체 문자표나 품사·파생 규칙 자료가 있을까요? 유배지어를 계속 발전시키는 방향에 관해 의견을 주시거나, 실제 문자 제작자 및 공개 배포 관련 권리 문의 창구를 알려 주실 수 있다면 감사하겠습니다.
 
 원전과 방송 이후의 용례, 팬 창작을 구분하여 기록하고, 공식 프로젝트나 협업으로 오해되지 않도록 하겠습니다. 원하신다면 간단한 한국어 입력기 시연을 공유드릴 수 있습니다. 참여 여부는 전적으로 편하신 방향에 따르겠습니다. 감사합니다.
+
+## Studio public alpha
+The shared Studio build is hosted on GitHub Pages (https://micaloveskpop.github.io/yubae/); use the generated site only, published from a reviewed commit, and retain the downloadable standalone HTML. Native Keyman catalogue submission remains a separate goal. Studio URLs contain readable message data in the fragment, not an encrypted/private communication channel.

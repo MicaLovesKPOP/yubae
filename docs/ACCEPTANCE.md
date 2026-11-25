@@ -10,3 +10,8 @@
 | Fire OS/other | Fallback plan | Actual device |
 
 Test phrase: human, water, god→divine, food→eat, ocean→blue, unsupported modifier on number (must preserve character); compare raw character codes. Korean: 한글/EN toggles, 뜻/문자, /k/anf; with Latin base, ambiguous 팔 does not auto-convert. Verify that previous alpha text remains readable. Test a narrow phone and landscape/tablet; keyboard should not obscure all editor content.
+
+## Studio 0.5.0-alpha.1 — 2026-11-25
+- PASS: 93 shared glyphs with exact native font; 608 mnemonic conversions and 465 modifier cases; bilingual search, ambiguity, portable tokens and unknown-ID validation.
+- PASS: actual Edge/Chromium headless desktop and Korean-locale touch-sized viewport; glyph insertion, form replacement, history, draft/favourites persistence, PNG export, shared reader, offline HTML, offline reload and an explicitly approved service worker update with retained draft. Clipboard and share APIs were substituted for automated checks; actual operating-system share dialogs were not exercised.
+- PENDING: installation, real Korean OS IME interaction, native share sheet and mobile/offline/update acceptance on Android/iOS devices. Native keyboard acceptance remains separate.

@@ -74,7 +74,7 @@
     "ko": "서수 / 번째",
     "en": "Ordinal dot",
     "status": "modifier-placement-review",
-    "source": "S1 zones 2,12; first, second, sixth; inspect actual variants"
+    "source": "S1 zones 2,12; first, second, sixth; inspect actual variants; S3 gallery 5 shows chalk numeral-like marks with endpoint dots; exact mapping pending primary review"
   },
   {
     "id": "live-noun",
@@ -138,5 +138,26 @@
     "en": "All 15 floor areas and other signs",
     "status": "primary-audit-needed",
     "source": "P1/P2; no complete authoritative chart retrieved"
+  },
+  {
+    "id": "know-remember",
+    "ko": "알다 / 기억하다",
+    "en": "Know / remember",
+    "status": "secondary-visual-candidate",
+    "source": "S3 gallery 6 (handwritten note reproduced, editorial gloss); diamond-like root with upper dot; distinguish from existing forms; confirm in P1/P3"
+  },
+  {
+    "id": "at-least",
+    "ko": "이상",
+    "en": "At least / greater-or-equal",
+    "status": "secondary-visual-candidate",
+    "source": "S3 gallery 6, comparison-like form with shaded quadrilateral/slash; verify actual shape and relation to S1/P1"
+  },
+  {
+    "id": "not-copula",
+    "ko": "아니다",
+    "en": "Not / is not",
+    "status": "secondary-visual-candidate",
+    "source": "S3 gallery 6, plus/cross-like form; distinguish from chart negation, equality and conditional forms"
   }
 ]

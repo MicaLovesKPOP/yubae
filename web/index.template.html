@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#f5f3ef"><meta name="description" content="Write, read and share the Exile Zone script in Korean and English. An unofficial offline-first language toolkit.">
+<title>Yubae Studio · 유배지어</title>
+<!--MANIFEST-->
+<style>/*FONT*/ /*CSS*/</style>
+</head>
+<body>
+<header class="top"><div class="brand"><span class="brandmark" aria-hidden="true">&#xE00A;</span><div><strong>Yubae Studio</strong><span class="subtitle">유배지어 · <span id="version"></span></span></div></div><div class="top-actions"><button type="button" id="lang-ko" lang="ko">한국어</button><button type="button" id="lang-en" lang="en">EN</button><button id="install" hidden data-i="install"></button></div></header>
+<main>
+<section class="notice" id="update-banner" hidden role="status"><span data-i="updateReady"></span> <button id="update" data-i="update"></button></section>
+<section id="reader" class="panel" hidden><header class="section-heading"><h1 data-i="sharedMessage"></h1><span class="pill" data-i="unofficial"></span></header><p id="read-message" class="read-message glyph"></p><p id="read-gloss" class="muted" hidden></p><p id="read-warning" class="muted" hidden></p><div class="actions"><button id="read-toggle" data-i="showGloss"></button><button id="read-copy" data-i="copyText"></button><button id="read-open" data-i="editCopy"></button><button id="read-reply" class="primary" data-i="writeReply"></button><button id="read-save" data-i="portable"></button></div></section>
+<div id="workspace">
+<section class="panel editor-panel" aria-labelledby="editor-title">
+<header class="section-heading"><h1 id="editor-title" data-i="write"></h1><span id="draft-state" class="muted" role="status"></span></header>
+<label for="editor" class="sr-only" data-i="message"></label><textarea id="editor" class="glyph" maxlength="3000" spellcheck="false" autocomplete="off" autocorrect="off" rows="4"></textarea>
+<div class="edit-tools actions"><button id="undo" data-i="undo"></button><button id="redo" data-i="redo"></button><button id="space" data-i="space"></button><button id="newline" data-i="newline"></button><button id="backspace" data-i="backspace"></button><button id="clear" data-i="clear"></button><span class="muted" id="count"></span></div>
+<div class="forms"><div class="forms-heading"><strong data-i="forms"></strong><span id="form-context" class="muted"></span></div><div id="form-buttons" class="actions"></div></div>
+<details class="gloss-box"><summary data-i="gloss"></summary><div id="gloss" class="muted"></div></details>
+<div class="share-row actions"><button id="share" class="primary" data-i="share"></button><button id="png" data-i="png"></button><button id="share-more" aria-expanded="false" aria-controls="copy portable import" data-i="more"></button><button id="copy" class="share-secondary" data-i="copyText"></button><button id="portable" class="share-secondary" data-i="portable"></button><button id="import" class="share-secondary" data-i="import"></button></div>
+<p class="muted hint share-hint" data-i="shareHint"></p><p class="muted hint privacy-hint" data-i="privateLink"></p>
+</section>
+<section class="panel palette-panel" aria-labelledby="palette-title">
+<header class="section-heading"><h2 id="palette-title" data-i="dictionary"></h2><div class="actions"><button id="mode" data-i="browse"></button></div></header>
+<label class="sr-only" for="search" data-i="search"></label><div class="search-row"><input id="search" type="search" autocomplete="off" spellcheck="false"><button id="reset-search" data-i="reset"></button></div>
+<div class="categories" id="categories" aria-label="Categories"></div>
+<div id="recents-wrap"><p class="small-heading" data-i="recent"></p><div id="recents" class="recents"></div></div>
+<div class="result-heading"><span id="result-count" class="muted" aria-live="polite"></span><span class="muted" data-i="provisional"></span></div>
+<div id="results" class="result-grid"></div>
+<aside id="detail" class="detail" hidden><div class="detail-top"><span id="detail-glyph" class="glyph"></span><div><strong id="detail-name"></strong><p id="detail-secondary" class="muted"></p><p id="detail-code" class="muted"></p></div></div><p id="detail-note" class="muted"></p><div class="actions"><button id="detail-insert" class="primary" data-i="insert"></button><button id="detail-fav"></button><button id="detail-close" data-i="close"></button></div></aside>
+</section>
+</div>
+<section class="panel help-panel"><details><summary data-i="howTo"></summary><p data-i="instructions"></p><p data-i="keyboardHelp"></p><p><a href="https://github.com/MicaLovesKPOP/yubae/releases/tag/v0.4.0" target="_blank" rel="noopener" data-i="nativeDownload"></a></p></details><details><summary data-i="about"></summary><p data-i="aboutText"></p><p><a href="https://github.com/MicaLovesKPOP/yubae/blob/main/docs/RESEARCH.md" target="_blank" rel="noopener" data-i="sources"></a> · <a href="https://github.com/MicaLovesKPOP/yubae/blob/main/RIGHTS.md" target="_blank" rel="noopener" data-i="rights"></a> · <a href="https://github.com/MicaLovesKPOP/yubae" target="_blank" rel="noopener">GitHub</a></p></details></section>
+</main>
+<footer><span data-i="footer"></span> <a id="offline-download" href="./Yubae_Studio.html" download data-i="offlineFile"></a></footer>
+<div id="toast" role="status" aria-live="polite"></div>
+<dialog id="import-dialog"><form method="dialog"><h2 data-i="import"></h2><p data-i="importHint"></p><label for="import-value" class="sr-only" data-i="import"></label><textarea id="import-value" rows="6" maxlength="24000" spellcheck="false"></textarea><div class="actions"><button value="cancel" data-i="cancel"></button><button type="button" id="import-apply" class="primary" data-i="importApply"></button></div></form></dialog>
+<script type="application/json" id="registry">/*DATA*/</script>
+<script>/*MODEL*/</script><script>/*APP*/</script>
+</body></html>

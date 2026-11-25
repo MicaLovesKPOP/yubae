@@ -14,7 +14,10 @@
 | P3 | Language evolution | Versioned later-attested and community vocabulary, grammar notes, learning exercises; robust standards migration only if justified |
 
 ## Current blockers
-Complete primary visual references, unresolved glyph/script rights for catalogue submission (not a blanket blocker to public fan alpha), native Korean review, no physical iOS/macOS/Linux/ChromeOS test devices in current session, mobile PUA rendering outside Keyman. Native Korean predictive candidate input and browser PWA deployment are not yet verified.
+Complete primary visual references, unresolved glyph/script rights for catalogue submission (not a blanket blocker to public fan alpha), native Korean review, no physical iOS/macOS/Linux/ChromeOS test devices in current session, mobile PUA rendering outside Keyman. Native Korean predictive candidate input and physical-device PWA install/share behavior are not yet verified. Studio browser acceptance has passed; public hosting and update lifecycle are separate from native distribution.
 
 ## Immediate next session
 Primary-source audit is the critical path: view the 30-minute Korean masterclass and original post-show messages, extract a timestamped root/form catalogue and source-confirm missing shape candidates before expanding the default glyph inventory. Independently validate 0.4.0 on Android and Korean users. No need to defer independent software QA while source access is pending.
+
+## Studio milestone 0.5.0-alpha.1
+Implemented bilingual composition, Korean initial-consonant search, documented form previews, recent/favourites, draft recovery, PNG, portable tokens and message links. Browser regression, mobile viewport, offline and update tests passed. Next highest-value work: primary-source audit and actual Android/iOS Studio acceptance; review native Korean candidate entry; keep web/native encoding aligned. Do not add provisional shapes merely to fill missing IDs.
