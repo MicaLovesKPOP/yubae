@@ -25,3 +25,6 @@ The long-term goal is a low-friction place to learn, write, exchange texts and c
 This milestone changes only Studio. Native 0.5.2, the font, all 160 text mappings and 1,301 previous shortcuts are unchanged. See the tests and acceptance record. Physical devices and source review remain outstanding.
 
 Studio alpha.8 uses prefix markers by default in direct physical input, with a persistent optional postfix preference. Lesson hints follow this preference. The touch board still uses root-first composition, and the compact-code hints retain their existing suffix order.
+
+## Voluntary input and learning research (planned)
+See [INPUT_RESEARCH.md](INPUT_RESEARCH.md) for the proposed opt-in research programme: comparable typing benchmarks, actual input-method adoption and longitudinal transitions, Korean/English learning and desktop/mobile differences, privacy-preserving local aggregates, participant data controls and bilingual community-facing results. The aim is evidence-led improvement across multiple input paths, not a single winner. Current Studio remains tracking-free; no collection or upload is enabled by documenting the plan. Source evidence and stable text mappings remain separate from usability research.

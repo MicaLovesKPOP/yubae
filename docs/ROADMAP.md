@@ -9,6 +9,7 @@
 | P1 | Daily companion | Search in normal Korean IME and English; modifier previews; favourites/recent; draft recovery; image share; versioned text and links; offline; spoiler-safe dictionary |
 | P1 | Keyman cloud / web release | Catalogue licensing and naming requirements resolved, bilingual documentation, controlled updates and rollback |
 | P1 | Improve input efficiency | User tests; native two-set candidate composition if viable; evidence-based common words; modifier gestures if supported and discoverable; do not introduce unverified forms |
+| P1 | Voluntary input and learning research (planning; separate launch approval) | Repeatable local benchmark, method-adoption/learning metrics, privacy-reviewed opt-in design, Korean/English community pilot and disclosure-safe findings; core stays tracking-free |
 | P2 | ChromeOS and other platforms | Test ChromeOS extension on actual device, choose store or web fallback; Fire OS acceptance; browser compatibility |
 | P2 | Community collaboration | Bilingual contribution process and review; Stella/creator involvement only if desired; clear attribution and governance |
 | P3 | Language evolution | Versioned later-attested and community vocabulary, grammar notes, learning exercises; robust standards migration only if justified |
@@ -36,3 +37,6 @@ Normalized 3/4 as symmetric quarter-turn pair, recorded original-source bounding
 
 ## Direct input, learning and writing feedback
 Studio alpha.6 implements an opt-in 83-root physical layout, a clickable four-layer visual board, three bilingual introductory lessons with 64 recognition/typing cards, local spaced review, and an explicit advisory writing check. The fourth letter layer and five third-layer positions are spare. Native positional typing remains a separate experiment; preserve the released mnemonic package until actual keyboard acceptance. Next: gather authentic corpus and Korean speaker review to refine key placement, lesson vocabulary, and source-backed sentence/grammar exercises. Avoid labeling unverified writing as incorrect; suggestions must explain the evidence and remain optional. No hosted accounts or community service in this milestone.
+
+## Community input research — planned 2026-11-25
+Compare real desktop/mobile and Korean/English method adoption, mixed use, learning journeys and typing performance over time, including separately consented native input where feasible. Use controlled benchmarks and voluntary privacy-preserving aggregate statistics, not raw messages or keystroke logs. Promote participation as an optional bilingual community research programme with transparent public findings and a personal research-data view. See [INPUT_RESEARCH.md](INPUT_RESEARCH.md) for design, privacy boundaries and launch gates. No collection or deployment is authorized by this roadmap entry; the source audit, stable encodings and real-device acceptance remain P0.
