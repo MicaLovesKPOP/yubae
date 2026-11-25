@@ -8,3 +8,5 @@ Build the native package, then run \`python web/build_studio.py\` and \`node tes
 Root-first Studio regression checks every root and all six modifier slots, with actual browser insertion of all 93 legacy forms. All 498 combinations are checked for enabled/disabled state, and selection/cancel must not alter text.
 
 Run \`python tests/test_root_input.py\` for the experimental root-first postfix semantic reference. It tests all 498 root/form-slot combinations, 415 physical marker-key combinations, bare-root repetitions, punctuation and commit. No platform integration or new codepoint/font acceptance is implied.
+
+Geometry checks: python tests/test_geometry.py and python source/audit_geometry.py; the native build runs both. The audit reports dimensions, ratios, symmetry and shape similarity for current vector outlines, not official source metrics.

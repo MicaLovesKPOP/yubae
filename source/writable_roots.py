@@ -52,6 +52,7 @@ def root_aliases(aliases,roots):
 def export_data(records,roots):
     for name,obj in [
       ('text-registry.json',[{k:v for k,v in g.items() if k not in ('path','fill')} for g in records]),
+      ('root-registry.json',make_registry()),
       ('writable-roots.json',roots),
       ('modifier-keys.json',MARKER_KEYS)]:
         (D/name).write_text(json.dumps(obj,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')

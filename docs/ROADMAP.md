@@ -30,3 +30,6 @@ Studio alpha.3 and native 0.5.0 now implement one-tap bare-root entry, optional 
 
 ## Fast root selection milestone
 Studio alpha.4 candidate dialog and native 0.5.1 compact code trial implemented and regression-tested. Next: real Korean and English user acceptance; compare candidate, compact-code and possible persistent direct-key modes on actual tasks. Preserve existing compatibility. Prioritize authentic glyph/root/ordinal audit and native device acceptance over additional speculative shortcut schemes.
+
+## Geometry and corpus milestone
+Normalized 3/4 as symmetric quarter-turn pair, recorded original-source bounding-box sample, added automatic geometry audit and reviewed all 15 areas of the Korean secondary text. Next priority: resolve exact original head/know, house/dwell, life/death, ordinal and mathematical/functional forms through legible source frames. Do not stretch all roots to square or merge semantically distinct IDs by visual overlap. Continue original-source audit before adding input features.

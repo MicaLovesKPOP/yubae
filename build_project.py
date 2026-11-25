@@ -12,6 +12,8 @@ for filename in ('exile.kmn','exile.kps'):
  if os.name=='nt':run('cmd.exe','/d','/c',str(kmc),'build',B/filename)
  else:run(kmc,'build',B/filename)
 run('node',S/'test_compiled.cjs')
+run(sys.executable,P/'tests'/'test_geometry.py')
+run(sys.executable,S/'audit_geometry.py')
 lex=json.loads((D/'text-registry.json').read_text(encoding='utf-8'))
 baseline=json.loads((D/'encoding-v1.json').read_text(encoding='utf-8'))
 current={g['id']:g['cp'] for g in lex}
@@ -31,6 +33,12 @@ with zipfile.ZipFile(B/'exile.kmp') as z:
  assert set(cmap)=={32,*current.values()}
  assert all(font['glyf'][cmap[cp]].numberOfContours>0 for cp in current.values())
  assert font['OS/2'].fsType==0
+ a,b=[font['glyf'][cmap[k]] for k in (0xe003,0xe004)]
+ cx,cy=(480,401)
+ pts=set(map(tuple,a.coordinates));rot=set(map(tuple,b.coordinates))
+ assert a.xMax-a.xMin==a.yMax-a.yMin==b.xMax-b.xMin==b.yMax-b.yMin
+ assert pts=={(2*cx-x,y) for x,y in pts}=={(x,2*cy-y) for x,y in pts}
+ assert rot=={(cx+y-cy,cy-x+cx) for x,y in pts} and rot!=pts
 OUT.mkdir(exist_ok=True)
 package=OUT/f'Exile_Keyboard_{version}.kmp';shutil.copy2(B/'exile.kmp',package)
 (OUT/'SHA256SUMS.txt').write_text(f'{hashlib.sha256(package.read_bytes()).hexdigest()}  {package.name}\n',encoding='ascii')

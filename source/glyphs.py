@@ -1,6 +1,7 @@
 # Hand-normalized vector traces of the supplied six-column handwritten chart.
 # Each path is a monoline outline in 100 x 100 design units, y increasing downwards.
 # Marks: n horizontal, v ring, a rising slash, adv falling slash; chart-specific placement preserved.
+from numeral_geometry import NUMERAL_PATHS
 G=[]
 N='M18 13 H82'; V='M50 8 m-3.8 0 a3.8 3.8 0 1 0 7.6 0 a3.8 3.8 0 1 0 -7.6 0'; A='M42 18 L58 4'; D='M42 4 L58 18';
 def ring(x,y,r=4): return f'M{x-r} {y} a{r} {r} 0 1 0 {2*r} 0 a{r} {r} 0 1 0 {-2*r} 0'
@@ -8,7 +9,7 @@ def diamond(x,y,r=20): return f'M{x} {y-r} L{x+r} {y} {x} {y+r} {x-r} {y} Z'
 def add(id,en,ko,cat,path,mark='',fill='',aliases='',group=None):
  G.append(dict(id=id,en=en,ko=ko,category=cat,path=(mark+' '+path).strip(),fill=fill,aliases=aliases.split(',') if aliases else [],group=group or id))
 # Column 1
-for i,p in enumerate(['M20 21 H80 V81 H20 Z','M26 30 H73 V72 L55 57','M34 25 L18 49 80 38 64 80','M25 25 L76 49 25 75 M75 23 L26 47 76 72','M20 29 L53 74 M39 28 L72 74 M53 29 L20 74 M72 29 L39 74','M20 25 L79 20 67 42 M49 23 V83','M22 29 L17 51 82 43 74 72 M50 19 V86','M50 18 V84 M22 72 L18 52 H79 L69 72','M78 23 H20 V82 H77 V38','M20 37 L78 27 20 65 M48 19 V87']): add(str(i),str(i),str(i),'Numbers',p,aliases=['zero','one','two','three','four','five','six','seven','eight','nine'][i])
+for i,p in enumerate(['M20 21 H80 V81 H20 Z','M26 30 H73 V72 L55 57','M34 25 L18 49 80 38 64 80',NUMERAL_PATHS['3'],NUMERAL_PATHS['4'],'M20 25 L79 20 67 42 M49 23 V83','M22 29 L17 51 82 43 74 72 M50 19 V86','M50 18 V84 M22 72 L18 52 H79 L69 72','M78 23 H20 V82 H77 V38','M20 37 L78 27 20 65 M48 19 V87']): add(str(i),str(i),str(i),'Numbers',p,aliases=['zero','one','two','three','four','five','six','seven','eight','nine'][i])
 add('human','Human','사람','People','M50 28 L77 80 H23 Z',N,aliases='person,people')
 add('head','Head','머리','People',diamond(50,53,23),N)
 add('has','Has','있다','Actions','M39 28 V83 M61 28 V83',V,aliases='exist,have')

@@ -1,0 +1,492 @@
+{
+  "schema": "yubae-corpus-review-v1",
+  "date": "2026-11-25",
+  "scope": "All 15 areas were read in the Korean secondary decipherment S1. Public lecture storyboard snapshots and reproduced show images were inspected for selected observations only. Not an exhaustive primary transcription; no official complete chart obtained.",
+  "sources": {
+    "P1": {
+      "url": "https://www.youtube.com/watch?v=xss78qe_ko4",
+      "access": "Public video page and 320x180 storyboard snapshots, at 10-second intervals through 20:50; Korean ASR caption endpoint returned empty. No full audio/video transcript reviewed."
+    },
+    "S1": {
+      "url": "https://namu.moe/w/데블스%20플랜%3A%20데드%20어게인/유배지",
+      "access": "Full Korean decipherment text retrieved; floor image CDN returned HTTP 503. Community source, section numbering not official."
+    },
+    "S2": {
+      "url": "https://gall.dcinside.com/mini/board/view/?id=devilsplans3&no=32708&page=1",
+      "access": "Two annotated screenshots retrieved and visually inspected. Early readings can be erroneous; original frame crops are clearer evidence of shape than labels."
+    },
+    "S3": {
+      "url": "https://hweek.kr/article/9043",
+      "access": "Gallery images 2–6 inspected; reproduced Netflix floor image and lecture chalkboard."
+    }
+  },
+  "zones": [
+    {
+      "area": 1,
+      "focus": "Position and path vocabulary",
+      "review": [
+        "above-adverb"
+      ],
+      "existing": [
+        "human",
+        "has",
+        "path",
+        "end"
+      ]
+    },
+    {
+      "area": 2,
+      "focus": "Rules and ordinal forms",
+      "review": [
+        "live-noun",
+        "death-noun",
+        "not-equals",
+        "below-adjective",
+        "place-adverb",
+        "contest",
+        "instrument",
+        "method",
+        "ordinal-1",
+        "ordinal-2",
+        "ordinal-6",
+        "victory",
+        "end-adjective"
+      ],
+      "existing": [
+        "human",
+        "has",
+        "and",
+        "can",
+        "place",
+        "god",
+        "divine",
+        "test",
+        "then",
+        "pass",
+        "live"
+      ]
+    },
+    {
+      "area": 3,
+      "focus": "Animals, actions and anatomy",
+      "review": [
+        "house",
+        "tail",
+        "arm-leg",
+        "instrument",
+        "zero",
+        "cry"
+      ],
+      "existing": [
+        "bird",
+        "human",
+        "fruit",
+        "can",
+        "speak",
+        "eat",
+        "cow",
+        "grass",
+        "spider",
+        "snake",
+        "make",
+        "tree",
+        "head",
+        "hand",
+        "foot",
+        "egg",
+        "become",
+        "small",
+        "plural",
+        "exists-not"
+      ]
+    },
+    {
+      "area": 4,
+      "focus": "Grid and mathematical grammar",
+      "review": [
+        "table",
+        "table-adjective",
+        "number-adjective",
+        "equals",
+        "below-adjective"
+      ],
+      "existing": [
+        "god",
+        "divine",
+        "test",
+        "number",
+        "magic-square",
+        "horizontal",
+        "vertical",
+        "diagonal",
+        "sum",
+        "pass"
+      ]
+    },
+    {
+      "area": 5,
+      "focus": "Scorpion and position",
+      "review": [
+        "scorpion-adjective",
+        "constellation",
+        "below-adverb"
+      ],
+      "existing": [
+        "human",
+        "see",
+        "shadow",
+        "has"
+      ]
+    },
+    {
+      "area": 6,
+      "focus": "Arithmetic and colour",
+      "review": [
+        "equals",
+        "color-purple-root"
+      ],
+      "existing": [
+        "tree",
+        "add",
+        "fire",
+        "charcoal",
+        "red",
+        "blue",
+        "purple",
+        "sand",
+        "glass",
+        "minus",
+        "ocean",
+        "water",
+        "salt",
+        "transparent"
+      ]
+    },
+    {
+      "area": 7,
+      "focus": "Door area; no lexical claim made",
+      "review": [],
+      "existing": []
+    },
+    {
+      "area": 8,
+      "focus": "Numeral arrangement",
+      "review": [
+        "zero",
+        "ordinal",
+        "numeral-3-4"
+      ],
+      "existing": [
+        "number",
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9"
+      ]
+    },
+    {
+      "area": 9,
+      "focus": "Instrumental form",
+      "review": [
+        "spear-adverb"
+      ],
+      "existing": [
+        "small",
+        "human",
+        "plural",
+        "kill",
+        "big",
+        "spear"
+      ]
+    },
+    {
+      "area": 10,
+      "focus": "Colour diagram",
+      "review": [
+        "color-purple-root",
+        "colour-marker-review"
+      ],
+      "existing": [
+        "colour",
+        "red",
+        "blue",
+        "white",
+        "purple"
+      ]
+    },
+    {
+      "area": 11,
+      "focus": "Scorpion, tail and dwelling",
+      "review": [
+        "scorpion",
+        "scorpion-adjective",
+        "tail",
+        "house"
+      ],
+      "existing": [
+        "snake",
+        "has",
+        "poison",
+        "human",
+        "eat",
+        "then",
+        "kill",
+        "dwell",
+        "sand"
+      ]
+    },
+    {
+      "area": 12,
+      "focus": "Root derivation and ordinal vocabulary",
+      "review": [
+        "know-remember",
+        "see-adjective",
+        "method",
+        "instrument",
+        "ordinal-6",
+        "below-adverb",
+        "hole-adverb",
+        "colour-marker-review"
+      ],
+      "existing": [
+        "black",
+        "hole",
+        "god",
+        "see",
+        "you",
+        "plural",
+        "sun",
+        "moon",
+        "has",
+        "place",
+        "can",
+        "dead",
+        "human",
+        "bird",
+        "speak",
+        "cover",
+        "daytime",
+        "become",
+        "night",
+        "path",
+        "end",
+        "divine",
+        "test"
+      ]
+    },
+    {
+      "area": 13,
+      "focus": "Black and animate forms",
+      "review": [
+        "colour-marker-review"
+      ],
+      "existing": [
+        "black",
+        "bird",
+        "plural",
+        "eat",
+        "dead",
+        "human",
+        "can",
+        "exists-not",
+        "speak"
+      ]
+    },
+    {
+      "area": 14,
+      "focus": "Time and numerals",
+      "review": [
+        "equals",
+        "zero",
+        "numeral-3-4"
+      ],
+      "existing": [
+        "hour",
+        "minute",
+        "day",
+        "earth",
+        "orbit",
+        "sun",
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6"
+      ]
+    },
+    {
+      "area": 15,
+      "focus": "Anatomy and spatial modifiers",
+      "review": [
+        "human-adjective",
+        "above-adverb",
+        "arm-leg"
+      ],
+      "existing": [
+        "human",
+        "head",
+        "has",
+        "hole",
+        "7",
+        "big",
+        "1",
+        "2",
+        "eat",
+        "or",
+        "speak",
+        "above",
+        "left",
+        "right",
+        "hear",
+        "see",
+        "and"
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "root_ids": [
+        "3",
+        "4"
+      ],
+      "type": "rotational numeral pair",
+      "status": "source-supported editorial normalization",
+      "evidence": [
+        "P1 06:10 and 06:30",
+        "S3 gallery 2 digit 4 in two rows"
+      ],
+      "decision": "Generate 4 as exact 90-degree rotation of 3; preserve both IDs."
+    },
+    {
+      "root_ids": [
+        "and",
+        "live"
+      ],
+      "type": "shared graphic shape; different lexical role",
+      "status": "strong secondary support, lecture context corroboration",
+      "evidence": [
+        "S1 4.2 notes geometric equivalence",
+        "P1 11:00 contrasts life/death"
+      ],
+      "decision": "Do not merge text IDs or remap existing root-live. Review a common graphic-family layer that allows independent lexical entries."
+    },
+    {
+      "root_ids": [
+        "head"
+      ],
+      "candidate": "know-remember",
+      "type": "noun-to-verb",
+      "status": "high priority",
+      "evidence": [
+        "S1 4.12 identifies head with verb mark",
+        "S3 gallery 6 handwritten later usage"
+      ],
+      "decision": "Verify original head shape and verb mark on a legible primary frame."
+    },
+    {
+      "root_ids": [
+        "dwell"
+      ],
+      "candidate": "house",
+      "type": "verb-to-noun",
+      "status": "high priority",
+      "evidence": [
+        "S1 4.3 and 4.11 explicitly relate residence and house"
+      ],
+      "decision": "Compare original house and dwell bodies."
+    },
+    {
+      "root_ids": [
+        "live",
+        "death"
+      ],
+      "candidate": "live-noun / death-noun",
+      "type": "noun forms",
+      "status": "strong visual and textual lead",
+      "evidence": [
+        "P1 10:50–11:00 board and subtitle context",
+        "S1 4.2"
+      ],
+      "decision": "Review noun forms before adding codes."
+    },
+    {
+      "root_ids": [
+        "0",
+        "8"
+      ],
+      "type": "similar but distinct numeral geometries",
+      "status": "do not merge",
+      "evidence": [
+        "P1 06:10–06:30"
+      ],
+      "decision": "Closed square versus open-corner numeral."
+    },
+    {
+      "root_ids": [
+        "minute",
+        "hour"
+      ],
+      "type": "related clock diagrams",
+      "status": "visual similarity; distinct roots remain",
+      "evidence": [
+        "S2 annotated arithmetic/time crops",
+        "S1 4.14"
+      ],
+      "decision": "Audit internal clock hands."
+    },
+    {
+      "root_ids": [
+        "above",
+        "left",
+        "right"
+      ],
+      "type": "shaded directional diamond family",
+      "status": "geometry family; grammatical roles need review",
+      "evidence": [
+        "P1 09:10–09:20 directional example",
+        "S1 4.1,4.2,4.5,4.15"
+      ],
+      "decision": "Audit rotation, filled region and upper marker independently; do not collapse directional meanings."
+    },
+    {
+      "root_ids": [
+        "1",
+        "2",
+        "6"
+      ],
+      "type": "ordinal variants",
+      "status": "endpoint markings seen; exact points require full-resolution review",
+      "evidence": [
+        "S3 gallery 5 chalkboard",
+        "P1 13:20–13:40",
+        "S1 4.8"
+      ],
+      "decision": "Dots may be multiple (sixth appears to have two); do not apply a generic single-dot rule."
+    }
+  ],
+  "later_usage": [
+    {
+      "topic": "Zero",
+      "source": "P1 06:30",
+      "finding": "Stella draws a square while explaining zero. Keep existing square zero; whether that convention was printed on the original floor remains unresolved."
+    },
+    {
+      "topic": "New colour words",
+      "source": "P1 08:00, 16:40–19:40",
+      "finding": "Lecture discusses extending the colour vocabulary, including orange and further examples. Treat these as participant proposals/later usage, not proof of original floor vocabulary."
+    },
+    {
+      "topic": "First person",
+      "source": "P1 12:30",
+      "finding": "Lecture subtitle indicates no word for 'I' in the language as encountered; later attempts at expression need separate provenance."
+    }
+  ]
+}

@@ -13,14 +13,14 @@ The 93 glyphs are vector reconstructions of a supplied handwritten chart, not an
 - 40 touch layers: glyph/learning labels × Korean/English navigation, phone/tablet.
 - 142 English, 233 Hangul and 233 Dubeolsik mnemonics; exact matches only.
 - 83 one-tap writable roots, 160 encoded symbols; persistent modifier row on every touch page. 608 original full-form mnemonics, 610 explicit bare-root aliases and 83 compact codes. Optional postfix modifiers; unsupported physical markers remain literal punctuation.
-- Android input and display verified with v0.3.2; v0.5.1 is compiled and adapter-tested but awaits device testing.
-- Yubae Studio 0.5.0-alpha.4 is a bilingual browser composer/PWA with portable messages. Chromebook native extension remains experimental.
+- Android input and display verified with v0.3.2; v0.5.2 is compiled and adapter-tested but awaits device testing.
+- Yubae Studio 0.5.0-alpha.5 is a bilingual browser composer/PWA with portable messages. Chromebook native extension remains experimental.
 
 ## Use Yubae Studio
 
 **[Open Yubae Studio](https://micaloveskpop.github.io/yubae/)** — browser companion, no account required. Compose with the existing provisional glyphs, search Korean/English (including Korean initial consonants), write bare roots immediately and optionally apply documented modifiers, change documented forms, save local drafts and share images or message links. On a supported browser, install it using the browser menu / Install button; the app works offline after its initial load. Link contents are readable by anyone who receives them. For the standalone HTML version use the offline download in Studio.
 
-Studio alpha 0.5.0-alpha.4 and native keyboard alpha 0.5.1 share the same glyph map. Browser automation validates the Studio model, desktop/mobile layouts and offline/update lifecycle. Physical device installation, native OS acceptance and the complete primary-source language audit remain outstanding.
+Studio alpha 0.5.0-alpha.5 and native keyboard alpha 0.5.2 share the same glyph map. Browser automation validates the Studio model, desktop/mobile layouts and offline/update lifecycle. Physical device installation, native OS acceptance and the complete primary-source language audit remain outstanding.
 
 ## Install the public alpha
 
@@ -60,3 +60,6 @@ On touch keyboards and in Studio, tap any root to write it immediately; then opt
 ### Faster physical typing (0.5.1 / Studio alpha.4)
 With Studio's editor focused, press F2 (or select Find root), then search in Korean or English, Korean initial consonants, a compact code such as ;wa, or k/ followed by two-set Korean physical keys (k/anf for 물). Arrow keys move through candidates, Page Up/Down changes pages, Enter chooses the highlighted root, and Alt+1–9 selects a visible candidate where the browser delivers those shortcuts. Escape cancels without changing the draft. After selection the cursor returns to the editor; type an optional postfix marker immediately. The search dialog does not insert the query itself.
 In Studio and native Keyman, ;wa; writes the bare water root; ;wa;- writes its documented noun. ;3; writes numeral 3. See data/compact-root-codes.json for the complete trial map. Compact codes are optional, based mostly on English mnemonic hints, not Korean vocabulary or established phonetic readings. Normal Hangul candidate search remains available in Studio. Existing shortcuts and all 160 symbol assignments stay unchanged.
+
+### Script geometry and source review (0.5.2 / Studio alpha.5)
+Numerals 3 and 4 are now generated from a single symmetric square construction, with 4 the exact quarter-turn of 3. The official show's floor and Stella's lecture support the topology; the precise proportions are editorial. All text IDs, other outlines and input rules are retained. See [geometry and corpus audit](docs/GEOMETRY_AUDIT.md) and [research queue](data/research-queue.json) for the source findings and remaining linguistic questions.

@@ -3,8 +3,9 @@
     "id": "cry",
     "ko": "울다",
     "en": "Cry",
-    "status": "missing-shape",
-    "source": "L1: user report; distinguish from 소리 내다"
+    "status": "meaning-review",
+    "source": "L1 user report; S1 4.3/4.12/4.13 uses sound-making (소리내다). No separate cry glyph established. Compare possible senses of current speak.",
+    "candidate_root": "speak"
   },
   {
     "id": "method",
@@ -31,8 +32,9 @@
     "id": "house",
     "ko": "집",
     "en": "House",
-    "status": "secondary-reported",
-    "source": "S1 zone 3"
+    "status": "strong-root-derivation-lead",
+    "source": "S1 4.3,4.11 explicitly link noun house to verb reside. Original shape review pending.",
+    "candidate_root": "dwell"
   },
   {
     "id": "scorpion",
@@ -80,15 +82,17 @@
     "id": "live-noun",
     "ko": "삶",
     "en": "Life",
-    "status": "form-review",
-    "source": "S1 zone 2; same root as live, not AND"
+    "status": "lecture-and-secondary-lead",
+    "source": "P1 11:00, S1 4.2; graphical relation to AND does not establish interchangeable semantics.",
+    "candidate_root": "live"
   },
   {
     "id": "death-noun",
     "ko": "죽음",
     "en": "Death",
-    "status": "form-review",
-    "source": "S1 zone 2"
+    "status": "lecture-and-secondary-lead",
+    "source": "P1 11:00, S1 4.2. Compare noun marker and death body.",
+    "candidate_root": "death"
   },
   {
     "id": "see-adjective",
@@ -115,8 +119,8 @@
     "id": "zero",
     "ko": "0",
     "en": "Zero",
-    "status": "conflict-review",
-    "source": "L1 square; S1/S2 empty position in number diagram, S1 corpus reports zero arms"
+    "status": "lecture-visual-supported",
+    "source": "P1 06:30 square demonstration; S1 4.8 empty numeral diagram position. On-show origin of square still unverified. Preserve existing zero."
   },
   {
     "id": "arm-leg",
@@ -136,15 +140,16 @@
     "id": "all-zones",
     "ko": "전 구역",
     "en": "All 15 floor areas and other signs",
-    "status": "primary-audit-needed",
-    "source": "P1/P2; no complete authoritative chart retrieved"
+    "status": "secondary-coverage-complete-primary-pending",
+    "source": "All 15 zones reviewed in S1; see data/corpus-review.json. Floor CDN image unavailable; selected original screenshots and lecture snapshots examined."
   },
   {
     "id": "know-remember",
     "ko": "알다 / 기억하다",
     "en": "Know / remember",
-    "status": "secondary-visual-candidate",
-    "source": "S3 gallery 6 (handwritten note reproduced, editorial gloss); diamond-like root with upper dot; distinguish from existing forms; confirm in P1/P3"
+    "status": "strong-root-derivation-lead",
+    "source": "S1 4.12 explicitly describes noun head -> verb know; S3 gallery 6 later handwritten usage. Distinguish original know from later broadened meanings.",
+    "candidate_root": "head"
   },
   {
     "id": "at-least",
@@ -159,5 +164,127 @@
     "en": "Not / is not",
     "status": "secondary-visual-candidate",
     "source": "S3 gallery 6, plus/cross-like form; distinguish from chart negation, equality and conditional forms"
+  },
+  {
+    "id": "numeral-3-4",
+    "ko": "숫자 3·4",
+    "en": "Numerals 3/4",
+    "status": "normalized-editorial",
+    "source": "P1 06:10–06:30; S3 gallery 2. Exact square construction is editorial; rotational topology corroborated."
+  },
+  {
+    "id": "tail",
+    "ko": "꼬리",
+    "en": "Tail",
+    "status": "secondary-reported",
+    "source": "S1 4.3,4.11; S2 annotated anatomy/scorpion crops."
+  },
+  {
+    "id": "above-adverb",
+    "ko": "위에",
+    "en": "Above / on (adverb)",
+    "status": "marker-review",
+    "source": "S1 4.1 and 4.5; compare current above adjective and directional diamond.",
+    "candidate_root": "above"
+  },
+  {
+    "id": "below-adjective",
+    "ko": "아래의 / 이하",
+    "en": "Below / at most",
+    "status": "shape-and-marker-review",
+    "source": "S1 4.2,4.4; compare bottom-shaded diamond and current bottom entry; do not conflate them."
+  },
+  {
+    "id": "below-adverb",
+    "ko": "아래에",
+    "en": "Below / underneath",
+    "status": "shape-and-marker-review",
+    "source": "S1 4.5,4.12; compare bottom-shaded diamond and current bottom entry."
+  },
+  {
+    "id": "end-adjective",
+    "ko": "끝의 / 최후의",
+    "en": "Final",
+    "status": "form-review",
+    "source": "S1 4.2. Compare existing end adverb.",
+    "candidate_root": "end"
+  },
+  {
+    "id": "human-adjective",
+    "ko": "사람의",
+    "en": "Of a person",
+    "status": "form-review",
+    "source": "S1 4.15. Compare human noun.",
+    "candidate_root": "human"
+  },
+  {
+    "id": "number-adjective",
+    "ko": "숫자의",
+    "en": "Of a number",
+    "status": "form-review",
+    "source": "S1 4.4. Compare number noun.",
+    "candidate_root": "number"
+  },
+  {
+    "id": "table-adjective",
+    "ko": "표의",
+    "en": "Of a table",
+    "status": "form-review",
+    "source": "S1 4.4. Resolve table versus magic-square root first."
+  },
+  {
+    "id": "scorpion-adjective",
+    "ko": "전갈의",
+    "en": "Of a scorpion",
+    "status": "form-review",
+    "source": "S1 4.5,4.11. Resolve scorpion root first.",
+    "candidate_root": "scorpion"
+  },
+  {
+    "id": "hole-adverb",
+    "ko": "구멍에",
+    "en": "In / at a hole",
+    "status": "form-review",
+    "source": "S1 4.12. Compare hole noun.",
+    "candidate_root": "hole"
+  },
+  {
+    "id": "spear-adverb",
+    "ko": "창으로",
+    "en": "With a spear",
+    "status": "form-review",
+    "source": "S1 4.9 explicitly reports adverbial spear; compare separate instrument particle.",
+    "candidate_root": "spear"
+  },
+  {
+    "id": "ordinal-1",
+    "ko": "첫 번째",
+    "en": "First",
+    "status": "endpoint-review",
+    "source": "S3 gallery 5 and S1 4.2; P1 chalkboard sequence, approximately 13:20–13:40.",
+    "candidate_root": "1"
+  },
+  {
+    "id": "ordinal-2",
+    "ko": "두 번째",
+    "en": "Second",
+    "status": "endpoint-review",
+    "source": "S3 gallery 5 and S1 4.2; P1 chalkboard sequence, approximately 13:20–13:40.",
+    "candidate_root": "2"
+  },
+  {
+    "id": "ordinal-6",
+    "ko": "여섯 번째",
+    "en": "Sixth",
+    "status": "endpoint-review",
+    "source": "S3 gallery 5 shows two apparent endpoint dots; S1 4.2,4.8,4.12 and P1 13:20. Do not use a universal single-dot recipe.",
+    "candidate_root": "6"
+  },
+  {
+    "id": "colour-marker-review",
+    "ko": "색 표지 / 품사",
+    "en": "Colour and POS markers",
+    "status": "axis-review",
+    "source": "S1 4.6,4.10,4.12,4.13; P1 08:00 and application segment. Separate upper grammatical marker from lower colour dots."
   }
 ]

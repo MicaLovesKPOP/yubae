@@ -4,7 +4,7 @@ from pathlib import Path
 import json,base64,hashlib,struct,zlib,math,zipfile,io,shutil,sys
 from fontTools.ttLib import TTFont
 P=Path(__file__).resolve().parent;ROOT=P.parent;D=ROOT/'data';N=ROOT/'source'/'native';OUT=ROOT/'dist';SITE=OUT/'site'
-VERSION='0.5.0-alpha.4'
+VERSION='0.5.0-alpha.5'
 SHARE_BASE='https://micaloveskpop.github.io/yubae/'
 def read_json(name):return json.loads((D/name).read_text(encoding='utf-8'))
 def read(name):return (P/name).read_text(encoding='utf-8')

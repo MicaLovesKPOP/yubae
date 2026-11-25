@@ -1,0 +1,349 @@
+{
+  "source": "https://hweek.kr/article/9043 gallery 2, reproduced Netflix floor image",
+  "sha256": "9f6134ce2b9b4ab0d7791b1389e0e893afbf5295e9d2a6796a36bf24a830e075",
+  "size_px": [
+    720,
+    900
+  ],
+  "method": "Hand-localized boxes, FFmpeg RGB24; warm-pixel selection R>=85, R-G>=threshold, R-B>=threshold+9, inclusive bounding boxes. Thresholds 12/16/20/24. No perspective rectification or claim of vector-exact geometry.",
+  "boxes": {
+    "four-row1": [
+      142,
+      544,
+      184,
+      586
+    ],
+    "four-row2": [
+      142,
+      624,
+      184,
+      665
+    ],
+    "human-row1": [
+      230,
+      531,
+      272,
+      585
+    ],
+    "human-row2": [
+      184,
+      610,
+      227,
+      665
+    ],
+    "has-row2": [
+      233,
+      610,
+      267,
+      665
+    ],
+    "can-row1": [
+      275,
+      546,
+      314,
+      588
+    ]
+  },
+  "measurements": {
+    "four-row1": {
+      "12": {
+        "bounds": [
+          148,
+          550,
+          177,
+          579
+        ],
+        "width": 30,
+        "height": 30,
+        "ratio": 1.0,
+        "pixels": 375
+      },
+      "16": {
+        "bounds": [
+          148,
+          550,
+          177,
+          577
+        ],
+        "width": 30,
+        "height": 28,
+        "ratio": 1.071,
+        "pixels": 338
+      },
+      "20": {
+        "bounds": [
+          148,
+          552,
+          175,
+          575
+        ],
+        "width": 28,
+        "height": 24,
+        "ratio": 1.167,
+        "pixels": 255
+      },
+      "24": {
+        "bounds": [
+          150,
+          552,
+          175,
+          575
+        ],
+        "width": 26,
+        "height": 24,
+        "ratio": 1.083,
+        "pixels": 181
+      }
+    },
+    "four-row2": {
+      "12": {
+        "bounds": [
+          148,
+          629,
+          179,
+          659
+        ],
+        "width": 32,
+        "height": 31,
+        "ratio": 1.032,
+        "pixels": 425
+      },
+      "16": {
+        "bounds": [
+          150,
+          630,
+          178,
+          659
+        ],
+        "width": 29,
+        "height": 30,
+        "ratio": 0.967,
+        "pixels": 389
+      },
+      "20": {
+        "bounds": [
+          150,
+          630,
+          178,
+          659
+        ],
+        "width": 29,
+        "height": 30,
+        "ratio": 0.967,
+        "pixels": 323
+      },
+      "24": {
+        "bounds": [
+          150,
+          630,
+          177,
+          659
+        ],
+        "width": 28,
+        "height": 30,
+        "ratio": 0.933,
+        "pixels": 280
+      }
+    },
+    "human-row1": {
+      "12": {
+        "bounds": [
+          232,
+          536,
+          265,
+          579
+        ],
+        "width": 34,
+        "height": 44,
+        "ratio": 0.773,
+        "pixels": 545
+      },
+      "16": {
+        "bounds": [
+          233,
+          536,
+          265,
+          579
+        ],
+        "width": 33,
+        "height": 44,
+        "ratio": 0.75,
+        "pixels": 518
+      },
+      "20": {
+        "bounds": [
+          234,
+          536,
+          263,
+          579
+        ],
+        "width": 30,
+        "height": 44,
+        "ratio": 0.682,
+        "pixels": 487
+      },
+      "24": {
+        "bounds": [
+          234,
+          536,
+          263,
+          579
+        ],
+        "width": 30,
+        "height": 44,
+        "ratio": 0.682,
+        "pixels": 427
+      }
+    },
+    "human-row2": {
+      "12": {
+        "bounds": [
+          189,
+          617,
+          222,
+          659
+        ],
+        "width": 34,
+        "height": 43,
+        "ratio": 0.791,
+        "pixels": 530
+      },
+      "16": {
+        "bounds": [
+          189,
+          617,
+          221,
+          659
+        ],
+        "width": 33,
+        "height": 43,
+        "ratio": 0.767,
+        "pixels": 512
+      },
+      "20": {
+        "bounds": [
+          189,
+          617,
+          221,
+          659
+        ],
+        "width": 33,
+        "height": 43,
+        "ratio": 0.767,
+        "pixels": 476
+      },
+      "24": {
+        "bounds": [
+          189,
+          617,
+          221,
+          657
+        ],
+        "width": 33,
+        "height": 41,
+        "ratio": 0.805,
+        "pixels": 343
+      }
+    },
+    "has-row2": {
+      "12": {
+        "bounds": [
+          239,
+          614,
+          259,
+          659
+        ],
+        "width": 21,
+        "height": 46,
+        "ratio": 0.457,
+        "pixels": 297
+      },
+      "16": {
+        "bounds": [
+          239,
+          615,
+          259,
+          657
+        ],
+        "width": 21,
+        "height": 43,
+        "ratio": 0.488,
+        "pixels": 271
+      },
+      "20": {
+        "bounds": [
+          239,
+          615,
+          259,
+          657
+        ],
+        "width": 21,
+        "height": 43,
+        "ratio": 0.488,
+        "pixels": 257
+      },
+      "24": {
+        "bounds": [
+          239,
+          615,
+          259,
+          655
+        ],
+        "width": 21,
+        "height": 41,
+        "ratio": 0.512,
+        "pixels": 215
+      }
+    },
+    "can-row1": {
+      "12": {
+        "bounds": [
+          280,
+          552,
+          305,
+          583
+        ],
+        "width": 26,
+        "height": 32,
+        "ratio": 0.812,
+        "pixels": 457
+      },
+      "16": {
+        "bounds": [
+          280,
+          552,
+          305,
+          581
+        ],
+        "width": 26,
+        "height": 30,
+        "ratio": 0.867,
+        "pixels": 416
+      },
+      "20": {
+        "bounds": [
+          280,
+          552,
+          305,
+          581
+        ],
+        "width": 26,
+        "height": 30,
+        "ratio": 0.867,
+        "pixels": 371
+      },
+      "24": {
+        "bounds": [
+          280,
+          552,
+          303,
+          579
+        ],
+        "width": 24,
+        "height": 28,
+        "ratio": 0.857,
+        "pixels": 333
+      }
+    }
+  }
+}

@@ -69,7 +69,7 @@
     "id": "3",
     "representative": "3",
     "preview": {
-      "path": "M25 25 L76 49 25 75 M75 23 L26 47 76 72",
+      "path": "M20 21 L80 51 L20 81 M80 21 L20 51 L80 81",
       "fill": ""
     },
     "forms": [
@@ -91,7 +91,7 @@
     "id": "4",
     "representative": "4",
     "preview": {
-      "path": "M20 29 L53 74 M39 28 L72 74 M53 29 L20 74 M72 29 L39 74",
+      "path": "M80 21 L50 81 L20 21 M80 81 L50 21 L20 81",
       "fill": ""
     },
     "forms": [
