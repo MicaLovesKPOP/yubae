@@ -13,7 +13,7 @@ function createModel(data){
  function uniqueRoots(gs){const seen=new Set();return gs.map(g=>{const r=rootByForm.get(g.id);if(!r||seen.has(r.id))return null;seen.add(r.id);return {root:r,match:g}}).filter(Boolean)}
  function rootSearch(q,cat='all',favorites=[]){
   const expanded=cat==='favorites'?Array.from(new Set(favorites.flatMap(id=>(rootByForm.get(id)?.forms||[]).map(f=>f.id)))):favorites;
-  return uniqueRoots(search(q,cat,expanded))
+  return uniqueRoots(search(q,cat,expanded).filter(g=>!g.root_component))
  }
  function rootForm(rootId,kind){const r=rootById.get(rootId);const form=r?.forms.find(f=>f.kind===kind);return form?byId.get(form.id):null}
 
@@ -34,10 +34,10 @@ function createModel(data){
  }
  function convert(text,start,end){
   if(start!==end)return null;
-  const match=text.slice(0,end).match(/\/(?:k\/)?[A-Za-z0-9가-힣-]+;$/u);
+  const match=text.slice(0,end).match(/\/(?:r\/)?(?:k\/)?[A-Za-z0-9가-힣-]+;$/u);
   if(!match||!Object.hasOwn(mn,match[0]))return null;
   const ch=mn[match[0]],i=end-match[0].length;
-  return {text:text.slice(0,i)+ch+text.slice(end),caret:i+ch.length,id:byChar.get(ch)?.id}
+  return {text:text.slice(0,i)+ch+text.slice(end),caret:i+ch.length,id:byChar.get(ch)?.id,rootId:match[0].startsWith('/r/')?rootByForm.get(byChar.get(ch)?.id)?.id:null}
  }
  function selected(text,start,end){
   const raw=start===end?text.slice(Math.max(0,start-1),start):text.slice(start,end);
@@ -45,7 +45,7 @@ function createModel(data){
   return glyph?{glyph,start:start===end?start-1:start,end}:null;
  }
  function changeForm(text,start,end,modifier){
-  const s=selected(text,start,end),target=s&&byId.get(forms[s.glyph.id]?.[modifier]);
+  const s=selected(text,start,end),target=s&&rootForm(rootByForm.get(s.glyph.id)?.id,modifier);
   if(!target)return null;
   return {text:text.slice(0,s.start)+target.char+text.slice(s.end),caret:s.start+target.char.length,id:target.id};
  }

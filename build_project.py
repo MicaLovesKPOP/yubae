@@ -12,12 +12,14 @@ for filename in ('exile.kmn','exile.kps'):
  if os.name=='nt':run('cmd.exe','/d','/c',str(kmc),'build',B/filename)
  else:run(kmc,'build',B/filename)
 run('node',S/'test_compiled.cjs')
-lex=json.loads((D/'lexicon.json').read_text(encoding='utf-8'))
+lex=json.loads((D/'text-registry.json').read_text(encoding='utf-8'))
 baseline=json.loads((D/'encoding-v1.json').read_text(encoding='utf-8'))
 current={g['id']:g['cp'] for g in lex}
 assert len(set(current.values()))==len(current)==len(lex)
 assert all(current.get(id)==cp for id,cp in baseline.items()),'Breaking encoding change'
 assert len(baseline)==93
+assert current=={**baseline,**json.loads((D/'root-encoding-v1.json').read_text(encoding='utf-8'))}
+assert len(current)==160
 with zipfile.ZipFile(B/'exile.kmp') as z:
  assert z.testzip() is None
  meta=json.loads(z.read('kmp.json'))

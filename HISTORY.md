@@ -10,3 +10,5 @@
 - 0.3.0: first Keyman package.
 - 0.2.0: 93 handwritten-chart reconstructions.
 - 0.1.0: gloss composer.
+
+- Native 0.5.0 / Studio 0.5.0-alpha.3: writable bare roots (67 added without changing the 93 legacy encodings/outlines), shared font, optional postfix modifiers, persistent native modifier row, 610 root aliases, portable-message compatibility, browser and compiled-rule regression checks.

@@ -4,25 +4,25 @@ from pathlib import Path
 import json,base64,hashlib,struct,zlib,math,zipfile,io,shutil,sys
 from fontTools.ttLib import TTFont
 P=Path(__file__).resolve().parent;ROOT=P.parent;D=ROOT/'data';N=ROOT/'source'/'native';OUT=ROOT/'dist';SITE=OUT/'site'
-VERSION='0.5.0-alpha.2'
+VERSION='0.5.0-alpha.3'
 SHARE_BASE='https://micaloveskpop.github.io/yubae/'
 def read_json(name):return json.loads((D/name).read_text(encoding='utf-8'))
 def read(name):return (P/name).read_text(encoding='utf-8')
-lex=read_json('lexicon.json');mn=read_json('mnemonics.json');comps=read_json('composition.json');baseline=read_json('encoding-v1.json')
+lex=read_json('text-registry.json');mn={**read_json('mnemonics.json'),**read_json('root-mnemonics.json')};comps=read_json('composition.json');baseline={**read_json('encoding-v1.json'),**read_json('root-encoding-v1.json')}
 assert {g['id']:g['cp'] for g in lex}==baseline
 assert all(g['char']==chr(g['cp']) for g in lex)
 sys.path.insert(0,str(ROOT/'source'))
-from root_registry import make_registry
-roots=make_registry()
+from writable_roots import load
+_,roots=load()
 assert {x['id'] for r in roots for x in r['forms']}==set(baseline)
-(D/'root-registry.json').write_text(json.dumps(roots,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+assert roots==read_json('writable-roots.json')
 # Use the exact font packaged in Keyman, not a separate interpretation.
 with zipfile.ZipFile(N/'exile.kmp') as z:
  assert z.testzip() is None
  meta=json.loads(z.read('kmp.json'))
  font=z.read(meta['keyboards'][0]['oskFont'])
 f=TTFont(io.BytesIO(font));assert set(f.getBestCmap())=={32,*baseline.values()}
-data={'version':VERSION,'encoding':'yubae-private-v1','shareBase':SHARE_BASE,'lexicon':lex,'mnemonics':mn,'composition':comps,'roots':roots}
+data={'version':VERSION,'encoding':'yubae-private-v2','shareBase':SHARE_BASE,'lexicon':lex,'mnemonics':mn,'composition':comps,'roots':roots,'modifierKeys':read_json('modifier-keys.json')}
 fontcss="@font-face{font-family:Yubae;src:url(data:font/ttf;base64,"+base64.b64encode(font).decode('ascii')+") format('truetype');font-weight:400;font-style:normal;font-display:block;}"
 template=read('index.template.html');css=read('studio.css');model=read('model.js');app=read('studio.js')
 assert '</script' not in model.lower()+app.lower()

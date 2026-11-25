@@ -7,7 +7,8 @@ from fontTools.fontBuilder import FontBuilder
 from shapely.geometry import LineString, Polygon
 from shapely.geometry.polygon import orient
 from shapely.ops import unary_union
-from glyphs import G
+from writable_roots import load
+FONT_G,_=load()
 P=Path(__file__).resolve().parent; O=P.parent
 class Flatten(BasePen):
  def __init__(self): super().__init__(None); self.paths=[]; self.cur=[]
@@ -58,11 +59,11 @@ def ttglyph(geometry):
    pen.moveTo(coords[0]);[pen.lineTo(pt) for pt in coords[1:]];pen.closePath()
  return pen.glyph()
 font=FontBuilder(1000,isTTF=True)
-names=['.notdef','space']+[f'exile{g["cp"]:04X}' for g in G]
+names=['.notdef','space']+[f'exile{g["cp"]:04X}' for g in FONT_G]
 font.setupGlyphOrder(names)
-font.setupCharacterMap({32:'space',**{g['cp']:f'exile{g["cp"]:04X}' for g in G}})
+font.setupCharacterMap({32:'space',**{g['cp']:f'exile{g["cp"]:04X}' for g in FONT_G}})
 glyphs={'.notdef':ttglyph(LineString([(20,20),(80,20),(80,80),(20,80),(20,20)]).buffer(1.5)), 'space':TTGlyphPen(None).glyph()}
-for g in G:glyphs[f'exile{g["cp"]:04X}']=ttglyph(outline(g))
+for g in FONT_G:glyphs[f'exile{g["cp"]:04X}']=ttglyph(outline(g))
 font.setupGlyf(glyphs)
 font.setupHorizontalMetrics({k:(420 if k=='space' else 960,0 if k=='space' else (glyphs[k].xMin if hasattr(glyphs[k],'xMin') else 0)) for k in names})
 font.setupHorizontalHeader(ascent=900,descent=-180)
