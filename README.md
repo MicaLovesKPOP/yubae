@@ -5,9 +5,9 @@
 
 [한국어](README.ko.md) · [Project charter](docs/CHARTER.md) · [Research and source register](docs/RESEARCH.md) · [Encoding and composition](docs/ENCODING.md) · [Roadmap](docs/ROADMAP.md) · [Distribution and collaboration](docs/DISTRIBUTION.md)
 
-## Status — private alpha, 2026-11-25
+## Status — public alpha, 2026-11-25
 
-The 93 glyphs are vector reconstructions of a supplied handwritten chart, not an official complete character set. All current meanings and shapes remain subject to source review. Season reference: The Devil's Plan: Dead Again (season 3). This project is independent of the programme, Netflix, its producers and Stella Jang. No endorsement or licence has been obtained.
+The 93 glyphs are vector reconstructions of a supplied handwritten chart, not an official complete character set. All current meanings and shapes remain subject to source review. Season reference: The Devil's Plan: Dead Again (season 3). This project is independent of the programme, Netflix, its producers and Stella Jang. No endorsement or permission for the underlying script has been obtained. See [rights and attribution](RIGHTS.md).
 
 - Keyman package for Windows, macOS, Linux, Android and iOS/iPadOS.
 - 40 touch layers: glyph/learning labels × Korean/English navigation, phone/tablet.
@@ -16,7 +16,7 @@ The 93 glyphs are vector reconstructions of a supplied handwritten chart, not an
 - Android input and display verified with v0.3.2; v0.4.0 is compiled and adapter-tested but awaits device testing.
 - Browser composer and Chromebook extension are companion targets; browser is the universal display/share fallback.
 
-## Install the private alpha
+## Install the public alpha
 
 Download the .kmp from Releases, then install it in Keyman. The package includes the font. Use Keyman's editor on mobile; ordinary apps may not render these private-use characters. Desktop: select Exile Chart in a font-aware editor.
 
@@ -32,7 +32,7 @@ python -m pip install -r requirements.txt
 npm ci
 python build_project.py
 ```
-Build artifacts are in dist/. Generated data and character mapping are reviewed with code. Do not publish unreviewed glyphs. See the charter for public release gates.
+Build artifacts are in dist/. Generated data and character mapping are reviewed with code. Clearly identify provisional glyphs; do not claim authenticity for unreviewed forms. See the charter and RIGHTS.md for release gates.
 
 ## Repository structure
 
@@ -45,4 +45,4 @@ dist/ — generated packages (ignored by Git).
 
 ## Rights
 
-Private development only pending provenance and rights review. Proposed licensing: MIT for original software; SIL OFL 1.1 for original font work only if the relevant rights allow; permissive data licence after review. No rights in the original programme, script, names or artwork are asserted. Do not upload screenshots, video extracts, logos, or third-party art to public releases without permission.
+Public non-commercial fan alpha, with original software available under the scoped MIT licence. Rights to the underlying script and reconstructed glyph artwork are unresolved and not granted by that licence. No official affiliation. See [RIGHTS.md](RIGHTS.md) for attribution, publication rationale, licence scope and correction/removal requests. No copied programme footage, source chart images, official fonts or logos.

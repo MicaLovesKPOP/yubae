@@ -18,13 +18,13 @@ Make Yubae usable in ordinary life, as a living writing system and language, not
 - No forced replacement of users' normal keyboard or device fonts; no rooting or jailbreaking.
 - Do not promise third-party mobile apps render PUA text. Share images or compatible links as primary interoperable options.
 - No Unicode submission until a stable corpus, user community, compatible encoding migration plan and evidence justify it.
-- No public publication of unlicensed material or outreach in the owner's name without approval.
+- Public fan alpha is authorized under the scoped rights policy in RIGHTS.md; no copied programme footage, original chart imagery, logos or official assets. Do not assert that silence constitutes permission. External outreach in the owner's name still requires approval.
 
 ## Evidence status vs collection
 Keep two orthogonal fields: collection = original / later-attested / community / unknown; verification = candidate / independently corroborated / primary-confirmed / disputed / rejected. The 93 chart entries are currently original candidates; the chart is not an official source. A form may be attested without its meaning being settled.
 
 ## Decisions and governance
-The project owner controls publication, licensing, budgets and external representation. Contributors may propose changes; a maintainer and preferably a native Korean reviewer review evidence and compatibility. Invite Stella Jang and actual script creators to advise if they want to, without assuming any role or obligation. Document disagreements and credit all voluntary contributors. If an official character chart or standardized encoding emerges, adapt compatibly rather than insisting on ours.
+The project owner controls publication policy, licensing, budgets and external representation. Public alpha releases may proceed under the standing 2026-11-25 policy in RIGHTS.md; pause affected material if a credible rights concern arises. Contributors may propose changes; a maintainer and preferably a native Korean reviewer review evidence and compatibility. Invite Stella Jang and actual script creators to advise if they want to, without assuming any role or obligation. Document disagreements and credit all voluntary contributors. If an official character chart or standardized encoding emerges, adapt compatibly rather than insisting on ours.
 
 ## Release bar
 A change to encoding must never silently reinterpret old text. All generators consume the same lexicon; compare previous codepoints and shapes, verify rendering, input rules, accessible UI, and actual-device acceptance per supported platform. A compile is not device verification. Alpha and stable releases are separate; no automatic promotion. Daily usability outranks cosmetic polish. New unverified forms remain excluded from the default canonical keyboard until reviewed.
