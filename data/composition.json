@@ -1,0 +1,82 @@
+{
+  "food": {
+    "noun": "food",
+    "verb": "eat"
+  },
+  "eat": {
+    "noun": "food",
+    "verb": "eat"
+  },
+  "kill": {
+    "verb": "kill",
+    "adjective": "dead"
+  },
+  "dead": {
+    "verb": "kill",
+    "adjective": "dead"
+  },
+  "sum": {
+    "noun": "sum",
+    "verb": "add"
+  },
+  "add": {
+    "noun": "sum",
+    "verb": "add"
+  },
+  "god": {
+    "noun": "god",
+    "adjective": "divine"
+  },
+  "divine": {
+    "noun": "god",
+    "adjective": "divine"
+  },
+  "shadow": {
+    "noun": "shadow",
+    "verb": "cover"
+  },
+  "cover": {
+    "noun": "shadow",
+    "verb": "cover"
+  },
+  "ocean": {
+    "noun": "ocean",
+    "colour": "blue"
+  },
+  "blue": {
+    "noun": "ocean",
+    "colour": "blue"
+  },
+  "fire": {
+    "noun": "fire",
+    "colour": "red"
+  },
+  "red": {
+    "noun": "fire",
+    "colour": "red"
+  },
+  "salt": {
+    "noun": "salt",
+    "colour": "white"
+  },
+  "white": {
+    "noun": "salt",
+    "colour": "white"
+  },
+  "glass": {
+    "noun": "glass",
+    "colour": "transparent"
+  },
+  "transparent": {
+    "noun": "glass",
+    "colour": "transparent"
+  },
+  "charcoal": {
+    "noun": "charcoal",
+    "colour": "black"
+  },
+  "black": {
+    "noun": "charcoal",
+    "colour": "black"
+  }
+}

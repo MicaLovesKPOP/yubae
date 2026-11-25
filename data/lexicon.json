@@ -1,0 +1,2411 @@
+[
+  {
+    "id": "0",
+    "en": "0",
+    "ko": "0",
+    "category": "Numbers",
+    "aliases": [
+      "zero"
+    ],
+    "group": "0",
+    "cp": 57344,
+    "char": "",
+    "status": "handwritten-chart reconstruction",
+    "ko_key": "0",
+    "ko_aliases": [
+      "0",
+      "영",
+      "공",
+      "제로"
+    ],
+    "note_ko": "",
+    "provenance": {
+      "collection": "original-candidate",
+      "glyph_evidence": "user-supplied-chart",
+      "meaning_evidence": "provisional-chart-gloss",
+      "verification": "needs-primary-review"
+    },
+    "marker": "none"
+  },
+  {
+    "id": "1",
+    "en": "1",
+    "ko": "1",
+    "category": "Numbers",
+    "aliases": [
+      "one"
+    ],
+    "group": "1",
+    "cp": 57345,
+    "char": "",
+    "status": "handwritten-chart reconstruction",
+    "ko_key": "1",
+    "ko_aliases": [
+      "1",
+      "일",
+      "하나"
+    ],
+    "note_ko": "",
+    "provenance": {
+      "collection": "original-candidate",
+      "glyph_evidence": "user-supplied-chart",
+      "meaning_evidence": "provisional-chart-gloss",
+      "verification": "needs-primary-review"
+    },
+    "marker": "none"
+  },
+  {
+    "id": "2",
+    "en": "2",
+    "ko": "2",
+    "category": "Numbers",
+    "aliases": [
+      "two"
+    ],
+    "group": "2",
+    "cp": 57346,
+    "char": "",
+    "status": "handwritten-chart reconstruction",
+    "ko_key": "2",
+    "ko_aliases": [
+      "2",
+      "이",
+      "둘"
+    ],
+    "note_ko": "",
+    "provenance": {
+      "collection": "original-candidate",
+      "glyph_evidence": "user-supplied-chart",
+      "meaning_evidence": "provisional-chart-gloss",
+      "verification": "needs-primary-review"
+    },
+    "marker": "none"
+  },
+  {
+    "id": "3",
+    "en": "3",
+    "ko": "3",
+    "category": "Numbers",
+    "aliases": [
+      "three"
+    ],
+    "group": "3",
+    "cp": 57347,
+    "char": "",
+    "status": "handwritten-chart reconstruction",
+    "ko_key": "3",
+    "ko_aliases": [
+      "3",
+      "삼",
+      "셋"
+    ],
+    "note_ko": "",
+    "provenance": {
+      "collection": "original-candidate",
+      "glyph_evidence": "user-supplied-chart",
+      "meaning_evidence": "provisional-chart-gloss",
+      "verification": "needs-primary-review"
+    },
+    "marker": "none"
+  },
+  {
+    "id": "4",
+    "en": "4",
+    "ko": "4",
+    "category": "Numbers",
+    "aliases": [
+      "four"
+    ],
+    "group": "4",
+    "cp": 57348,
+    "char": "",
+    "status": "handwritten-chart reconstruction",
+    "ko_key": "4",
+    "ko_aliases": [
+      "4",
+      "사",
+      "넷"
+    ],
+    "note_ko": "",
+    "provenance": {
+      "collection": "original-candidate",
+      "glyph_evidence": "user-supplied-chart",
+      "meaning_evidence": "provisional-chart-gloss",
+      "verification": "needs-primary-review"
+    },
+    "marker": "none"
+  },
+  {
+    "id": "5",
+    "en": "5",
+    "ko": "5",
+    "category": "Numbers",
+    "aliases": [
+      "five"
+    ],
+    "group": "5",
+    "cp": 57349,
+    "char": "",
+    "status": "handwritten-chart reconstruction",
+    "ko_key": "5",
+    "ko_aliases": [
+      "5",
+      "오",
+      "다섯"
+    ],
+    "note_ko": "",
+    "provenance": {
+      "collection": "original-candidate",
+      "glyph_evidence": "user-supplied-chart",
+      "meaning_evidence": "provisional-chart-gloss",
+      "verification": "needs-primary-review"
+    },
+    "marker": "none"
+  },
+  {
+    "id": "6",
+    "en": "6",
+    "ko": "6",
+    "category": "Numbers",
+    "aliases": [
+      "six"
+    ],
+    "group": "6",
+    "cp": 57350,
+    "char": "",
+    "status": "handwritten-chart reconstruction",
+    "ko_key": "6",
+    "ko_aliases": [
+      "6",
+      "육",
+      "여섯"
+    ],
+    "note_ko": "",
+    "provenance": {
+      "collection": "original-candidate",
+      "glyph_evidence": "user-supplied-chart",
+      "meaning_evidence": "provisional-chart-gloss",
+      "verification": "needs-primary-review"
+    },
+    "marker": "none"
+  },
+  {
+    "id": "7",
+    "en": "7",
+    "ko": "7",
+    "category": "Numbers",
+    "aliases": [
+      "seven"
+    ],
+    "group": "7",
+    "cp": 57351,
+    "char": "",
+    "status": "handwritten-chart reconstruction",
+    "ko_key": "7",
+    "ko_aliases": [
+      "7",
+      "칠",
+      "일곱"
+    ],
+    "note_ko": "",
+    "provenance": {
+      "collection": "original-candidate",
+      "glyph_evidence": "user-supplied-chart",
+      "meaning_evidence": "provisional-chart-gloss",
+      "verification": "needs-primary-review"
+    },
+    "marker": "none"
+  },
+  {
+    "id": "8",
+    "en": "8",
+    "ko": "8",
+    "category": "Numbers",
+    "aliases": [
+      "eight"
+    ],
+    "group": "8",
+    "cp": 57352,
+    "char": "",
+    "status": "handwritten-chart reconstruction",
+    "ko_key": "8",
+    "ko_aliases": [
+      "8",
+      "팔",
+      "여덟"
+    ],
+    "note_ko": "",
+    "provenance": {
+      "collection": "original-candidate",
+      "glyph_evidence": "user-supplied-chart",
+      "meaning_evidence": "provisional-chart-gloss",
+      "verification": "needs-primary-review"
+    },
+    "marker": "none"
+  },
+  {
+    "id": "9",
+    "en": "9",
+    "ko": "9",
+    "category": "Numbers",
+    "aliases": [
+      "nine"
+    ],
+    "group": "9",
+    "cp": 57353,
+    "char": "",
+    "status": "handwritten-chart reconstruction",
+    "ko_key": "9",
+    "ko_aliases": [
+      "9",
+      "구",
+      "아홉"
+    ],
+    "note_ko": "",
+    "provenance": {
+      "collection": "original-candidate",
+      "glyph_evidence": "user-supplied-chart",
+      "meaning_evidence": "provisional-chart-gloss",
+      "verification": "needs-primary-review"
+    },
+    "marker": "none"
+  },
+  {
+    "id": "human",
+    "en": "Human",
+    "ko": "사람",
+    "category": "People",
+    "aliases": [
+      "person",
+      "people"
+    ],
+    "group": "human",
+    "cp": 57354,
+    "char": "",
+    "status": "handwritten-chart reconstruction",
+    "ko_key": "사람",
+    "ko_aliases": [
+      "사람",
+      "인간",
+      "인물"
+    ],
+    "note_ko": "",
+    "provenance": {
+      "collection": "original-candidate",
+      "glyph_evidence": "user-supplied-chart",
+      "meaning_evidence": "provisional-chart-gloss",
+      "verification": "needs-primary-review"
+    },
+    "marker": "noun"
+  },
+  {
+    "id": "head",
+    "en": "Head",
+    "ko": "머리",
+    "category": "People",
+    "aliases": [],
+    "group": "head",
+    "cp": 57355,
+    "char": "",
+    "status": "handwritten-chart reconstruction",
+    "ko_key": "머리",
+    "ko_aliases": [
+      "머리",
+      "두부"
+    ],
+    "note_ko": "",
+    "provenance": {
+      "collection": "original-candidate",
+      "glyph_evidence": "user-supplied-chart",
+      "meaning_evidence": "provisional-chart-gloss",
+      "verification": "needs-primary-review"
+    },
+    "marker": "noun"
+  },
+  {
+    "id": "has",
+    "en": "Exist / have",
+    "ko": "있다",
+    "category": "Actions",
+    "aliases": [
+      "exist",
+      "have"
+    ],
+    "group": "has",
+    "cp": 57356,
+    "char": "",
+    "status": "handwritten-chart reconstruction",
+    "ko_key": "있다",
+    "ko_aliases": [
+      "있다",
+      "가지다",
+      "존재하다",
+      "소유하다"
+    ],
+    "en_legacy": "Has",
+    "note_ko": "",
+    "provenance": {
+      "collection": "original-candidate",
+      "glyph_evidence": "user-supplied-chart",
+      "meaning_evidence": "provisional-chart-gloss",
+      "verification": "needs-primary-review"
+    },
+    "marker": "verb"
+  },
+  {
+    "id": "hole",
+    "en": "Hole",
+    "ko": "구멍",
+    "category": "World",
+    "aliases": [],
+    "group": "hole",
+    "cp": 57357,
+    "char": "",
+    "status": "handwritten-chart reconstruction",
+    "ko_key": "구멍",
+    "ko_aliases": [
+      "구멍",
+      "공",
+      "공간"
+    ],
+    "note_ko": "",
+    "provenance": {
+      "collection": "original-candidate",
+      "glyph_evidence": "user-supplied-chart",
+      "meaning_evidence": "provisional-chart-gloss",
+      "verification": "needs-primary-review"
+    },
+    "marker": "noun"
+  },
+  {
+    "id": "eat",
+    "en": "Eat / drink",
+    "ko": "먹다 / 마시다",
+    "category": "Actions",
+    "aliases": [
+      "eat",
+      "drink"
+    ],
+    "group": "meal",
+    "cp": 57358,
+    "char": "",
+    "status": "handwritten-chart reconstruction",
+    "ko_key": "먹다",
+    "ko_aliases": [
+      "먹다",
+      "먹다 / 마시다",
+      "마시다",
+      "먹기",
+      "마시기"
+    ],
+    "note_ko": "",
+    "provenance": {
+      "collection": "original-candidate",
+      "glyph_evidence": "user-supplied-chart",
+      "meaning_evidence": "provisional-chart-gloss",
+      "verification": "needs-primary-review"
+    },
+    "marker": "verb"
+  },
+  {
+    "id": "food",
+    "en": "Food",
+    "ko": "음식",
+    "category": "World",
+    "aliases": [],
+    "group": "meal",
+    "cp": 57359,
+    "char": "",
+    "status": "handwritten-chart reconstruction",
+    "ko_key": "음식",
+    "ko_aliases": [
+      "음식",
+      "먹이",
+      "먹을것",
+      "식량"
+    ],
+    "note_ko": "",
+    "provenance": {
+      "collection": "original-candidate",
+      "glyph_evidence": "user-supplied-chart",
+      "meaning_evidence": "provisional-chart-gloss",
+      "verification": "needs-primary-review"
+    },
+    "marker": "noun"
+  },
+  {
+    "id": "bottom",
+    "en": "Bottom",
+    "ko": "아래",
+    "category": "Space",
+    "aliases": [
+      "below",
+      "lower"
+    ],
+    "group": "bottom",
+    "cp": 57360,
+    "char": "",
+    "status": "handwritten-chart reconstruction",
+    "ko_key": "아래",
+    "ko_aliases": [
+      "아래",
+      "밑",
+      "하단",
+      "이하"
+    ],
+    "note_ko": "",
+    "provenance": {
+      "collection": "original-candidate",
+      "glyph_evidence": "user-supplied-chart",
+      "meaning_evidence": "provisional-chart-gloss",
+      "verification": "needs-primary-review"
+    },
+    "marker": "adjective"
+  },
+  {
+    "id": "or",
+    "en": "Or",
+    "ko": "또는",
+    "category": "Grammar",
+    "aliases": [],
+    "group": "or",
+    "cp": 57361,
+    "char": "",
+    "status": "handwritten-chart reconstruction",
+    "ko_key": "또는",
+    "ko_aliases": [
+      "또는",
+      "혹은",
+      "아니면"
+    ],
+    "note_ko": "",
+    "provenance": {
+      "collection": "original-candidate",
+      "glyph_evidence": "user-supplied-chart",
+      "meaning_evidence": "provisional-chart-gloss",
+      "verification": "needs-primary-review"
+    },
+    "marker": "none"
+  },
+  {
+    "id": "and",
+    "en": "And",
+    "ko": "그리고",
+    "category": "Grammar",
+    "aliases": [],
+    "group": "and",
+    "cp": 57362,
+    "char": "",
+    "status": "handwritten-chart reconstruction",
+    "ko_key": "그리고",
+    "ko_aliases": [
+      "그리고",
+      "및",
+      "와",
+      "과"
+    ],
+    "note_ko": "",
+    "provenance": {
+      "collection": "original-candidate",
+      "glyph_evidence": "user-supplied-chart",
+      "meaning_evidence": "provisional-chart-gloss",
+      "verification": "needs-primary-review"
+    },
+    "marker": "none"
+  },
+  {
+    "id": "speak",
+    "en": "Make a sound / speak",
+    "ko": "말하다",
+    "category": "Actions",
+    "aliases": [
+      "sound",
+      "talk"
+    ],
+    "group": "speak",
+    "cp": 57363,
+    "char": "",
+    "status": "handwritten-chart reconstruction",
+    "ko_key": "소리내다",
+    "ko_aliases": [
+      "소리내다",
+      "말하다",
+      "소리 내다",
+      "울음소리",
+      "발성하다"
+    ],
+    "en_legacy": "Speak",
+    "note_ko": "방송 관련 해독 자료에서 소리 내다의 의미가 제시됨. 말하다로 한정하지 않음.",
+    "provenance": {
+      "collection": "original-candidate",
+      "glyph_evidence": "user-supplied-chart",
+      "meaning_evidence": "provisional-chart-gloss",
+      "verification": "needs-primary-review"
+    },
+    "marker": "verb"
+  },
+  {
+    "id": "above",
+    "en": "Above / on",
+    "ko": "위에",
+    "category": "Space",
+    "aliases": [
+      "above",
+      "on",
+      "upper"
+    ],
+    "group": "above",
+    "cp": 57364,
+    "char": "",
+    "status": "handwritten-chart reconstruction",
+    "ko_key": "위",
+    "ko_aliases": [
+      "위",
+      "위에",
+      "위쪽",
+      "상단"
+    ],
+    "note_ko": "",
+    "provenance": {
+      "collection": "original-candidate",
+      "glyph_evidence": "user-supplied-chart",
+      "meaning_evidence": "provisional-chart-gloss",
+      "verification": "needs-primary-review"
+    },
+    "marker": "adjective"
+  },
+  {
+    "id": "see",
+    "en": "See",
+    "ko": "보다",
+    "category": "Actions",
+    "aliases": [
+      "look"
+    ],
+    "group": "see",
+    "cp": 57365,
+    "char": "",
+    "status": "handwritten-chart reconstruction",
+    "ko_key": "보다",
+    "ko_aliases": [
+      "보다",
+      "보이다",
+      "바라보다"
+    ],
+    "note_ko": "",
+    "provenance": {
+      "collection": "original-candidate",
+      "glyph_evidence": "user-supplied-chart",
+      "meaning_evidence": "provisional-chart-gloss",
+      "verification": "needs-primary-review"
+    },
+    "marker": "verb"
+  },
+  {
+    "id": "left",
+    "en": "Left",
+    "ko": "왼쪽",
+    "category": "Space",
+    "aliases": [],
+    "group": "left",
+    "cp": 57366,
+    "char": "",
+    "status": "handwritten-chart reconstruction",
+    "ko_key": "왼쪽",
+    "ko_aliases": [
+      "왼쪽",
+      "좌측",
+      "좌"
+    ],
+    "note_ko": "",
+    "provenance": {
+      "collection": "original-candidate",
+      "glyph_evidence": "user-supplied-chart",
+      "meaning_evidence": "provisional-chart-gloss",
+      "verification": "needs-primary-review"
+    },
+    "marker": "adjective"
+  },
+  {
+    "id": "right",
+    "en": "Right",
+    "ko": "오른쪽",
+    "category": "Space",
+    "aliases": [],
+    "group": "right",
+    "cp": 57367,
+    "char": "",
+    "status": "handwritten-chart reconstruction",
+    "ko_key": "오른쪽",
+    "ko_aliases": [
+      "오른쪽",
+      "우측",
+      "우"
+    ],
+    "note_ko": "",
+    "provenance": {
+      "collection": "original-candidate",
+      "glyph_evidence": "user-supplied-chart",
+      "meaning_evidence": "provisional-chart-gloss",
+      "verification": "needs-primary-review"
+    },
+    "marker": "adjective"
+  },
+  {
+    "id": "hear",
+    "en": "Hear",
+    "ko": "듣다",
+    "category": "Actions",
+    "aliases": [
+      "listen"
+    ],
+    "group": "hear",
+    "cp": 57368,
+    "char": "",
+    "status": "handwritten-chart reconstruction",
+    "ko_key": "듣다",
+    "ko_aliases": [
+      "듣다",
+      "들리다",
+      "청취하다"
+    ],
+    "note_ko": "",
+    "provenance": {
+      "collection": "original-candidate",
+      "glyph_evidence": "user-supplied-chart",
+      "meaning_evidence": "provisional-chart-gloss",
+      "verification": "needs-primary-review"
+    },
+    "marker": "verb"
+  },
+  {
+    "id": "small",
+    "en": "Small",
+    "ko": "작은",
+    "category": "Properties",
+    "aliases": [],
+    "group": "small",
+    "cp": 57369,
+    "char": "",
+    "status": "handwritten-chart reconstruction",
+    "ko_key": "작은",
+    "ko_aliases": [
+      "작은",
+      "작다",
+      "작음"
+    ],
+    "note_ko": "",
+    "provenance": {
+      "collection": "original-candidate",
+      "glyph_evidence": "user-supplied-chart",
+      "meaning_evidence": "provisional-chart-gloss",
+      "verification": "needs-primary-review"
+    },
+    "marker": "adjective"
+  },
+  {
+    "id": "plural",
+    "en": "Plural",
+    "ko": "복수",
+    "category": "Grammar",
+    "aliases": [
+      "many",
+      "more than one"
+    ],
+    "group": "plural",
+    "cp": 57370,
+    "char": "",
+    "status": "handwritten-chart reconstruction",
+    "ko_key": "복수",
+    "ko_aliases": [
+      "복수",
+      "들",
+      "여럿"
+    ],
+    "note_ko": "",
+    "provenance": {
+      "collection": "original-candidate",
+      "glyph_evidence": "user-supplied-chart",
+      "meaning_evidence": "provisional-chart-gloss",
+      "verification": "needs-primary-review"
+    },
+    "marker": "none"
+  },
+  {
+    "id": "kill",
+    "en": "Die / kill",
+    "ko": "죽이다",
+    "category": "Actions",
+    "aliases": [
+      "die",
+      "death"
+    ],
+    "group": "death",
+    "cp": 57371,
+    "char": "",
+    "status": "handwritten-chart reconstruction",
+    "ko_key": "죽다·죽이다",
+    "ko_aliases": [
+      "죽다·죽이다",
+      "죽이다",
+      "죽다"
+    ],
+    "en_legacy": "Kill",
+    "note_ko": "주어만 있으면 죽다, 목적어가 있으면 죽이다로 풀이되는 용례가 보고됨.",
+    "provenance": {
+      "collection": "original-candidate",
+      "glyph_evidence": "user-supplied-chart",
+      "meaning_evidence": "provisional-chart-gloss",
+      "verification": "needs-primary-review"
+    },
+    "marker": "verb"
+  },
+  {
+    "id": "dead",
+    "en": "Dead",
+    "ko": "죽은",
+    "category": "Properties",
+    "aliases": [],
+    "group": "death",
+    "cp": 57372,
+    "char": "",
+    "status": "handwritten-chart reconstruction",
+    "ko_key": "죽은",
+    "ko_aliases": [
+      "죽은",
+      "죽은상태"
+    ],
+    "note_ko": "",
+    "provenance": {
+      "collection": "original-candidate",
+      "glyph_evidence": "user-supplied-chart",
+      "meaning_evidence": "provisional-chart-gloss",
+      "verification": "needs-primary-review"
+    },
+    "marker": "adjective"
+  },
+  {
+    "id": "big",
+    "en": "Big",
+    "ko": "큰",
+    "category": "Properties",
+    "aliases": [
+      "large"
+    ],
+    "group": "big",
+    "cp": 57373,
+    "char": "",
+    "status": "handwritten-chart reconstruction",
+    "ko_key": "큰",
+    "ko_aliases": [
+      "큰",
+      "크다",
+      "커다란"
+    ],
+    "note_ko": "",
+    "provenance": {
+      "collection": "original-candidate",
+      "glyph_evidence": "user-supplied-chart",
+      "meaning_evidence": "provisional-chart-gloss",
+      "verification": "needs-primary-review"
+    },
+    "marker": "adjective"
+  },
+  {
+    "id": "exists-not",
+    "en": "Exists not",
+    "ko": "없다",
+    "category": "Actions",
+    "aliases": [
+      "absent",
+      "not exist",
+      "not have"
+    ],
+    "group": "exists-not",
+    "cp": 57374,
+    "char": "",
+    "status": "handwritten-chart reconstruction",
+    "ko_key": "없다",
+    "ko_aliases": [
+      "없다",
+      "존재하지않다",
+      "가지고있지않다"
+    ],
+    "note_ko": "",
+    "provenance": {
+      "collection": "original-candidate",
+      "glyph_evidence": "user-supplied-chart",
+      "meaning_evidence": "provisional-chart-gloss",
+      "verification": "needs-primary-review"
+    },
+    "marker": "verb"
+  },
+  {
+    "id": "bird",
+    "en": "Bird",
+    "ko": "새",
+    "category": "Nature",
+    "aliases": [],
+    "group": "bird",
+    "cp": 57375,
+    "char": "",
+    "status": "handwritten-chart reconstruction",
+    "ko_key": "새",
+    "ko_aliases": [
+      "새",
+      "조류"
+    ],
+    "note_ko": "",
+    "provenance": {
+      "collection": "original-candidate",
+      "glyph_evidence": "user-supplied-chart",
+      "meaning_evidence": "provisional-chart-gloss",
+      "verification": "needs-primary-review"
+    },
+    "marker": "noun"
+  },
+  {
+    "id": "can",
+    "en": "Can",
+    "ko": "할 수 있다",
+    "category": "Grammar",
+    "aliases": [
+      "able"
+    ],
+    "group": "can",
+    "cp": 57376,
+    "char": "",
+    "status": "handwritten-chart reconstruction",
+    "ko_key": "할 수 있다",
+    "ko_aliases": [
+      "할 수 있다",
+      "가능하다",
+      "가능",
+      "할수있다"
+    ],
+    "note_ko": "",
+    "provenance": {
+      "collection": "original-candidate",
+      "glyph_evidence": "user-supplied-chart",
+      "meaning_evidence": "provisional-chart-gloss",
+      "verification": "needs-primary-review"
+    },
+    "marker": "none"
+  },
+  {
+    "id": "fruit",
+    "en": "Fruit",
+    "ko": "열매",
+    "category": "Nature",
+    "aliases": [],
+    "group": "fruit",
+    "cp": 57377,
+    "char": "",
+    "status": "handwritten-chart reconstruction",
+    "ko_key": "열매",
+    "ko_aliases": [
+      "열매",
+      "과일"
+    ],
+    "note_ko": "",
+    "provenance": {
+      "collection": "original-candidate",
+      "glyph_evidence": "user-supplied-chart",
+      "meaning_evidence": "provisional-chart-gloss",
+      "verification": "needs-primary-review"
+    },
+    "marker": "noun"
+  },
+  {
+    "id": "cow",
+    "en": "Cow",
+    "ko": "소",
+    "category": "Nature",
+    "aliases": [],
+    "group": "cow",
+    "cp": 57378,
+    "char": "",
+    "status": "handwritten-chart reconstruction",
+    "ko_key": "소",
+    "ko_aliases": [
+      "소",
+      "암소",
+      "황소"
+    ],
+    "note_ko": "",
+    "provenance": {
+      "collection": "original-candidate",
+      "glyph_evidence": "user-supplied-chart",
+      "meaning_evidence": "provisional-chart-gloss",
+      "verification": "needs-primary-review"
+    },
+    "marker": "noun"
+  },
+  {
+    "id": "grass",
+    "en": "Grass",
+    "ko": "풀",
+    "category": "Nature",
+    "aliases": [],
+    "group": "grass",
+    "cp": 57379,
+    "char": "",
+    "status": "handwritten-chart reconstruction",
+    "ko_key": "풀",
+    "ko_aliases": [
+      "풀",
+      "잔디"
+    ],
+    "note_ko": "",
+    "provenance": {
+      "collection": "original-candidate",
+      "glyph_evidence": "user-supplied-chart",
+      "meaning_evidence": "provisional-chart-gloss",
+      "verification": "needs-primary-review"
+    },
+    "marker": "noun"
+  },
+  {
+    "id": "spider",
+    "en": "Spider",
+    "ko": "거미",
+    "category": "Nature",
+    "aliases": [],
+    "group": "spider",
+    "cp": 57380,
+    "char": "",
+    "status": "handwritten-chart reconstruction",
+    "ko_key": "거미",
+    "ko_aliases": [
+      "거미"
+    ],
+    "note_ko": "",
+    "provenance": {
+      "collection": "original-candidate",
+      "glyph_evidence": "user-supplied-chart",
+      "meaning_evidence": "provisional-chart-gloss",
+      "verification": "needs-primary-review"
+    },
+    "marker": "noun"
+  },
+  {
+    "id": "snake",
+    "en": "Snake",
+    "ko": "뱀",
+    "category": "Nature",
+    "aliases": [],
+    "group": "snake",
+    "cp": 57381,
+    "char": "",
+    "status": "handwritten-chart reconstruction",
+    "ko_key": "뱀",
+    "ko_aliases": [
+      "뱀"
+    ],
+    "note_ko": "",
+    "provenance": {
+      "collection": "original-candidate",
+      "glyph_evidence": "user-supplied-chart",
+      "meaning_evidence": "provisional-chart-gloss",
+      "verification": "needs-primary-review"
+    },
+    "marker": "noun"
+  },
+  {
+    "id": "make",
+    "en": "Make",
+    "ko": "만들다",
+    "category": "Actions",
+    "aliases": [
+      "create"
+    ],
+    "group": "make",
+    "cp": 57382,
+    "char": "",
+    "status": "handwritten-chart reconstruction",
+    "ko_key": "만들다",
+    "ko_aliases": [
+      "만들다",
+      "제작하다",
+      "짓다"
+    ],
+    "note_ko": "",
+    "provenance": {
+      "collection": "original-candidate",
+      "glyph_evidence": "user-supplied-chart",
+      "meaning_evidence": "provisional-chart-gloss",
+      "verification": "needs-primary-review"
+    },
+    "marker": "verb"
+  },
+  {
+    "id": "hand",
+    "en": "Hand / arm (review)",
+    "ko": "손",
+    "category": "People",
+    "aliases": [],
+    "group": "hand",
+    "cp": 57383,
+    "char": "",
+    "status": "handwritten-chart reconstruction",
+    "ko_key": "손·팔",
+    "ko_aliases": [
+      "손·팔",
+      "손",
+      "팔"
+    ],
+    "en_legacy": "Hand",
+    "note_ko": "팔과 손의 관계를 원본 영상에서 확인해야 함. 검색용 유의어이며 별도 글자로 단정하지 않음.",
+    "provenance": {
+      "collection": "original-candidate",
+      "glyph_evidence": "user-supplied-chart",
+      "meaning_evidence": "provisional-chart-gloss",
+      "verification": "needs-primary-review"
+    },
+    "marker": "noun"
+  },
+  {
+    "id": "foot",
+    "en": "Foot / leg (review)",
+    "ko": "발",
+    "category": "People",
+    "aliases": [],
+    "group": "foot",
+    "cp": 57384,
+    "char": "",
+    "status": "handwritten-chart reconstruction",
+    "ko_key": "발·다리",
+    "ko_aliases": [
+      "발·다리",
+      "발",
+      "다리"
+    ],
+    "en_legacy": "Foot",
+    "note_ko": "다리와 발의 관계를 원본 영상에서 확인해야 함.",
+    "provenance": {
+      "collection": "original-candidate",
+      "glyph_evidence": "user-supplied-chart",
+      "meaning_evidence": "provisional-chart-gloss",
+      "verification": "needs-primary-review"
+    },
+    "marker": "noun"
+  },
+  {
+    "id": "body",
+    "en": "Body",
+    "ko": "몸",
+    "category": "People",
+    "aliases": [],
+    "group": "body",
+    "cp": 57385,
+    "char": "",
+    "status": "handwritten-chart reconstruction",
+    "ko_key": "몸",
+    "ko_aliases": [
+      "몸",
+      "신체"
+    ],
+    "note_ko": "",
+    "provenance": {
+      "collection": "original-candidate",
+      "glyph_evidence": "user-supplied-chart",
+      "meaning_evidence": "provisional-chart-gloss",
+      "verification": "needs-primary-review"
+    },
+    "marker": "noun"
+  },
+  {
+    "id": "egg",
+    "en": "Egg",
+    "ko": "알",
+    "category": "Nature",
+    "aliases": [],
+    "group": "egg",
+    "cp": 57386,
+    "char": "",
+    "status": "handwritten-chart reconstruction",
+    "ko_key": "알",
+    "ko_aliases": [
+      "알",
+      "달걀",
+      "계란"
+    ],
+    "note_ko": "",
+    "provenance": {
+      "collection": "original-candidate",
+      "glyph_evidence": "user-supplied-chart",
+      "meaning_evidence": "provisional-chart-gloss",
+      "verification": "needs-primary-review"
+    },
+    "marker": "noun"
+  },
+  {
+    "id": "become",
+    "en": "Become",
+    "ko": "되다",
+    "category": "Actions",
+    "aliases": [],
+    "group": "become",
+    "cp": 57387,
+    "char": "",
+    "status": "handwritten-chart reconstruction",
+    "ko_key": "되다",
+    "ko_aliases": [
+      "되다",
+      "변하다"
+    ],
+    "note_ko": "",
+    "provenance": {
+      "collection": "original-candidate",
+      "glyph_evidence": "user-supplied-chart",
+      "meaning_evidence": "provisional-chart-gloss",
+      "verification": "needs-primary-review"
+    },
+    "marker": "verb"
+  },
+  {
+    "id": "minute",
+    "en": "Minute",
+    "ko": "분",
+    "category": "Time",
+    "aliases": [],
+    "group": "minute",
+    "cp": 57388,
+    "char": "",
+    "status": "handwritten-chart reconstruction",
+    "ko_key": "분",
+    "ko_aliases": [
+      "분",
+      "분간"
+    ],
+    "note_ko": "",
+    "provenance": {
+      "collection": "original-candidate",
+      "glyph_evidence": "user-supplied-chart",
+      "meaning_evidence": "provisional-chart-gloss",
+      "verification": "needs-primary-review"
+    },
+    "marker": "noun"
+  },
+  {
+    "id": "hour",
+    "en": "Hour",
+    "ko": "시간",
+    "category": "Time",
+    "aliases": [],
+    "group": "hour",
+    "cp": 57389,
+    "char": "",
+    "status": "handwritten-chart reconstruction",
+    "ko_key": "시간",
+    "ko_aliases": [
+      "시간",
+      "한시간"
+    ],
+    "note_ko": "",
+    "provenance": {
+      "collection": "original-candidate",
+      "glyph_evidence": "user-supplied-chart",
+      "meaning_evidence": "provisional-chart-gloss",
+      "verification": "needs-primary-review"
+    },
+    "marker": "noun"
+  },
+  {
+    "id": "colour",
+    "en": "Colour",
+    "ko": "색",
+    "category": "Properties",
+    "aliases": [
+      "color"
+    ],
+    "group": "colour",
+    "cp": 57390,
+    "char": "",
+    "status": "handwritten-chart reconstruction",
+    "ko_key": "색",
+    "ko_aliases": [
+      "색",
+      "색깔",
+      "빛깔"
+    ],
+    "note_ko": "",
+    "provenance": {
+      "collection": "original-candidate",
+      "glyph_evidence": "user-supplied-chart",
+      "meaning_evidence": "provisional-chart-gloss",
+      "verification": "needs-primary-review"
+    },
+    "marker": "noun"
+  },
+  {
+    "id": "ocean",
+    "en": "Ocean",
+    "ko": "바다",
+    "category": "Nature",
+    "aliases": [
+      "sea"
+    ],
+    "group": "ocean",
+    "cp": 57391,
+    "char": "",
+    "status": "handwritten-chart reconstruction",
+    "ko_key": "바다",
+    "ko_aliases": [
+      "바다",
+      "대양",
+      "해양"
+    ],
+    "note_ko": "",
+    "provenance": {
+      "collection": "original-candidate",
+      "glyph_evidence": "user-supplied-chart",
+      "meaning_evidence": "provisional-chart-gloss",
+      "verification": "needs-primary-review"
+    },
+    "marker": "noun"
+  },
+  {
+    "id": "blue",
+    "en": "Blue",
+    "ko": "파란색",
+    "category": "Properties",
+    "aliases": [],
+    "group": "ocean",
+    "cp": 57392,
+    "char": "",
+    "status": "handwritten-chart reconstruction",
+    "ko_key": "파란색",
+    "ko_aliases": [
+      "파란색",
+      "파랑",
+      "청색",
+      "푸른색"
+    ],
+    "note_ko": "",
+    "provenance": {
+      "collection": "original-candidate",
+      "glyph_evidence": "user-supplied-chart",
+      "meaning_evidence": "provisional-chart-gloss",
+      "verification": "needs-primary-review"
+    },
+    "marker": "noun"
+  },
+  {
+    "id": "fire",
+    "en": "Fire",
+    "ko": "불",
+    "category": "Nature",
+    "aliases": [],
+    "group": "fire",
+    "cp": 57393,
+    "char": "",
+    "status": "handwritten-chart reconstruction",
+    "ko_key": "불",
+    "ko_aliases": [
+      "불",
+      "화염"
+    ],
+    "note_ko": "",
+    "provenance": {
+      "collection": "original-candidate",
+      "glyph_evidence": "user-supplied-chart",
+      "meaning_evidence": "provisional-chart-gloss",
+      "verification": "needs-primary-review"
+    },
+    "marker": "noun"
+  },
+  {
+    "id": "red",
+    "en": "Red",
+    "ko": "빨간색",
+    "category": "Properties",
+    "aliases": [],
+    "group": "fire",
+    "cp": 57394,
+    "char": "",
+    "status": "handwritten-chart reconstruction",
+    "ko_key": "빨간색",
+    "ko_aliases": [
+      "빨간색",
+      "빨강",
+      "적색",
+      "붉은색"
+    ],
+    "note_ko": "",
+    "provenance": {
+      "collection": "original-candidate",
+      "glyph_evidence": "user-supplied-chart",
+      "meaning_evidence": "provisional-chart-gloss",
+      "verification": "needs-primary-review"
+    },
+    "marker": "noun"
+  },
+  {
+    "id": "salt",
+    "en": "Salt",
+    "ko": "소금",
+    "category": "World",
+    "aliases": [],
+    "group": "salt",
+    "cp": 57395,
+    "char": "",
+    "status": "handwritten-chart reconstruction",
+    "ko_key": "소금",
+    "ko_aliases": [
+      "소금",
+      "염"
+    ],
+    "note_ko": "",
+    "provenance": {
+      "collection": "original-candidate",
+      "glyph_evidence": "user-supplied-chart",
+      "meaning_evidence": "provisional-chart-gloss",
+      "verification": "needs-primary-review"
+    },
+    "marker": "noun"
+  },
+  {
+    "id": "white",
+    "en": "White",
+    "ko": "흰색",
+    "category": "Properties",
+    "aliases": [],
+    "group": "salt",
+    "cp": 57396,
+    "char": "",
+    "status": "handwritten-chart reconstruction",
+    "ko_key": "흰색",
+    "ko_aliases": [
+      "흰색",
+      "하양",
+      "하얀색",
+      "백색"
+    ],
+    "note_ko": "",
+    "provenance": {
+      "collection": "original-candidate",
+      "glyph_evidence": "user-supplied-chart",
+      "meaning_evidence": "provisional-chart-gloss",
+      "verification": "needs-primary-review"
+    },
+    "marker": "noun"
+  },
+  {
+    "id": "tree",
+    "en": "Wood / tree",
+    "ko": "나무",
+    "category": "Nature",
+    "aliases": [
+      "wood",
+      "tree"
+    ],
+    "group": "tree",
+    "cp": 57397,
+    "char": "",
+    "status": "handwritten-chart reconstruction",
+    "ko_key": "나무",
+    "ko_aliases": [
+      "나무",
+      "목재",
+      "수목"
+    ],
+    "note_ko": "",
+    "provenance": {
+      "collection": "original-candidate",
+      "glyph_evidence": "user-supplied-chart",
+      "meaning_evidence": "provisional-chart-gloss",
+      "verification": "needs-primary-review"
+    },
+    "marker": "noun"
+  },
+  {
+    "id": "add",
+    "en": "Add / combine",
+    "ko": "더하다",
+    "category": "Numbers",
+    "aliases": [
+      "plus",
+      "combine"
+    ],
+    "group": "addition",
+    "cp": 57398,
+    "char": "",
+    "status": "handwritten-chart reconstruction",
+    "ko_key": "더하다",
+    "ko_aliases": [
+      "더하다",
+      "합치다",
+      "덧셈",
+      "합하다"
+    ],
+    "en_legacy": "Add",
+    "note_ko": "",
+    "provenance": {
+      "collection": "original-candidate",
+      "glyph_evidence": "user-supplied-chart",
+      "meaning_evidence": "provisional-chart-gloss",
+      "verification": "needs-primary-review"
+    },
+    "marker": "verb"
+  },
+  {
+    "id": "purple",
+    "en": "Purple",
+    "ko": "보라색",
+    "category": "Properties",
+    "aliases": [],
+    "group": "purple",
+    "cp": 57399,
+    "char": "",
+    "status": "handwritten-chart reconstruction",
+    "ko_key": "보라색",
+    "ko_aliases": [
+      "보라색",
+      "보라",
+      "자주색"
+    ],
+    "note_ko": "보라색 자체의 의미는 보고되나, 아래 점을 뺀 어근의 의미는 아직 미확인.",
+    "provenance": {
+      "collection": "original-candidate",
+      "glyph_evidence": "user-supplied-chart",
+      "meaning_evidence": "provisional-chart-gloss",
+      "verification": "needs-primary-review"
+    },
+    "marker": "noun"
+  },
+  {
+    "id": "minus",
+    "en": "Minus",
+    "ko": "빼다",
+    "category": "Numbers",
+    "aliases": [
+      "subtract"
+    ],
+    "group": "minus",
+    "cp": 57400,
+    "char": "",
+    "status": "handwritten-chart reconstruction",
+    "ko_key": "빼다",
+    "ko_aliases": [
+      "빼다",
+      "빼기",
+      "뺄셈",
+      "제하다"
+    ],
+    "note_ko": "",
+    "provenance": {
+      "collection": "original-candidate",
+      "glyph_evidence": "user-supplied-chart",
+      "meaning_evidence": "provisional-chart-gloss",
+      "verification": "needs-primary-review"
+    },
+    "marker": "verb"
+  },
+  {
+    "id": "water",
+    "en": "Water",
+    "ko": "물",
+    "category": "Nature",
+    "aliases": [],
+    "group": "water",
+    "cp": 57401,
+    "char": "",
+    "status": "handwritten-chart reconstruction",
+    "ko_key": "물",
+    "ko_aliases": [
+      "물",
+      "식수"
+    ],
+    "note_ko": "",
+    "provenance": {
+      "collection": "original-candidate",
+      "glyph_evidence": "user-supplied-chart",
+      "meaning_evidence": "provisional-chart-gloss",
+      "verification": "needs-primary-review"
+    },
+    "marker": "noun"
+  },
+  {
+    "id": "sand",
+    "en": "Sand",
+    "ko": "모래",
+    "category": "World",
+    "aliases": [],
+    "group": "sand",
+    "cp": 57402,
+    "char": "",
+    "status": "handwritten-chart reconstruction",
+    "ko_key": "모래",
+    "ko_aliases": [
+      "모래"
+    ],
+    "note_ko": "",
+    "provenance": {
+      "collection": "original-candidate",
+      "glyph_evidence": "user-supplied-chart",
+      "meaning_evidence": "provisional-chart-gloss",
+      "verification": "needs-primary-review"
+    },
+    "marker": "noun"
+  },
+  {
+    "id": "glass",
+    "en": "Glass",
+    "ko": "유리",
+    "category": "World",
+    "aliases": [],
+    "group": "glass",
+    "cp": 57403,
+    "char": "",
+    "status": "handwritten-chart reconstruction",
+    "ko_key": "유리",
+    "ko_aliases": [
+      "유리"
+    ],
+    "note_ko": "",
+    "provenance": {
+      "collection": "original-candidate",
+      "glyph_evidence": "user-supplied-chart",
+      "meaning_evidence": "provisional-chart-gloss",
+      "verification": "needs-primary-review"
+    },
+    "marker": "noun"
+  },
+  {
+    "id": "transparent",
+    "en": "Transparent / clear",
+    "ko": "투명한",
+    "category": "Properties",
+    "aliases": [
+      "clear"
+    ],
+    "group": "glass",
+    "cp": 57404,
+    "char": "",
+    "status": "handwritten-chart reconstruction",
+    "ko_key": "투명색",
+    "ko_aliases": [
+      "투명색",
+      "투명한",
+      "투명",
+      "무색"
+    ],
+    "en_legacy": "Transparent",
+    "note_ko": "",
+    "provenance": {
+      "collection": "original-candidate",
+      "glyph_evidence": "user-supplied-chart",
+      "meaning_evidence": "provisional-chart-gloss",
+      "verification": "needs-primary-review"
+    },
+    "marker": "noun"
+  },
+  {
+    "id": "path",
+    "en": "Path",
+    "ko": "길",
+    "category": "Space",
+    "aliases": [
+      "road"
+    ],
+    "group": "path",
+    "cp": 57405,
+    "char": "",
+    "status": "handwritten-chart reconstruction",
+    "ko_key": "길",
+    "ko_aliases": [
+      "길",
+      "도로",
+      "경로",
+      "통로"
+    ],
+    "note_ko": "",
+    "provenance": {
+      "collection": "original-candidate",
+      "glyph_evidence": "user-supplied-chart",
+      "meaning_evidence": "provisional-chart-gloss",
+      "verification": "needs-primary-review"
+    },
+    "marker": "noun"
+  },
+  {
+    "id": "charcoal",
+    "en": "Charcoal",
+    "ko": "숯",
+    "category": "World",
+    "aliases": [],
+    "group": "charcoal",
+    "cp": 57406,
+    "char": "",
+    "status": "handwritten-chart reconstruction",
+    "ko_key": "숯",
+    "ko_aliases": [
+      "숯",
+      "목탄"
+    ],
+    "note_ko": "",
+    "provenance": {
+      "collection": "original-candidate",
+      "glyph_evidence": "user-supplied-chart",
+      "meaning_evidence": "provisional-chart-gloss",
+      "verification": "needs-primary-review"
+    },
+    "marker": "noun"
+  },
+  {
+    "id": "black",
+    "en": "Black",
+    "ko": "검은색",
+    "category": "Properties",
+    "aliases": [],
+    "group": "charcoal",
+    "cp": 57407,
+    "char": "",
+    "status": "handwritten-chart reconstruction",
+    "ko_key": "검은색",
+    "ko_aliases": [
+      "검은색",
+      "검정",
+      "검정색",
+      "흑색"
+    ],
+    "note_ko": "",
+    "provenance": {
+      "collection": "original-candidate",
+      "glyph_evidence": "user-supplied-chart",
+      "meaning_evidence": "provisional-chart-gloss",
+      "verification": "needs-primary-review"
+    },
+    "marker": "noun"
+  },
+  {
+    "id": "day",
+    "en": "Day",
+    "ko": "날",
+    "category": "Time",
+    "aliases": [],
+    "group": "day",
+    "cp": 57408,
+    "char": "",
+    "status": "handwritten-chart reconstruction",
+    "ko_key": "하루",
+    "ko_aliases": [
+      "하루",
+      "날",
+      "일"
+    ],
+    "note_ko": "",
+    "provenance": {
+      "collection": "original-candidate",
+      "glyph_evidence": "user-supplied-chart",
+      "meaning_evidence": "provisional-chart-gloss",
+      "verification": "needs-primary-review"
+    },
+    "marker": "noun"
+  },
+  {
+    "id": "earth",
+    "en": "Earth",
+    "ko": "지구",
+    "category": "Nature",
+    "aliases": [],
+    "group": "earth",
+    "cp": 57409,
+    "char": "",
+    "status": "handwritten-chart reconstruction",
+    "ko_key": "지구",
+    "ko_aliases": [
+      "지구"
+    ],
+    "note_ko": "",
+    "provenance": {
+      "collection": "original-candidate",
+      "glyph_evidence": "user-supplied-chart",
+      "meaning_evidence": "provisional-chart-gloss",
+      "verification": "needs-primary-review"
+    },
+    "marker": "noun"
+  },
+  {
+    "id": "sun",
+    "en": "Sun",
+    "ko": "태양",
+    "category": "Nature",
+    "aliases": [],
+    "group": "sun",
+    "cp": 57410,
+    "char": "",
+    "status": "handwritten-chart reconstruction",
+    "ko_key": "태양",
+    "ko_aliases": [
+      "태양",
+      "해"
+    ],
+    "note_ko": "",
+    "provenance": {
+      "collection": "original-candidate",
+      "glyph_evidence": "user-supplied-chart",
+      "meaning_evidence": "provisional-chart-gloss",
+      "verification": "needs-primary-review"
+    },
+    "marker": "noun"
+  },
+  {
+    "id": "orbit",
+    "en": "Orbit",
+    "ko": "돌다",
+    "category": "Actions",
+    "aliases": [
+      "rotate"
+    ],
+    "group": "orbit",
+    "cp": 57411,
+    "char": "",
+    "status": "handwritten-chart reconstruction",
+    "ko_key": "돌다",
+    "ko_aliases": [
+      "돌다",
+      "공전하다",
+      "회전하다"
+    ],
+    "note_ko": "",
+    "provenance": {
+      "collection": "original-candidate",
+      "glyph_evidence": "user-supplied-chart",
+      "meaning_evidence": "provisional-chart-gloss",
+      "verification": "needs-primary-review"
+    },
+    "marker": "verb"
+  },
+  {
+    "id": "end",
+    "en": "At the end / final",
+    "ko": "끝",
+    "category": "Space",
+    "aliases": [
+      "last",
+      "final"
+    ],
+    "group": "end",
+    "cp": 57412,
+    "char": "",
+    "status": "handwritten-chart reconstruction",
+    "ko_key": "끝에",
+    "ko_aliases": [
+      "끝에",
+      "끝",
+      "마지막",
+      "최후"
+    ],
+    "en_legacy": "End",
+    "note_ko": "품사 표지에 따라 뜻이 달라질 수 있으므로 원전의 형용사·부사형을 별도 확인.",
+    "provenance": {
+      "collection": "original-candidate",
+      "glyph_evidence": "user-supplied-chart",
+      "meaning_evidence": "provisional-chart-gloss",
+      "verification": "needs-primary-review"
+    },
+    "marker": "adverb"
+  },
+  {
+    "id": "god",
+    "en": "God",
+    "ko": "신",
+    "category": "People",
+    "aliases": [],
+    "group": "god",
+    "cp": 57413,
+    "char": "",
+    "status": "handwritten-chart reconstruction",
+    "ko_key": "신",
+    "ko_aliases": [
+      "신",
+      "신령"
+    ],
+    "note_ko": "",
+    "provenance": {
+      "collection": "original-candidate",
+      "glyph_evidence": "user-supplied-chart",
+      "meaning_evidence": "provisional-chart-gloss",
+      "verification": "needs-primary-review"
+    },
+    "marker": "noun"
+  },
+  {
+    "id": "divine",
+    "en": "Divine",
+    "ko": "신의",
+    "category": "Properties",
+    "aliases": [],
+    "group": "god",
+    "cp": 57414,
+    "char": "",
+    "status": "handwritten-chart reconstruction",
+    "ko_key": "신의",
+    "ko_aliases": [
+      "신의",
+      "신성한"
+    ],
+    "note_ko": "",
+    "provenance": {
+      "collection": "original-candidate",
+      "glyph_evidence": "user-supplied-chart",
+      "meaning_evidence": "provisional-chart-gloss",
+      "verification": "needs-primary-review"
+    },
+    "marker": "adjective"
+  },
+  {
+    "id": "moon",
+    "en": "Moon",
+    "ko": "달",
+    "category": "Nature",
+    "aliases": [],
+    "group": "moon",
+    "cp": 57415,
+    "char": "",
+    "status": "handwritten-chart reconstruction",
+    "ko_key": "달",
+    "ko_aliases": [
+      "달",
+      "월"
+    ],
+    "note_ko": "",
+    "provenance": {
+      "collection": "original-candidate",
+      "glyph_evidence": "user-supplied-chart",
+      "meaning_evidence": "provisional-chart-gloss",
+      "verification": "needs-primary-review"
+    },
+    "marker": "noun"
+  },
+  {
+    "id": "shadow",
+    "en": "Shadow",
+    "ko": "그림자",
+    "category": "World",
+    "aliases": [],
+    "group": "shadow",
+    "cp": 57416,
+    "char": "",
+    "status": "handwritten-chart reconstruction",
+    "ko_key": "그림자",
+    "ko_aliases": [
+      "그림자"
+    ],
+    "note_ko": "",
+    "provenance": {
+      "collection": "original-candidate",
+      "glyph_evidence": "user-supplied-chart",
+      "meaning_evidence": "provisional-chart-gloss",
+      "verification": "needs-primary-review"
+    },
+    "marker": "noun"
+  },
+  {
+    "id": "cover",
+    "en": "Cover",
+    "ko": "가리다",
+    "category": "Actions",
+    "aliases": [
+      "hide"
+    ],
+    "group": "shadow",
+    "cp": 57417,
+    "char": "",
+    "status": "handwritten-chart reconstruction",
+    "ko_key": "가리다",
+    "ko_aliases": [
+      "가리다",
+      "덮다",
+      "숨기다"
+    ],
+    "note_ko": "",
+    "provenance": {
+      "collection": "original-candidate",
+      "glyph_evidence": "user-supplied-chart",
+      "meaning_evidence": "provisional-chart-gloss",
+      "verification": "needs-primary-review"
+    },
+    "marker": "verb"
+  },
+  {
+    "id": "you",
+    "en": "You",
+    "ko": "당신",
+    "category": "People",
+    "aliases": [],
+    "group": "you",
+    "cp": 57418,
+    "char": "",
+    "status": "handwritten-chart reconstruction",
+    "ko_key": "당신",
+    "ko_aliases": [
+      "당신",
+      "너"
+    ],
+    "note_ko": "",
+    "provenance": {
+      "collection": "original-candidate",
+      "glyph_evidence": "user-supplied-chart",
+      "meaning_evidence": "provisional-chart-gloss",
+      "verification": "needs-primary-review"
+    },
+    "marker": "noun"
+  },
+  {
+    "id": "daytime",
+    "en": "Daytime",
+    "ko": "낮",
+    "category": "Time",
+    "aliases": [
+      "daylight"
+    ],
+    "group": "daynight",
+    "cp": 57419,
+    "char": "",
+    "status": "handwritten-chart reconstruction",
+    "ko_key": "낮",
+    "ko_aliases": [
+      "낮",
+      "낮시간"
+    ],
+    "note_ko": "",
+    "provenance": {
+      "collection": "original-candidate",
+      "glyph_evidence": "user-supplied-chart",
+      "meaning_evidence": "provisional-chart-gloss",
+      "verification": "needs-primary-review"
+    },
+    "marker": "noun"
+  },
+  {
+    "id": "night",
+    "en": "Night",
+    "ko": "밤",
+    "category": "Time",
+    "aliases": [],
+    "group": "daynight",
+    "cp": 57420,
+    "char": "",
+    "status": "handwritten-chart reconstruction",
+    "ko_key": "밤",
+    "ko_aliases": [
+      "밤",
+      "야간"
+    ],
+    "note_ko": "",
+    "provenance": {
+      "collection": "original-candidate",
+      "glyph_evidence": "user-supplied-chart",
+      "meaning_evidence": "provisional-chart-gloss",
+      "verification": "needs-primary-review"
+    },
+    "marker": "noun"
+  },
+  {
+    "id": "test",
+    "en": "Test",
+    "ko": "시험",
+    "category": "World",
+    "aliases": [
+      "trial"
+    ],
+    "group": "test",
+    "cp": 57421,
+    "char": "",
+    "status": "handwritten-chart reconstruction",
+    "ko_key": "시험",
+    "ko_aliases": [
+      "시험",
+      "테스트"
+    ],
+    "note_ko": "",
+    "provenance": {
+      "collection": "original-candidate",
+      "glyph_evidence": "user-supplied-chart",
+      "meaning_evidence": "provisional-chart-gloss",
+      "verification": "needs-primary-review"
+    },
+    "marker": "noun"
+  },
+  {
+    "id": "live",
+    "en": "Live",
+    "ko": "살다",
+    "category": "Actions",
+    "aliases": [
+      "survive"
+    ],
+    "group": "live",
+    "cp": 57422,
+    "char": "",
+    "status": "handwritten-chart reconstruction",
+    "ko_key": "살다",
+    "ko_aliases": [
+      "살다",
+      "생존하다",
+      "살아있다"
+    ],
+    "note_ko": "",
+    "provenance": {
+      "collection": "original-candidate",
+      "glyph_evidence": "user-supplied-chart",
+      "meaning_evidence": "provisional-chart-gloss",
+      "verification": "needs-primary-review"
+    },
+    "marker": "verb"
+  },
+  {
+    "id": "number",
+    "en": "Number",
+    "ko": "숫자",
+    "category": "Numbers",
+    "aliases": [],
+    "group": "number",
+    "cp": 57423,
+    "char": "",
+    "status": "handwritten-chart reconstruction",
+    "ko_key": "숫자",
+    "ko_aliases": [
+      "숫자",
+      "수"
+    ],
+    "note_ko": "",
+    "provenance": {
+      "collection": "original-candidate",
+      "glyph_evidence": "user-supplied-chart",
+      "meaning_evidence": "provisional-chart-gloss",
+      "verification": "needs-primary-review"
+    },
+    "marker": "noun"
+  },
+  {
+    "id": "magic-square",
+    "en": "Magic square",
+    "ko": "마방진",
+    "category": "Numbers",
+    "aliases": [
+      "grid"
+    ],
+    "group": "magic-square",
+    "cp": 57424,
+    "char": "",
+    "status": "handwritten-chart reconstruction",
+    "ko_key": "마방진",
+    "ko_aliases": [
+      "마방진"
+    ],
+    "note_ko": "",
+    "provenance": {
+      "collection": "original-candidate",
+      "glyph_evidence": "user-supplied-chart",
+      "meaning_evidence": "provisional-chart-gloss",
+      "verification": "needs-primary-review"
+    },
+    "marker": "noun"
+  },
+  {
+    "id": "horizontal",
+    "en": "Horizontal",
+    "ko": "가로",
+    "category": "Space",
+    "aliases": [],
+    "group": "horizontal",
+    "cp": 57425,
+    "char": "",
+    "status": "handwritten-chart reconstruction",
+    "ko_key": "가로",
+    "ko_aliases": [
+      "가로",
+      "수평"
+    ],
+    "note_ko": "",
+    "provenance": {
+      "collection": "original-candidate",
+      "glyph_evidence": "user-supplied-chart",
+      "meaning_evidence": "provisional-chart-gloss",
+      "verification": "needs-primary-review"
+    },
+    "marker": "adjective"
+  },
+  {
+    "id": "vertical",
+    "en": "Vertical",
+    "ko": "세로",
+    "category": "Space",
+    "aliases": [],
+    "group": "vertical",
+    "cp": 57426,
+    "char": "",
+    "status": "handwritten-chart reconstruction",
+    "ko_key": "세로",
+    "ko_aliases": [
+      "세로",
+      "수직"
+    ],
+    "note_ko": "",
+    "provenance": {
+      "collection": "original-candidate",
+      "glyph_evidence": "user-supplied-chart",
+      "meaning_evidence": "provisional-chart-gloss",
+      "verification": "needs-primary-review"
+    },
+    "marker": "adjective"
+  },
+  {
+    "id": "diagonal",
+    "en": "Diagonal",
+    "ko": "대각선",
+    "category": "Space",
+    "aliases": [],
+    "group": "diagonal",
+    "cp": 57427,
+    "char": "",
+    "status": "handwritten-chart reconstruction",
+    "ko_key": "대각선",
+    "ko_aliases": [
+      "대각선",
+      "대각"
+    ],
+    "note_ko": "",
+    "provenance": {
+      "collection": "original-candidate",
+      "glyph_evidence": "user-supplied-chart",
+      "meaning_evidence": "provisional-chart-gloss",
+      "verification": "needs-primary-review"
+    },
+    "marker": "adjective"
+  },
+  {
+    "id": "sum",
+    "en": "Sum",
+    "ko": "합",
+    "category": "Numbers",
+    "aliases": [],
+    "group": "addition",
+    "cp": 57428,
+    "char": "",
+    "status": "handwritten-chart reconstruction",
+    "ko_key": "합",
+    "ko_aliases": [
+      "합",
+      "합계",
+      "총합"
+    ],
+    "note_ko": "",
+    "provenance": {
+      "collection": "original-candidate",
+      "glyph_evidence": "user-supplied-chart",
+      "meaning_evidence": "provisional-chart-gloss",
+      "verification": "needs-primary-review"
+    },
+    "marker": "noun"
+  },
+  {
+    "id": "pass",
+    "en": "Pass",
+    "ko": "통과하다",
+    "category": "Actions",
+    "aliases": [],
+    "group": "pass",
+    "cp": 57429,
+    "char": "",
+    "status": "handwritten-chart reconstruction",
+    "ko_key": "통과하다",
+    "ko_aliases": [
+      "통과하다",
+      "통과"
+    ],
+    "note_ko": "",
+    "provenance": {
+      "collection": "original-candidate",
+      "glyph_evidence": "user-supplied-chart",
+      "meaning_evidence": "provisional-chart-gloss",
+      "verification": "needs-primary-review"
+    },
+    "marker": "verb"
+  },
+  {
+    "id": "poison",
+    "en": "Poison",
+    "ko": "독",
+    "category": "World",
+    "aliases": [],
+    "group": "poison",
+    "cp": 57430,
+    "char": "",
+    "status": "handwritten-chart reconstruction",
+    "ko_key": "독",
+    "ko_aliases": [
+      "독",
+      "독약"
+    ],
+    "note_ko": "",
+    "provenance": {
+      "collection": "original-candidate",
+      "glyph_evidence": "user-supplied-chart",
+      "meaning_evidence": "provisional-chart-gloss",
+      "verification": "needs-primary-review"
+    },
+    "marker": "noun"
+  },
+  {
+    "id": "spear",
+    "en": "Spear",
+    "ko": "창",
+    "category": "World",
+    "aliases": [],
+    "group": "spear",
+    "cp": 57431,
+    "char": "",
+    "status": "handwritten-chart reconstruction",
+    "ko_key": "창",
+    "ko_aliases": [
+      "창"
+    ],
+    "note_ko": "",
+    "provenance": {
+      "collection": "original-candidate",
+      "glyph_evidence": "user-supplied-chart",
+      "meaning_evidence": "provisional-chart-gloss",
+      "verification": "needs-primary-review"
+    },
+    "marker": "noun"
+  },
+  {
+    "id": "then",
+    "en": "Then",
+    "ko": "그러면",
+    "category": "Grammar",
+    "aliases": [
+      "if then"
+    ],
+    "group": "then",
+    "cp": 57432,
+    "char": "",
+    "status": "handwritten-chart reconstruction",
+    "ko_key": "그러면",
+    "ko_aliases": [
+      "그러면",
+      "그럼",
+      "그다음"
+    ],
+    "note_ko": "",
+    "provenance": {
+      "collection": "original-candidate",
+      "glyph_evidence": "user-supplied-chart",
+      "meaning_evidence": "provisional-chart-gloss",
+      "verification": "needs-primary-review"
+    },
+    "marker": "none"
+  },
+  {
+    "id": "place",
+    "en": "Place",
+    "ko": "곳",
+    "category": "Space",
+    "aliases": [
+      "here"
+    ],
+    "group": "place",
+    "cp": 57433,
+    "char": "",
+    "status": "handwritten-chart reconstruction",
+    "ko_key": "곳",
+    "ko_aliases": [
+      "곳",
+      "장소",
+      "여기",
+      "이곳"
+    ],
+    "note_ko": "",
+    "provenance": {
+      "collection": "original-candidate",
+      "glyph_evidence": "user-supplied-chart",
+      "meaning_evidence": "provisional-chart-gloss",
+      "verification": "needs-primary-review"
+    },
+    "marker": "noun"
+  },
+  {
+    "id": "floor",
+    "en": "Floor",
+    "ko": "바닥",
+    "category": "Space",
+    "aliases": [],
+    "group": "floor",
+    "cp": 57434,
+    "char": "",
+    "status": "handwritten-chart reconstruction",
+    "ko_key": "바닥",
+    "ko_aliases": [
+      "바닥",
+      "마루"
+    ],
+    "note_ko": "",
+    "provenance": {
+      "collection": "original-candidate",
+      "glyph_evidence": "user-supplied-chart",
+      "meaning_evidence": "provisional-chart-gloss",
+      "verification": "needs-primary-review"
+    },
+    "marker": "noun"
+  },
+  {
+    "id": "dwell",
+    "en": "Dwell",
+    "ko": "거주하다",
+    "category": "Actions",
+    "aliases": [
+      "reside"
+    ],
+    "group": "dwell",
+    "cp": 57435,
+    "char": "",
+    "status": "handwritten-chart reconstruction",
+    "ko_key": "거주하다",
+    "ko_aliases": [
+      "거주하다",
+      "살다",
+      "거처하다"
+    ],
+    "note_ko": "살다와 거주하다의 검색 결과는 구분되어야 함.",
+    "provenance": {
+      "collection": "original-candidate",
+      "glyph_evidence": "user-supplied-chart",
+      "meaning_evidence": "provisional-chart-gloss",
+      "verification": "needs-primary-review"
+    },
+    "marker": "verb"
+  },
+  {
+    "id": "in",
+    "en": "In",
+    "ko": "안에",
+    "category": "Grammar",
+    "aliases": [
+      "inside"
+    ],
+    "group": "in",
+    "cp": 57436,
+    "char": "",
+    "status": "handwritten-chart reconstruction",
+    "ko_key": "안에",
+    "ko_aliases": [
+      "안에",
+      "안",
+      "내부",
+      "속에"
+    ],
+    "note_ko": "",
+    "provenance": {
+      "collection": "original-candidate",
+      "glyph_evidence": "user-supplied-chart",
+      "meaning_evidence": "provisional-chart-gloss",
+      "verification": "needs-primary-review"
+    },
+    "marker": "none"
+  }
+]

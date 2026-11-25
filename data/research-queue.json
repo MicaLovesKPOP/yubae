@@ -1,0 +1,142 @@
+[
+  {
+    "id": "cry",
+    "ko": "울다",
+    "en": "Cry",
+    "status": "missing-shape",
+    "source": "L1: user report; distinguish from 소리 내다"
+  },
+  {
+    "id": "method",
+    "ko": "방법",
+    "en": "Method",
+    "status": "secondary-reported",
+    "source": "S1 zone 2 / rule text"
+  },
+  {
+    "id": "contest",
+    "ko": "대결",
+    "en": "Contest",
+    "status": "secondary-reported",
+    "source": "S1 zone 2 / rule text"
+  },
+  {
+    "id": "victory",
+    "ko": "승리하다",
+    "en": "Win",
+    "status": "secondary-reported",
+    "source": "S1 zone 2"
+  },
+  {
+    "id": "house",
+    "ko": "집",
+    "en": "House",
+    "status": "secondary-reported",
+    "source": "S1 zone 3"
+  },
+  {
+    "id": "scorpion",
+    "ko": "전갈",
+    "en": "Scorpion",
+    "status": "secondary-reported",
+    "source": "S1 zone 5"
+  },
+  {
+    "id": "constellation",
+    "ko": "별자리",
+    "en": "Constellation / place",
+    "status": "meaning-and-shape-review",
+    "source": "S1 zone 5; may be existing place form"
+  },
+  {
+    "id": "instrument",
+    "ko": "~(으)로",
+    "en": "By means of",
+    "status": "secondary-reported",
+    "source": "S1 zones 2,3,9"
+  },
+  {
+    "id": "equals",
+    "ko": "같다 / 등호",
+    "en": "Equals",
+    "status": "secondary-reported",
+    "source": "S1 zones 2,6"
+  },
+  {
+    "id": "not-equals",
+    "ko": "아니다 / 부등호",
+    "en": "Not equal",
+    "status": "secondary-reported",
+    "source": "S1 zone 2"
+  },
+  {
+    "id": "ordinal",
+    "ko": "서수 / 번째",
+    "en": "Ordinal dot",
+    "status": "modifier-placement-review",
+    "source": "S1 zones 2,12; first, second, sixth; inspect actual variants"
+  },
+  {
+    "id": "live-noun",
+    "ko": "삶",
+    "en": "Life",
+    "status": "form-review",
+    "source": "S1 zone 2; same root as live, not AND"
+  },
+  {
+    "id": "death-noun",
+    "ko": "죽음",
+    "en": "Death",
+    "status": "form-review",
+    "source": "S1 zone 2"
+  },
+  {
+    "id": "see-adjective",
+    "ko": "보는",
+    "en": "Seeing / visible",
+    "status": "form-review",
+    "source": "S1 puzzle text"
+  },
+  {
+    "id": "place-adverb",
+    "ko": "이곳에 / 곳에",
+    "en": "Here / at place",
+    "status": "form-review",
+    "source": "S1 zone 2"
+  },
+  {
+    "id": "table",
+    "ko": "표 / 표의",
+    "en": "Table / of table",
+    "status": "meaning-and-form-review",
+    "source": "S1 zone 4; compare magic-square glyph"
+  },
+  {
+    "id": "zero",
+    "ko": "0",
+    "en": "Zero",
+    "status": "conflict-review",
+    "source": "L1 square; S1/S2 empty position in number diagram, S1 corpus reports zero arms"
+  },
+  {
+    "id": "arm-leg",
+    "ko": "팔 / 다리",
+    "en": "Arm / leg",
+    "status": "meaning-review",
+    "source": "S1/S2 body sentences; compare chart hand/foot"
+  },
+  {
+    "id": "color-purple-root",
+    "ko": "보라색의 어근",
+    "en": "Root underlying purple",
+    "status": "unconfirmed",
+    "source": "S1 zone 6 / L1 chart"
+  },
+  {
+    "id": "all-zones",
+    "ko": "전 구역",
+    "en": "All 15 floor areas and other signs",
+    "status": "primary-audit-needed",
+    "source": "P1/P2; no complete authoritative chart retrieved"
+  }
+]
