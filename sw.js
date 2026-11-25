@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: GPL-3.0-or-later
 // Each build has a unique cache. Activation of an update requires explicit approval.
-const CACHE='yubae-studio-103d11b5b01826c0';
+const CACHE='yubae-studio-dad414ac0db037dd';
 const BASE=self.registration.scope;
 const assets=['index.html','manifest.webmanifest','icon-192.png','icon-512.png','Yubae_Studio.html'];
 const url=p=>new URL(p,BASE).href;
