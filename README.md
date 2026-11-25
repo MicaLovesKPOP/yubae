@@ -14,13 +14,13 @@ The 93 glyphs are vector reconstructions of a supplied handwritten chart, not an
 - 142 English, 233 Hangul and 233 Dubeolsik mnemonics; exact matches only.
 - 83 one-tap writable roots, 160 encoded symbols; persistent modifier row on every touch page. 608 original full-form mnemonics, 610 explicit bare-root aliases and 83 compact codes. Optional postfix modifiers; unsupported physical markers remain literal punctuation.
 - Android input and display verified with v0.3.2; v0.5.2 is compiled and adapter-tested but awaits device testing.
-- Yubae Studio 0.5.0-alpha.5 is a bilingual browser composer/PWA with portable messages. Chromebook native extension remains experimental.
+- Yubae Studio 0.5.0-alpha.6 is a bilingual browser composer/PWA with portable messages. Chromebook native extension remains experimental.
 
 ## Use Yubae Studio
 
 **[Open Yubae Studio](https://micaloveskpop.github.io/yubae/)** — browser companion, no account required. Compose with the existing provisional glyphs, search Korean/English (including Korean initial consonants), write bare roots immediately and optionally apply documented modifiers, change documented forms, save local drafts and share images or message links. On a supported browser, install it using the browser menu / Install button; the app works offline after its initial load. Link contents are readable by anyone who receives them. For the standalone HTML version use the offline download in Studio.
 
-Studio alpha 0.5.0-alpha.5 and native keyboard alpha 0.5.2 share the same glyph map. Browser automation validates the Studio model, desktop/mobile layouts and offline/update lifecycle. Physical device installation, native OS acceptance and the complete primary-source language audit remain outstanding.
+Studio alpha 0.5.0-alpha.6 and native keyboard alpha 0.5.2 share the same glyph map. Browser automation validates the Studio model, desktop/mobile layouts and offline/update lifecycle. Physical device installation, native OS acceptance and the complete primary-source language audit remain outstanding.
 
 ## Install the public alpha
 
@@ -63,3 +63,7 @@ In Studio and native Keyman, ;wa; writes the bare water root; ;wa;- writes its d
 
 ### Script geometry and source review (0.5.2 / Studio alpha.5)
 Numerals 3 and 4 are now generated from a single symmetric square construction, with 4 the exact quarter-turn of 3. The official show's floor and Stella's lecture support the topology; the precise proportions are editorial. All text IDs, other outlines and input rules are retained. See [geometry and corpus audit](docs/GEOMETRY_AUDIT.md) and [research queue](data/research-queue.json) for the source findings and remaining linguistic questions.
+
+### Direct typing and learning (Studio alpha.6)
+Enable **Direct keys** in the editor for an experimental US-QWERTY positional layout: all ten number roots remain on the ordinary number keys, and the remaining 73 roots occupy 26 Normal, 26 Shift and 21 Right Alt/AltGr positions. Shift+AltGr is reserved. Optional postfix modifiers still work. Disable direct mode to type ordinary Latin/Hangul or mnemonics. The visible board provides a touch alternative. The existing Keyman package is unchanged; this trial is not a final frequency-optimized layout.
+Open **Learn** for 64 recognition and typing cards across three introductory lessons, with local review scheduling and no account. **Check writing** offers advisory registry notices and documented related forms. It is not a grammar checker or automatic translation engine; the vocabulary remains provisional. See [learning and direct input plan](docs/LEARNING.md).

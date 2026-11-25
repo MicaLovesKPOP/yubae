@@ -158,7 +158,7 @@ editor.addEventListener('keydown',e=>{if(isComposing||e.isComposing)return;
  if(e.key==='Escape'&&activeRoot()){e.preventDefault();endPending();return}
  if(!e.ctrlKey&&!e.metaKey&&!e.altKey&&activeRoot()&&Object.hasOwn(data.modifierKeys,e.key)){const mod=data.modifierKeys[e.key];if(applyActive(mod)){e.preventDefault();return}endPending()}
  if(['ArrowLeft','ArrowRight','ArrowUp','ArrowDown','Home','End','PageUp','PageDown','Tab'].includes(e.key))endPending();
-if((e.ctrlKey||e.metaKey)&&e.key.toLowerCase()==='z'){e.preventDefault();navigateHistory(e.shiftKey?1:-1)}else if((e.ctrlKey||e.metaKey)&&e.key.toLowerCase()==='y'){e.preventDefault();navigateHistory(1)}});
+if(!e.altKey&&!e.getModifierState?.('AltGraph')&&(e.ctrlKey||e.metaKey)&&e.key.toLowerCase()==='z'){e.preventDefault();navigateHistory(e.shiftKey?1:-1)}else if(!e.altKey&&!e.getModifierState?.('AltGraph')&&(e.ctrlKey||e.metaKey)&&e.key.toLowerCase()==='y'){e.preventDefault();navigateHistory(1)}});
 for(const id of ['undo','redo','space','newline','backspace','clear'])$(id).addEventListener('mousedown',e=>e.preventDefault());
 $('undo').onclick=()=>navigateHistory(-1);$('redo').onclick=()=>navigateHistory(1);$('space').onclick=()=>insertText(' ');$('newline').onclick=()=>insertText('\n');
 $('backspace').onclick=()=>{const s=snap();let start=s.start;if(start===s.end&&start>0)start-=Array.from(s.text.slice(0,start)).at(-1).length;commit(s.text.slice(0,start)+s.text.slice(s.end),start)};

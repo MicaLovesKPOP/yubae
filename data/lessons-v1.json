@@ -1,0 +1,65 @@
+{
+  "schema": "yubae-learn-v1",
+  "notice": "Current chart-derived glosses are provisional, not verified official curriculum.",
+  "lessons": [
+    {
+      "id": "numbers",
+      "en": "Numbers 0–9",
+      "ko": "숫자 0–9",
+      "forms": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9"
+      ],
+      "description_en": "Learn the numerals, including the rotated 3 and 4.",
+      "description_ko": "숫자와 90도 회전 관계인 3·4를 익혀 보세요."
+    },
+    {
+      "id": "first-words",
+      "en": "First words",
+      "ko": "첫 단어",
+      "forms": [
+        "human",
+        "you",
+        "water",
+        "has",
+        "see",
+        "speak",
+        "and",
+        "or",
+        "can",
+        "in"
+      ],
+      "description_en": "Recognize familiar words, then type the root and optional marker.",
+      "description_ko": "기본 단어를 알아보고 어근과 필요한 표지를 입력해 보세요."
+    },
+    {
+      "id": "forms",
+      "en": "Roots and markers",
+      "ko": "어근과 표지",
+      "forms": [
+        "food",
+        "eat",
+        "god",
+        "divine",
+        "fire",
+        "red",
+        "ocean",
+        "blue",
+        "salt",
+        "white",
+        "kill",
+        "dead"
+      ],
+      "description_en": "Practice how a marker changes a known root form.",
+      "description_ko": "표지에 따라 어근의 뜻이 어떻게 달라지는지 익혀 보세요."
+    }
+  ]
+}

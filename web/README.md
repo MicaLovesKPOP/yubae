@@ -20,3 +20,5 @@ Messages use the \`yubae:1\` portable token schema and URL fragments, which are 
 160 writable symbols in 83 provisional root groups: 93 legacy forms plus 67 bare-only graphic symbols with unknown standalone meanings. Root selection writes immediately; only documented modifier forms are enabled. Not a canonical dictionary. No automatic sentence translation. Native Keyman 0.5.1 uses the same encoding, but device acceptance remains pending. No real-device PWA install claim. See docs/RESEARCH.md, RIGHTS.md and docs/ACCEPTANCE.md.
 
 Studio alpha.4 adds F2/Find root, bilingual candidate search (including initials and two-set lookup), keyboard navigation and optional compact codes. The modal restores the editor caret on selection/cancellation. Real Korean IME acceptance remains pending; synthetic composition events are covered by browser tests.
+
+Studio alpha.6 adds opt-in direct typing, introductory lessons and advisory registry checks. Run node tests/learning.cjs alongside the existing Studio acceptance test. Learning progress is stored locally and not included in shared messages. Native Keyman remains 0.5.2.

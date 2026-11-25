@@ -10,3 +10,5 @@ Root-first Studio regression checks every root and all six modifier slots, with 
 Run \`python tests/test_root_input.py\` for the experimental root-first postfix semantic reference. It tests all 498 root/form-slot combinations, 415 physical marker-key combinations, bare-root repetitions, punctuation and commit. No platform integration or new codepoint/font acceptance is implied.
 
 Geometry checks: python tests/test_geometry.py and python source/audit_geometry.py; the native build runs both. The audit reports dimensions, ratios, symmetry and shape similarity for current vector outlines, not official source metrics.
+
+Run node tests/learning.cjs --model-only for direct-layout, curriculum, review, and advisory registry checks. Run node tests/learning.cjs with the same YUBAE_PLAYWRIGHT and YUBAE_BROWSER environment as the Studio test for browser integration.

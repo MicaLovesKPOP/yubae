@@ -4,7 +4,7 @@ from pathlib import Path
 import json,base64,hashlib,struct,zlib,math,zipfile,io,shutil,sys
 from fontTools.ttLib import TTFont
 P=Path(__file__).resolve().parent;ROOT=P.parent;D=ROOT/'data';N=ROOT/'source'/'native';OUT=ROOT/'dist';SITE=OUT/'site'
-VERSION='0.5.0-alpha.5'
+VERSION='0.5.0-alpha.6'
 SHARE_BASE='https://micaloveskpop.github.io/yubae/'
 def read_json(name):return json.loads((D/name).read_text(encoding='utf-8'))
 def read(name):return (P/name).read_text(encoding='utf-8')
@@ -22,15 +22,15 @@ with zipfile.ZipFile(N/'exile.kmp') as z:
  meta=json.loads(z.read('kmp.json'))
  font=z.read(meta['keyboards'][0]['oskFont'])
 f=TTFont(io.BytesIO(font));assert set(f.getBestCmap())=={32,*baseline.values()}
-data={'version':VERSION,'encoding':'yubae-private-v2','shareBase':SHARE_BASE,'lexicon':lex,'mnemonics':mn,'composition':comps,'roots':roots,'modifierKeys':read_json('modifier-keys.json'),'compactCodes':read_json('compact-root-codes.json')}
+data={'version':VERSION,'encoding':'yubae-private-v2','shareBase':SHARE_BASE,'lexicon':lex,'mnemonics':mn,'composition':comps,'roots':roots,'modifierKeys':read_json('modifier-keys.json'),'compactCodes':read_json('compact-root-codes.json'),'directLayout':read_json('direct-layout-trial.json'),'curriculum':read_json('lessons-v1.json')}
 fontcss="@font-face{font-family:Yubae;src:url(data:font/ttf;base64,"+base64.b64encode(font).decode('ascii')+") format('truetype');font-weight:400;font-style:normal;font-display:block;}"
-template=read('index.template.html');css=read('studio.css');model=read('model.js');app=read('studio.js')
-assert '</script' not in model.lower()+app.lower()
+template=read('index.template.html');css=read('studio.css');model=read('model.js');app=read('studio.js');learning=read('learning-model.js');learning_ui=read('learning-ui.js')
+assert '</script' not in (model+app+learning+learning_ui).lower()
 def html(hosted):
  registry=json.dumps({**data,'hosted':hosted},ensure_ascii=False,separators=(',',':')).replace('<','\\u003c').replace('&','\\u0026')
  manifest='<link rel="manifest" href="./manifest.webmanifest"><link rel="icon" type="image/png" href="./icon-192.png"><link rel="apple-touch-icon" href="./icon-192.png">' if hosted else ''
  out=template
- for a,b in [('<!--MANIFEST-->',manifest),('/*FONT*/',fontcss),('/*CSS*/',css),('/*DATA*/',registry),('/*MODEL*/',model),('/*APP*/',app)]:
+ for a,b in [('<!--MANIFEST-->',manifest),('/*FONT*/',fontcss),('/*CSS*/',css),('/*DATA*/',registry),('/*MODEL*/',model),('/*APP*/',app),('/*LEARNING_MODEL*/',learning),('/*LEARNING_UI*/',learning_ui)]:
   assert out.count(a)==1,a
   out=out.replace(a,b)
  return out

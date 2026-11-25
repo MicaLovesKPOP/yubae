@@ -1,0 +1,112 @@
+{
+  "schema": "yubae-direct-layout-v1",
+  "status": "experimental",
+  "physicalLayout": "US QWERTY positions",
+  "digits": {
+    "0": "0",
+    "1": "1",
+    "2": "2",
+    "3": "3",
+    "4": "4",
+    "5": "5",
+    "6": "6",
+    "7": "7",
+    "8": "8",
+    "9": "9"
+  },
+  "layers": [
+    {
+      "id": "base",
+      "keys": {
+        "q": "or",
+        "w": "water",
+        "e": "meal",
+        "r": "right",
+        "t": "then",
+        "y": "you",
+        "u": "can",
+        "i": "in",
+        "o": "has",
+        "p": "plural",
+        "a": "and",
+        "s": "see",
+        "d": "death",
+        "f": "fire",
+        "g": "god",
+        "h": "human",
+        "j": "exists-not",
+        "k": "speak",
+        "l": "live",
+        "z": "small",
+        "x": "big",
+        "c": "colour",
+        "v": "become",
+        "b": "bird",
+        "n": "number",
+        "m": "make"
+      }
+    },
+    {
+      "id": "shift",
+      "keys": {
+        "q": "hole",
+        "w": "ocean",
+        "e": "egg",
+        "r": "left",
+        "t": "tree",
+        "y": "day",
+        "u": "sun",
+        "i": "minute",
+        "o": "hour",
+        "p": "path",
+        "a": "above",
+        "s": "salt",
+        "d": "dwell",
+        "f": "foot",
+        "g": "grass",
+        "h": "head",
+        "j": "hear",
+        "k": "hand",
+        "l": "bottom",
+        "z": "shadow",
+        "x": "pass",
+        "c": "cow",
+        "v": "fruit",
+        "b": "body",
+        "n": "night",
+        "m": "moon"
+      }
+    },
+    {
+      "id": "altgr",
+      "keys": {
+        "q": "diagonal",
+        "w": "glass",
+        "e": "earth",
+        "r": "horizontal",
+        "t": "test",
+        "y": "daytime",
+        "u": "orbit",
+        "i": "vertical",
+        "o": "poison",
+        "p": "place",
+        "a": "addition",
+        "s": "sand",
+        "d": "spider",
+        "f": "floor",
+        "g": "charcoal",
+        "h": "end",
+        "j": "snake",
+        "k": "spear",
+        "l": "minus",
+        "z": "purple",
+        "x": "magic-square"
+      }
+    },
+    {
+      "id": "shift-altgr",
+      "keys": {}
+    }
+  ],
+  "notes": "Trial map uses semantic clusters and mnemonic hints, not measured typing frequency. Do not replace the released native mnemonic keyboard. Fourth layer reserved."
+}
