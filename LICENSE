@@ -20,6 +20,7 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
-Scope: original project software only. See RIGHTS.md for exclusions regarding
+Scope: MIT-licensed components only. See LICENSES/README.md for the component
+licence map and RIGHTS.md for exclusions regarding
 the underlying script, reconstructed glyph artwork, data, bundled glyph font,
 and other third-party material.

@@ -45,4 +45,4 @@ dist/ — generated packages (ignored by Git).
 
 ## Rights
 
-Public non-commercial fan alpha, with original software available under the scoped MIT licence. Rights to the underlying script and reconstructed glyph artwork are unresolved and not granted by that licence. No official affiliation. See [RIGHTS.md](RIGHTS.md) for attribution, publication rationale, licence scope and correction/removal requests. No copied programme footage, source chart images, official fonts or logos.
+Public non-commercial fan alpha, with component-specific licences: MIT for keyboard/shared software, GPLv3-or-later for Studio, CC0 for interoperability specifications and CC BY-SA 4.0 for original editorial knowledge. See the [licence map](LICENSES/README.md). Rights to the underlying script and reconstructed glyph artwork are unresolved and not granted by these licences. No official affiliation. See [RIGHTS.md](RIGHTS.md) for attribution, publication rationale, licence scope and correction/removal requests. No copied programme footage, source chart images, official fonts or logos.

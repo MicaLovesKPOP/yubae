@@ -1,5 +1,7 @@
 # History
 
+- 2026-11-25 licensing policy: MIT keyboard/shared software, GPL-3.0-or-later Studio, CC0 interoperability and CC BY-SA original editorial resources. Earlier MIT grants are preserved; font rights remain unresolved.
+
 - 0.4.0 (initial alpha, subsequently authorized for public release): Korean/English parity on touch, 608 explicit mnemonics, chart-backed composition, same 93 legacy codes, research registry, project governance. Build and adapter tests passed; actual-device test pending.
 - 0.3.4: all Keyman platform targets, experimental ChromeOS extension and web companion.
 - 0.3.3: larger, bolder glyphs and improved label sizing.
