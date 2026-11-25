@@ -23,3 +23,5 @@ The long-term goal is a low-friction place to learn, write, exchange texts and c
 ## Release boundary
 
 This milestone changes only Studio. Native 0.5.2, the font, all 160 text mappings and 1,301 previous shortcuts are unchanged. See the tests and acceptance record. Physical devices and source review remain outstanding.
+
+Studio alpha.8 uses prefix markers by default in direct physical input, with a persistent optional postfix preference. Lesson hints follow this preference. The touch board still uses root-first composition, and the compact-code hints retain their existing suffix order.

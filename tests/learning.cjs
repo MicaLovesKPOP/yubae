@@ -24,6 +24,16 @@ assert.deepEqual(L.directAction({code:'Backquote',key:'Dead'}),{kind:'marker',ch
 assert.deepEqual(L.directAction({code:'KeyA',key:'á',isComposing:true,keyCode:229}),{kind:'root',id:'and'});
 assert.equal(L.directAction({code:'KeyA',key:'a',ctrlKey:true}),null);
 assert.equal(L.directAction({code:'KeyA',key:'a',metaKey:true}),null);
+// All root/marker pairs under the new prefix order, with literal fallback.
+for(const r of M.roots)for(const [char,modifier] of Object.entries(data.modifierKeys)){
+ const first=L.prefixStep(null,{kind:'marker',char,modifier});
+ assert.equal(first.text,'');assert.deepEqual(first.next,{char,modifier});
+ const result=L.prefixStep(first.next,{kind:'root',id:r.id}),form=M.rootForm(r.id,modifier);
+ assert.equal(result.text,form?form.char:char+bare(r.id),r.id+'/'+modifier);
+ assert.equal(result.next,null);assert.equal(result.unsupported,form?null:modifier);
+ assert.equal(L.prefixStep(first.next,{kind:'literal',char:' '}).text,char);
+ assert.equal(L.prefixStep(first.next,{kind:'marker',char,modifier}).text,char);
+}
 assert.equal(L.cards.length,64);
 for(const c of L.cards){const opts=L.options(c);assert.equal(opts.length,4);assert(opts.some(g=>g.id===c.id));assert.equal(new Set(opts.map(g=>g.en)).size,4);assert.equal(new Set(opts.map(g=>g.ko_key)).size,4)}
 const now=1700000000000,first=L.grade(null,true,now);
@@ -43,9 +53,43 @@ try{
  const p=await ctx.newPage(),errors=[];p.on('pageerror',e=>errors.push(e.message));
  await p.goto('file:///'+path.resolve('dist/Yubae_Studio.html').replaceAll('\\','/'));
  await p.waitForFunction(()=>document.fonts.check('32px Yubae','\uE003'));
- assert.equal(await p.locator('#version').textContent(),'0.5.0-alpha.7');
+ assert.equal(await p.locator('#version').textContent(),'0.5.0-alpha.8');
  const ed=p.locator('#editor');await ed.fill('');await p.locator('#direct-toggle').click();
  assert.equal(await p.locator('#direct-toggle').getAttribute('aria-pressed'),'true');
+ assert.equal(await p.locator('#direct-order').getAttribute('data-order'),'prefix');
+ // Prefix is the default. Marker remains pending without changing the draft.
+ await ed.press('-');assert.equal(await ed.inputValue(),'');assert.equal(await p.locator('#direct-status').getAttribute('data-pending'),'noun');
+ await ed.press('w');assert.equal(await ed.inputValue(),cp('water'));
+ await ed.press('.');await ed.press('s');assert.equal(await ed.inputValue(),cp('water')+cp('see'));
+ await ed.press("'");await ed.press('d');assert.equal(await ed.inputValue(),cp('water')+cp('see')+cp('dead'));
+ await ed.press(':');await ed.press('f');assert.equal(await ed.inputValue(),cp('water')+cp('see')+cp('dead')+cp('red'));
+ const composed=await ed.inputValue();
+ await ed.press('-');await ed.press('Escape');assert.equal(await ed.inputValue(),composed);
+ await ed.press('-');await ed.press('Backspace');assert.equal(await ed.inputValue(),composed);
+ await ed.press('-');await ed.press('Space');assert.equal(await ed.inputValue(),composed+'-');
+ await ed.press('.');await ed.press('a');assert.equal(await ed.inputValue(),composed+'-.'+bare('and'));
+ assert((await p.locator('#direct-status').textContent()).includes('No documented'));
+ // Cursor movement cancels an uncommitted prefix.
+ await ed.press('-');await ed.press('ArrowLeft');assert.equal(await p.locator('#direct-status').getAttribute('data-pending'),'');
+ // Real browser undo/redo remains available; each successful form is one edit.
+ await ed.fill('');await ed.press('-');await ed.press('f');await ed.press('Control+z');assert.equal(await ed.inputValue(),'');await ed.press('Control+y');assert.equal(await ed.inputValue(),cp('fire'));
+ // Simulate an international dead key and the late native accent commit.
+ await ed.fill('');
+ await ed.evaluate(field=>{
+  const key=init=>field.dispatchEvent(new KeyboardEvent('keydown',{bubbles:true,cancelable:true,...init}));
+  const composition=(type,value)=>field.dispatchEvent(new CompositionEvent(type,{bubbles:true,data:value}));
+  if(key({code:'Quote',key:'Dead'}))throw Error('quote not handled');
+  composition('compositionstart','');composition('compositionupdate',"'");
+  if(key({code:'KeyD',key:'Process',isComposing:true}))throw Error('root not handled');
+  composition('compositionend','d');
+  field.value+='d';field.setSelectionRange(field.value.length,field.value.length);
+  field.dispatchEvent(new InputEvent('input',{inputType:'insertText',data:'d',bubbles:true}));
+ });
+ assert.equal(await ed.inputValue(),cp('dead'));
+ await ed.fill('');await ed.press('-');await ed.press('Shift+w');assert.equal(await ed.inputValue(),cp('ocean'));
+ // Switch to legacy postfix to replay the entire previous regression.
+ await p.locator('#direct-order').click();assert.equal(await p.locator('#direct-order').getAttribute('data-order'),'postfix');
+ await ed.fill('');
  await ed.press('w');assert.equal(await ed.inputValue(),bare('water'));await ed.press('-');assert.equal(await ed.inputValue(),cp('water'));
  await ed.press('Shift+w');assert.equal(await ed.inputValue(),cp('water')+bare('ocean'));await ed.press(':');assert.equal(await ed.inputValue(),cp('water')+cp('blue'));
  await ed.press('3');assert.equal(await ed.inputValue(),cp('water')+cp('blue')+cp('3'));
@@ -115,6 +159,9 @@ try{
    assert.equal(await ed.inputValue(),bare(rid),rid);
  }
  await p.locator('#direct-keys .layer-tabs button').nth(2).click();await p.locator('#direct-keys [data-root=glass]').click();assert((await ed.inputValue()).endsWith(bare('glass')));
+ // Check stored order and restore prefix before testing learning.
+ await p.locator('#direct-order').click();assert.equal(await p.locator('#direct-order').getAttribute('data-order'),'prefix');
+ assert.equal(await p.evaluate(()=>localStorage.getItem('yubae-direct-order-v1')),'prefix');
  await p.locator('#direct-toggle').click();await ed.fill('');await ed.pressSequentially(';wa;-');assert.equal(await ed.inputValue(),cp('water'));
  const draft=bare('water')+' '+cp('human')+'\uEABC';await ed.fill(draft);await p.locator('#check-open').click();
  assert.equal(await p.locator('#check-results .check-line').count(),2);assert.equal(await ed.inputValue(),draft);
@@ -133,12 +180,12 @@ try{
  assert.equal(saved['read:0'].correct,1);assert.equal(saved['type:0'].correct,1);assert.equal(saved['read:1'].streak,0);
  await p.reload();assert.equal(await p.locator('#editor').inputValue(),draft);
  await p.locator('#lang-ko').click();await p.locator('#learn-open').click();assert((await p.locator('#learn-title').textContent()).includes('학습'));assert((await p.locator('#learn-lessons .lesson-card').last().textContent()).includes('62'));
- await p.locator('#learn-lessons .lesson-card').nth(1).click();await p.locator('#learn-options [data-answer=human]').click();await p.locator('#learn-next').click();await input.focus();await input.press('h');await input.press('-');assert.equal(await input.inputValue(),cp('human'));await p.locator('#learn-check').click();assert((await p.locator('#learn-feedback').textContent()).includes('정답입니다'));
+ await p.locator('#learn-lessons .lesson-card').nth(1).click();await p.locator('#learn-options [data-answer=human]').click();await p.locator('#learn-next').click();await input.focus();await input.press('-');await input.press('h');assert.equal(await input.inputValue(),cp('human'));await p.locator('#learn-check').click();assert((await p.locator('#learn-feedback').textContent()).includes('정답입니다'));
  await p.screenshot({path:path.resolve('dist/learn-desktop.png')});
  assert.deepEqual(errors,[]);await ctx.close();
  const mc=await b.newContext({offline:true,locale:'ko-KR',viewport:{width:390,height:844},isMobile:true,hasTouch:true,deviceScaleFactor:2}),mp=await mc.newPage();
  await mp.goto('file:///'+path.resolve('dist/Yubae_Studio.html').replaceAll('\\','/'));await mp.locator('#learn-open').tap();await mp.locator('#learn-lessons .lesson-card').nth(1).tap();await mp.locator('#learn-options [data-answer=human]').tap();await mp.locator('#learn-next').tap();
  await mp.locator('#learn-keys [data-root=human]').tap();await mp.locator('#learn-modifiers button').filter({hasText:'명사'}).tap();assert.equal(await mp.locator('#learn-input').inputValue(),cp('human'));await mp.locator('#learn-check').tap();assert((await mp.locator('#learn-feedback').textContent()).includes('정답입니다'));
  assert(await mp.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1));await mp.screenshot({path:path.resolve('dist/learn-mobile.png')});await mc.close();
- console.log('PASS browser: opt-in direct layout, all 83 positions, modifiers, ordinary punctuation, quick picker, advisory selection, local lesson scoring and review persistence, Korean UI, touch exercise, no horizontal overflow and no change to draft.');
+ console.log('PASS browser: prefix default, postfix preference, dead-key cancellation, prefix learning and root-first touch, opt-in direct layout, all 83 positions, modifiers, ordinary punctuation, quick picker, advisory selection, local lesson scoring and review persistence, Korean UI, touch exercise, no horizontal overflow and no change to draft.');
 }finally{await b.close()}})().catch(e=>{console.error(e);process.exitCode=1});

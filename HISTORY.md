@@ -20,3 +20,5 @@
 - Studio 0.5.0-alpha.6: experimental direct QWERTY input for all 83 roots, four-layer visual keyboard, 64 bilingual recognition/typing cards and local spaced review, advisory registry writing notices. No native keyboard, glyph or encoding changes.
 
 - Studio 0.5.0-alpha.7: direct QWERTY input captures physical marker keys and isolates delayed US-International accent composition. Regression coverage includes all four reported punctuation/letter sequences. No mapping or native keyboard changes.
+
+- Studio 0.5.0-alpha.8: physical prefix/dead-key composition is the default in opt-in direct mode; locally saved postfix preference, visible pending marker, literal fallback and cancellation, matching lesson hints. No native or encoding changes.

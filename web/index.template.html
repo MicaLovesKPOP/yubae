@@ -16,8 +16,8 @@
 <section class="panel editor-panel" aria-labelledby="editor-title">
 <header class="section-heading"><h1 id="editor-title" data-i="write"></h1><span id="draft-state" class="muted" role="status"></span></header>
 <label for="editor" class="sr-only" data-i="message"></label><textarea id="editor" class="glyph" maxlength="3000" spellcheck="false" autocomplete="off" autocorrect="off" rows="4"></textarea>
-<div class="edit-tools actions"><button id="quick-open" type="button" data-i="quickOpen" aria-haspopup="dialog"></button><button id="direct-toggle" type="button" aria-pressed="false" data-i="directOff"></button><button id="check-open" type="button" data-i="checkWriting"></button><button id="undo" data-i="undo"></button><button id="redo" data-i="redo"></button><button id="space" data-i="space"></button><button id="newline" data-i="newline"></button><button id="backspace" data-i="backspace"></button><button id="clear" data-i="clear"></button><span class="muted" id="count"></span></div>
-<details id="direct-board" hidden open class="direct-panel"><summary data-i="directTitle"></summary><p class="muted" data-i="directHint"></p><div id="direct-keys"></div></details>
+<div class="edit-tools actions"><button id="quick-open" type="button" data-i="quickOpen" aria-haspopup="dialog"></button><button id="direct-toggle" type="button" aria-pressed="false" data-i="directOff"></button><button id="direct-order" type="button" hidden></button><button id="check-open" type="button" data-i="checkWriting"></button><button id="undo" data-i="undo"></button><button id="redo" data-i="redo"></button><button id="space" data-i="space"></button><button id="newline" data-i="newline"></button><button id="backspace" data-i="backspace"></button><button id="clear" data-i="clear"></button><span class="muted" id="count"></span></div>
+<p id="direct-status" class="muted input-status" role="status" hidden></p><details id="direct-board" hidden open class="direct-panel"><summary data-i="directTitle"></summary><p class="muted" data-i="directHint"></p><div id="direct-keys"></div></details>
 <div id="writing-check" class="detail" hidden><div class="section-heading"><strong data-i="checkWriting"></strong><button type="button" id="check-close" data-i="close"></button></div><p class="muted" data-i="checkDisclaimer"></p><div id="check-results"></div></div>
 <div class="forms"><div class="forms-heading"><strong data-i="forms"></strong><span id="form-context" class="muted"></span></div><div id="form-buttons" class="actions"></div></div>
 <details class="gloss-box"><summary data-i="gloss"></summary><div id="gloss" class="muted"></div></details>
@@ -46,8 +46,8 @@
 <section id="learn-quiz" hidden><div class="learn-progress"><span id="learn-count"></span><span id="learn-score"></span></div><progress id="learn-progress" max="1" value="0"></progress>
 <h3 id="learn-prompt"></h3><p id="learn-target" class="learn-target"></p><div id="learn-options" class="learn-options"></div>
 <div id="learn-typing" hidden><label for="learn-input" class="sr-only" data-i="learnInput"></label><textarea id="learn-input" rows="2" class="glyph" spellcheck="false" autocomplete="off" autocorrect="off" maxlength="64"></textarea>
-<div class="actions"><button id="learn-direct" type="button" aria-pressed="true"></button><button id="learn-hint" data-i="learnHint"></button><button id="learn-check" class="primary" data-i="learnCheck"></button></div>
-<p id="learn-hint-text" class="muted" hidden></p><div id="learn-keys"></div><div id="learn-modifiers" class="actions learn-modifiers"></div></div>
+<div class="actions"><button id="learn-direct" type="button" aria-pressed="true"></button><button id="learn-order" type="button"></button><button id="learn-hint" data-i="learnHint"></button><button id="learn-check" class="primary" data-i="learnCheck"></button></div>
+<p id="learn-status" class="muted input-status" role="status"></p><p id="learn-hint-text" class="muted" hidden></p><div id="learn-keys"></div><div id="learn-modifiers" class="actions learn-modifiers"></div></div>
 <div id="learn-feedback" role="status" class="learn-feedback" hidden></div>
 <div class="actions learn-bottom"><button type="button" id="learn-back" data-i="learnBack"></button><button type="button" id="learn-next" class="primary" data-i="learnNext" disabled></button></div></section>
 </dialog>

@@ -3,14 +3,45 @@
 const L=YubaeLearning.createLearning(M,data.directLayout,data.curriculum);
 Object.assign(words.en,{
  learnOpen:'Learn',learnTitle:'Learn Yubae',learnDisclaimer:'Practice uses our provisional reference vocabulary, not an official course. Progress stays on this device.',learnInput:'Your practice answer',learnHint:'Show hint',learnCheck:'Check answer',learnBack:'Lessons',learnNext:'Continue',learnRead:'What does this character mean?',learnType:'Write this character',learnCorrect:'Correct!',learnTry:'Not quite. Here is the reference form.',learnDone:'Lesson complete',learnReview:'Review due cards',learnNoDue:'Nothing due right now. Choose a lesson to practice again.',learnCards:n=>n+' exercises',learnDue:n=>n+' due',learnResults:(n,total)=>n+' / '+total+' correct',learnProgress:(n,total)=>n+' of '+total,
- directOff:'Direct keys: off',directOn:'Direct keys: on',directTitle:'Trial QWERTY layout',directHint:'Letters and unmodified digits write roots. Shift and right Alt select other layers. Type the root first, then a marker (for example d\', s., f-). Unsupported markers remain literal punctuation. Turn this mode off for Latin/Hangul or mnemonic entry.',base:'Normal',shift:'Shift',altgr:'AltGr / Option','shift-altgr':'Shift + AltGr',
+ directOff:'Direct keys: off',directOn:'Direct keys: on',directTitle:'Trial QWERTY layout',directHint:'Letters and unmodified digits write roots. Shift and right Alt select other layers. Click the on-screen roots and then a marker, or use the selected physical-key order. Turn direct mode off for Latin/Hangul or mnemonic entry.',base:'Normal',shift:'Shift',altgr:'AltGr / Option','shift-altgr':'Shift + AltGr',
  checkWriting:'Check writing',checkDisclaimer:'Advisory registry checks only. Unknown bare roots are valid writing, not spelling errors. No automatic correction or grammar judgment.',checkClear:'No unknown root meanings or unregistered private-use symbols found.',checkUnknown:'Bare root: standalone meaning unknown',checkUnregistered:'Symbol outside our registry',checkSelect:'Select',checkForms:'Documented related forms:',checkMore:n=>n+' additional notices'
 });
 Object.assign(words.ko,{
  learnOpen:'학습',learnTitle:'유배지어 학습',learnDisclaimer:'잠정 참고 어휘를 사용하는 연습이며 공식 강좌가 아닙니다. 학습 기록은 이 기기에만 저장됩니다.',learnInput:'연습 답안',learnHint:'힌트 보기',learnCheck:'정답 확인',learnBack:'학습 목록',learnNext:'계속',learnRead:'이 문자의 뜻은 무엇인가요?',learnType:'이 문자를 입력하세요',learnCorrect:'정답입니다!',learnTry:'아쉽네요. 참고 문자 형태를 확인하세요.',learnDone:'학습 완료',learnReview:'복습할 카드',learnNoDue:'지금 복습할 카드가 없습니다. 학습을 선택해 다시 연습할 수 있습니다.',learnCards:n=>n+'개 연습',learnDue:n=>n+'개 복습',learnResults:(n,total)=>total+'개 중 '+n+'개 정답',learnProgress:(n,total)=>n+' / '+total,
- directOff:'직접 입력: 끔',directOn:'직접 입력: 켬',directTitle:'시험 QWERTY 자판',directHint:'영문 키 위치와 숫자로 어근을 입력합니다. Shift와 오른쪽 Alt로 다른 층을 선택합니다. 문장부호 키로 표지를 적용합니다. 한글·영문·단축어 입력 시 이 모드를 끄세요.',base:'기본',shift:'Shift',altgr:'AltGr / Option','shift-altgr':'Shift + AltGr',
+ directOff:'직접 입력: 끔',directOn:'직접 입력: 켬',directTitle:'시험 QWERTY 자판',directHint:'영문 키 위치와 숫자로 어근을 입력합니다. Shift와 오른쪽 Alt로 다른 층을 선택합니다. 화면 키보드는 어근을 누른 뒤 표지를 선택하세요. 물리 키보드는 선택한 입력 순서를 따릅니다. 한글·영문·단축어 입력 시 직접 입력 모드를 끄세요.',base:'기본',shift:'Shift',altgr:'AltGr / Option','shift-altgr':'Shift + AltGr',
  checkWriting:'글 확인',checkDisclaimer:'참고 문자표를 기준으로 안내합니다. 뜻이 미확인된 어근도 올바른 입력입니다. 자동 수정이나 문법 판정은 하지 않습니다.',checkClear:'뜻이 미확인된 어근이나 미등록 사적 사용 영역 문자가 없습니다.',checkUnknown:'어근: 독립적인 뜻 미확인',checkUnregistered:'문자표에 없는 기호',checkSelect:'선택',checkForms:'기록된 관련 형태:',checkMore:n=>'추가 안내 '+n+'개'
 });
+Object.assign(words.en,{
+ orderPrefix:'Markers: before root',orderPostfix:'Markers: after root',orderSwitch:'Switch physical marker order',
+ prefixReady:"Prefix typing: -f = Fire, .s = See, 'd = Dead. Marker + Space writes literal punctuation.",
+ postfixReady:"Postfix typing: f- = Fire, s. = See, d' = Dead.",
+ prefixPending:(char,mod)=>char+' · '+mod+' ready — type a root, Space for punctuation, Esc to cancel.',
+ prefixUnsupported:mod=>'No documented '+mod+' form. Kept the punctuation and bare root.'
+});
+Object.assign(words.ko,{
+ orderPrefix:'표지: 어근 앞',orderPostfix:'표지: 어근 뒤',orderSwitch:'물리 키보드 표지 입력 순서 전환',
+ prefixReady:"앞 표지: -f = 불, .s = 보다, 'd = 죽은. 표지 + 공백은 문장부호를 입력합니다.",
+ postfixReady:"뒤 표지: f- = 불, s. = 보다, d' = 죽은.",
+ prefixPending:(char,mod)=>char+' · '+mod+' 대기 중 — 어근을 입력하세요. 공백은 문장부호, Esc는 취소.',
+ prefixUnsupported:mod=>'기록된 '+mod+' 형태가 없습니다. 문장부호와 어근을 유지했습니다.'
+});
+const ORDER_STORE='yubae-direct-order-v1';
+let markerOrder='prefix';
+try{if(localStorage.getItem(ORDER_STORE)==='postfix')markerOrder='postfix'}catch{}
+function orderLabel(id,enabled){
+ const b=$(id);b.hidden=!enabled;b.dataset.order=markerOrder;b.textContent=t(markerOrder==='prefix'?'orderPrefix':'orderPostfix');b.title=t('orderSwitch')
+}
+function paintInputStatus(id,enabled,pending,unsupported){
+ const e=$(id);e.hidden=!enabled;e.dataset.pending=pending?.modifier||'';
+ e.textContent=pending?t('prefixPending')(pending.char,t(pending.modifier)):unsupported?t('prefixUnsupported')(t(unsupported)):t(markerOrder==='prefix'?'prefixReady':'postfixReady');
+}
+function switchOrder(){
+ markerOrder=markerOrder==='prefix'?'postfix':'prefix';
+ try{localStorage.setItem(ORDER_STORE,markerOrder)}catch{}
+ resetEditorDirect();resetLearnDirect();endPending();learnPending=null;
+ renderDirect();if(learn.open&&!$('learn-typing').hidden){orderLabel('learn-order',learnDirect);resetLearnDirect.paint();renderLearnMods();showHint();li.focus()}else editor.focus()
+}
+$('direct-order').onclick=switchOrder;$('learn-order').onclick=switchOrder;
 const el=(tag,cls,text)=>{const node=document.createElement(tag);if(cls)node.className=cls;if(text!==undefined)node.textContent=text;return node};
 const keyButton=(text,handler)=>{const b=el('button','',text);b.type='button';b.addEventListener('mousedown',e=>e.preventDefault());b.onclick=handler;return b};
 const isMac=/Mac|iPhone|iPad/.test(navigator.platform||'');
@@ -41,15 +72,18 @@ function renderKeyBoard(container,layer,onLayer,onRoot){
 let directMode=false,directLayer='base';
 function renderDirect(){
  const b=$('direct-toggle');b.textContent=t(directMode?'directOn':'directOff');b.setAttribute('aria-pressed',String(directMode));$('direct-board').hidden=!directMode;
- if(directMode)renderKeyBoard($('direct-keys'),directLayer,l=>{directLayer=l;renderDirect()},rid=>{const g=rootChar(rid);editor.focus();insertText(g.char,g.id,rid)})
+ orderLabel('direct-order',directMode);resetEditorDirect.paint();
+ if(directMode)renderKeyBoard($('direct-keys'),directLayer,l=>{directLayer=l;renderDirect()},rid=>{resetEditorDirect();const g=rootChar(rid);editor.focus();insertText(g.char,g.id,rid)})
 }
 $('direct-toggle').onclick=()=>{directMode=!directMode;resetEditorDirect();if(directMode)isComposing=false;endPending();renderDirect();editor.focus()};
 // Capture physical input before the editor's normal text/IME listeners.
 // OS accent composition is not part of explicit positional mode. Retain
 // an authoritative snapshot to discard any delayed native composition edit.
 function installDirectField(field,enabled,actions){
- let guard=null,nativeCompose=false;
- const reset=()=>{guard=null;nativeCompose=false};
+ let guard=null,nativeCompose=false,prefix=null,prefixAnchor=null,unsupported=null;
+ const paint=()=>actions.status?.(prefix,unsupported);
+ const clearPrefix=()=>{prefix=null;prefixAnchor=null;unsupported=null;paint()};
+ const reset=()=>{guard=null;nativeCompose=false;clearPrefix()};
  const snapshot=()=>({text:field.value,start:field.selectionStart,end:field.selectionEnd});
  const remember=()=>{guard=snapshot()};
  const restore=()=>{if(!guard)return;if(field.value!==guard.text)field.value=guard.text;if(field.selectionStart!==guard.start||field.selectionEnd!==guard.end)field.setSelectionRange(guard.start,guard.end)};
@@ -58,6 +92,9 @@ function installDirectField(field,enabled,actions){
  const swallow=e=>{if(e.cancelable)e.preventDefault();e.stopImmediatePropagation()};
  field.addEventListener('keydown',e=>{
   if(!enabled()){reset();return}
+  if(prefix&&(e.key==='Escape'||e.key==='Backspace')&&!e.ctrlKey&&!e.metaKey&&!e.altKey){
+   swallow(e);clearPrefix();actions.commit();remember();return
+  }
   // A real IME is intentionally not used for letter entry in direct mode.
   // Key positions are authoritative, including OS 'Dead' and 'Process'.
   if(actions.blocked?.())return;
@@ -66,7 +103,14 @@ function installDirectField(field,enabled,actions){
   if(a){
    nativeCompose=nativeCompose||e.key==='Dead'||e.key==='Process'||e.isComposing||e.keyCode===229;
    swallow(e);
-   if(a.kind==='root')actions.root(a.id);
+   if(markerOrder==='prefix'){
+    const r=L.prefixStep(prefix,a);
+    if(a.kind==='marker')actions.commit();
+    if(r.text)actions.insert(r.text,r.id,r.root);
+    if(a.kind==='reserved')actions.commit();
+    prefix=r.next;unsupported=r.unsupported;prefixAnchor=prefix?snapshot():null;paint();
+   }
+   else if(a.kind==='root')actions.root(a.id);
    else if(a.kind==='marker'){if(!actions.marker(a.modifier))actions.literal(a.char)}
    else if(a.kind==='literal')actions.literal(a.char);
    else if(a.kind==='reserved')actions.commit();
@@ -98,12 +142,18 @@ function installDirectField(field,enabled,actions){
   // Ordinary paste, deletion, and native edits remain normal.
   reset()
  },true);
+ field.addEventListener('select',()=>{
+  if(!prefixAnchor)return;const cur=snapshot();
+  if(cur.text!==prefixAnchor.text||cur.start!==prefixAnchor.start||cur.end!==prefixAnchor.end)clearPrefix()
+ });
  field.addEventListener('pointerdown',reset);
  field.addEventListener('blur',reset);
- return reset;
+ reset.paint=paint;return reset;
 }
 const resetEditorDirect=installDirectField(editor,()=>directMode,{
  root:rid=>{const g=rootChar(rid);insertText(g.char,g.id,rid)},
+ insert:(text,id,root)=>insertText(text,id,root),
+ status:(pending,unsupported)=>paintInputStatus('direct-status',directMode,pending,unsupported),
  marker:mod=>applyActive(mod),
  literal:char=>insertText(char),
  commit:endPending
@@ -157,8 +207,8 @@ function renderLearnMods(){
  const wrap=$('learn-modifiers');wrap.replaceChildren();const a=activeLearn();
  for(const [key,kind] of Object.entries(data.modifierKeys)){const g=a&&M.rootForm(a.root,kind),b=keyButton(key+' · '+t(kind),()=>practiceMod(kind));b.disabled=graded||!g;wrap.append(b)}
 }
-function renderPracticeBoard(){renderKeyBoard($('learn-keys'),learnLayer,l=>{learnLayer=l;renderPracticeBoard()},practiceRoot);renderLearnMods()}
-$('learn-direct').onclick=()=>{learnDirect=!learnDirect;resetLearnDirect();if(learnDirect)learnComposing=false;learnPending=null;$('learn-direct').textContent=t(learnDirect?'directOn':'directOff');$('learn-direct').setAttribute('aria-pressed',String(learnDirect));li.focus()};
+function renderPracticeBoard(){renderKeyBoard($('learn-keys'),learnLayer,l=>{learnLayer=l;renderPracticeBoard()},rid=>{resetLearnDirect();practiceRoot(rid)});renderLearnMods()}
+$('learn-direct').onclick=()=>{learnDirect=!learnDirect;resetLearnDirect();if(learnDirect)learnComposing=false;learnPending=null;$('learn-direct').textContent=t(learnDirect?'directOn':'directOff');$('learn-direct').setAttribute('aria-pressed',String(learnDirect));orderLabel('learn-order',learnDirect);resetLearnDirect.paint();showHint();li.focus()};
 li.addEventListener('compositionstart',()=>{learnComposing=true;learnPending=null});
 li.addEventListener('compositionend',()=>{learnComposing=false;practiceInput()});
 function practiceInput(){if(learnComposing||graded)return;learnPending=null;const r=M.convert(li.value,li.selectionStart,li.selectionEnd);if(r)setPractice(r.text,r.caret,r.rootId);else renderLearnMods()}
@@ -176,13 +226,17 @@ li.addEventListener('keydown',e=>{
 const resetLearnDirect=installDirectField(li,()=>learnDirect,{
  blocked:()=>graded,
  root:practiceRoot,marker:practiceMod,
+ insert:(text,id,root)=>{const a=li.selectionStart,b=li.selectionEnd;if(li.value.length-(b-a)+text.length<=64)setPractice(li.value.slice(0,a)+text+li.value.slice(b),a+text.length,root)},
+ status:(pending,unsupported)=>paintInputStatus('learn-status',learnDirect,pending,unsupported),
  literal:char=>{const a=li.selectionStart,b=li.selectionEnd;if(li.value.length-(b-a)+char.length<=64)setPractice(li.value.slice(0,a)+char+li.value.slice(b),a+char.length)},
  commit:()=>{learnPending=null;renderLearnMods()},
  enter:checkPractice
 });
 function showHint(){
  const c=current();if(!c)return;const g=M.byId.get(c.id),r=M.rootByForm.get(c.id),loc=L.locations.get(r.id),f=r.forms.find(f=>f.id===g.id),mark=Object.entries(data.modifierKeys).find(([,m])=>m===f.kind)?.[0];
- $('learn-hint-text').hidden=!showLearnHint;$('learn-hint-text').textContent=(loc.layer==='base'?'':t(loc.layer)+' + ')+loc.key.toUpperCase()+(mark?' → '+mark:'')+' · '+(';'+M.compactByRoot.get(r.id)+';')+(mark||'');
+ const key=(loc.layer==='base'?'':t(loc.layer)+' + ')+loc.key.toUpperCase();
+ const direct=mark?(markerOrder==='prefix'?mark+' → '+key:key+' → '+mark):key;
+ $('learn-hint-text').hidden=!showLearnHint;$('learn-hint-text').textContent=(learnDirect?direct+' · ':'')+(';'+M.compactByRoot.get(r.id)+';')+(mark||'');
 }
 $('learn-hint').onclick=()=>{showLearnHint=!showLearnHint;if(showLearnHint){learnLayer=L.locations.get(M.rootByForm.get(current().id).id).layer;renderPracticeBoard()}showHint()};
 function answer(ok){
@@ -200,7 +254,7 @@ function renderLesson(){
  if(read){
   for(const option of L.options(c)){const b=keyButton(name(option),()=>answer(option.id===c.id));b.disabled=graded;b.dataset.answer=option.id;if(graded&&option.id===c.id)b.classList.add('correct-choice');$('learn-options').append(b)}
  }else{
-  $('learn-direct').textContent=t(learnDirect?'directOn':'directOff');$('learn-direct').setAttribute('aria-pressed',String(learnDirect));li.readOnly=graded;$('learn-check').disabled=graded;renderPracticeBoard();showHint()
+  $('learn-direct').textContent=t(learnDirect?'directOn':'directOff');$('learn-direct').setAttribute('aria-pressed',String(learnDirect));li.readOnly=graded;$('learn-check').disabled=graded;orderLabel('learn-order',learnDirect);resetLearnDirect.paint();renderPracticeBoard();showHint()
  }
  if(graded){const fb=$('learn-feedback');fb.hidden=false;fb.append(el('strong','',t(correct?'learnCorrect':'learnTry')),el('span','glyph',g.char),el('span','',name(g)));$('learn-next').focus()}
 }

@@ -61,6 +61,25 @@ function createLearning(M,layout,curriculum){
   // KeyDown Enter is mapped explicitly only for the writer, not quiz grading.
   return Object.hasOwn(M.data.modifierKeys||{},char)?{kind:'marker',char,modifier:M.data.modifierKeys[char]}:{kind:'literal',char};
  }
+ // Prefix dead-key transition. No unregistered modified form is emitted.
+ // Pending markers are transient UI state, not text or portable tokens.
+ function prefixStep(pending,action){
+  const empty={next:null,text:'',id:null,root:null,unsupported:null};
+  if(action.kind==='marker'){
+   const next={char:action.char,modifier:action.modifier};
+   if(!pending)return {...empty,next};
+   return {...empty,text:pending.char,next:pending.char===next.char?null:next};
+  }
+  if(action.kind==='root'){
+   const r=M.rootById.get(action.id),bare=M.byId.get(r.bare_id);
+   if(!pending)return {...empty,text:bare.char,id:bare.id,root:r.id};
+   const full=M.rootForm(r.id,pending.modifier);
+   if(full)return {...empty,text:full.char,id:full.id};
+   return {...empty,text:pending.char+bare.char,id:bare.id,root:r.id,unsupported:pending.modifier};
+  }
+  if(action.kind==='literal')return {...empty,text:pending?(action.char===' '?pending.char:pending.char+action.char):action.char};
+  return empty;
+ }
  function options(card){
   const lesson=lessons.get(card.lesson),target=M.byId.get(card.id);
   const ids=[...lesson.forms,...M.data.lexicon.filter(g=>!g.root_component).map(g=>g.id)];
@@ -95,7 +114,7 @@ function createLearning(M,layout,curriculum){
   }
   return issues;
  }
- return {layout,lessons,cards,locations,mappings,resolvePhysical,directAction,options,makeSession,grade,writingChecks};
+ return {layout,lessons,cards,locations,mappings,resolvePhysical,directAction,prefixStep,options,makeSession,grade,writingChecks};
 }
 const api={createLearning,LAYERS};if(typeof module!=='undefined'&&module.exports)module.exports=api;else global.YubaeLearning=api;
 })(typeof globalThis!=='undefined'?globalThis:this);

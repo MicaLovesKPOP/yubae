@@ -87,3 +87,6 @@ textarea,input[type=search]{width:100%;border:1px solid var(--line);background:v
 .learn-feedback .glyph{font-size:2rem}.learn-bottom{justify-content:space-between;margin-top:12px}
 .check-line{display:flex;gap:9px;align-items:center;border-top:1px solid var(--line);padding:8px 0}.check-symbol{font-size:1.7rem}.check-body{flex:1;min-width:0;font-size:.82rem}.check-body p{margin:2px 0}
 @media(max-width:480px){.learn-dialog{padding:12px}.lesson-grid{grid-template-columns:1fr}.lesson-card{min-height:84px}.direct-row{gap:2px}.direct-key{min-height:44px}.direct-key .glyph{font-size:1.2rem}.layer-tabs button{min-height:38px}}
+
+.input-status{margin:4px 0 7px;font-size:.78rem;line-height:1.5;min-height:1.3em}
+.input-status[data-pending]:not([data-pending=""]){font-weight:600;color:var(--focus)}
