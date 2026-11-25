@@ -4,11 +4,11 @@ from pathlib import Path
 import json,base64,hashlib,struct,zlib,math,zipfile,io,shutil,sys
 from fontTools.ttLib import TTFont
 P=Path(__file__).resolve().parent;ROOT=P.parent;D=ROOT/'data';N=ROOT/'source'/'native';OUT=ROOT/'dist';SITE=OUT/'site'
-VERSION='0.5.0-alpha.3'
+VERSION='0.5.0-alpha.4'
 SHARE_BASE='https://micaloveskpop.github.io/yubae/'
 def read_json(name):return json.loads((D/name).read_text(encoding='utf-8'))
 def read(name):return (P/name).read_text(encoding='utf-8')
-lex=read_json('text-registry.json');mn={**read_json('mnemonics.json'),**read_json('root-mnemonics.json')};comps=read_json('composition.json');baseline={**read_json('encoding-v1.json'),**read_json('root-encoding-v1.json')}
+lex=read_json('text-registry.json');mn={**read_json('mnemonics.json'),**read_json('root-mnemonics.json'),**read_json('compact-mnemonics.json')};comps=read_json('composition.json');baseline={**read_json('encoding-v1.json'),**read_json('root-encoding-v1.json')}
 assert {g['id']:g['cp'] for g in lex}==baseline
 assert all(g['char']==chr(g['cp']) for g in lex)
 sys.path.insert(0,str(ROOT/'source'))
@@ -22,7 +22,7 @@ with zipfile.ZipFile(N/'exile.kmp') as z:
  meta=json.loads(z.read('kmp.json'))
  font=z.read(meta['keyboards'][0]['oskFont'])
 f=TTFont(io.BytesIO(font));assert set(f.getBestCmap())=={32,*baseline.values()}
-data={'version':VERSION,'encoding':'yubae-private-v2','shareBase':SHARE_BASE,'lexicon':lex,'mnemonics':mn,'composition':comps,'roots':roots,'modifierKeys':read_json('modifier-keys.json')}
+data={'version':VERSION,'encoding':'yubae-private-v2','shareBase':SHARE_BASE,'lexicon':lex,'mnemonics':mn,'composition':comps,'roots':roots,'modifierKeys':read_json('modifier-keys.json'),'compactCodes':read_json('compact-root-codes.json')}
 fontcss="@font-face{font-family:Yubae;src:url(data:font/ttf;base64,"+base64.b64encode(font).decode('ascii')+") format('truetype');font-weight:400;font-style:normal;font-display:block;}"
 template=read('index.template.html');css=read('studio.css');model=read('model.js');app=read('studio.js')
 assert '</script' not in model.lower()+app.lower()

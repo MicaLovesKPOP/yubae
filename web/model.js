@@ -15,6 +15,22 @@ function createModel(data){
   const expanded=cat==='favorites'?Array.from(new Set(favorites.flatMap(id=>(rootByForm.get(id)?.forms||[]).map(f=>f.id)))):favorites;
   return uniqueRoots(search(q,cat,expanded).filter(g=>!g.root_component))
  }
+ const compactCodes=data.compactCodes||{}, compactByRoot=new Map(Object.entries(compactCodes).map(([c,id])=>[id,c]));
+ function candidateSearch(q,recent=[],favorites=[]){
+  const raw=String(q).normalize('NFC').trim(), key=raw.toLowerCase();
+  function byRoot(id){const r=rootById.get(id);return r?{root:r,match:byId.get(r.representative)}:null}
+  function dedup(entries){const seen=new Set();return entries.filter(e=>e&&!seen.has(e.root.id)&&seen.add(e.root.id))}
+  if(!raw)return dedup([...uniqueRoots([...recent,...favorites].map(id=>byId.get(id)).filter(Boolean)).map(e=>e.match.root_component?byRoot(e.root.id):e),...rootSearch('')]);
+  if(key.startsWith(';')){
+   const prefix=key.slice(1).replace(/;$/u,'');
+   return Object.entries(compactCodes).filter(([c])=>c.startsWith(prefix)).sort(([a],[b])=>Number(b===prefix)-Number(a===prefix)||a.localeCompare(b)).map(([,id])=>byRoot(id)).filter(Boolean)
+  }
+  if(raw.startsWith('k/')){
+   const prefix='/r/'+raw;
+   return dedup(Object.entries(mn).filter(([k])=>k.startsWith(prefix)).sort(([a],[b])=>Number(b===prefix+';')-Number(a===prefix+';')||a.length-b.length||a.localeCompare(b)).map(([,ch])=>{const g=byChar.get(ch);return g&&byRoot(rootByForm.get(g.id)?.id)}))
+  }
+  return rootSearch(raw)
+ }
  function rootForm(rootId,kind){const r=rootById.get(rootId);const form=r?.forms.find(f=>f.kind===kind);return form?byId.get(form.id):null}
 
  function search(q,cat='all',favorites=[]){
@@ -34,10 +50,10 @@ function createModel(data){
  }
  function convert(text,start,end){
   if(start!==end)return null;
-  const match=text.slice(0,end).match(/\/(?:r\/)?(?:k\/)?[A-Za-z0-9가-힣-]+;$/u);
+  const match=text.slice(0,end).match(/(?:;[a-z]{2};|;[0-9];|\/(?:r\/)?(?:k\/)?[A-Za-z0-9가-힣-]+;)$/u);
   if(!match||!Object.hasOwn(mn,match[0]))return null;
   const ch=mn[match[0]],i=end-match[0].length;
-  return {text:text.slice(0,i)+ch+text.slice(end),caret:i+ch.length,id:byChar.get(ch)?.id,rootId:match[0].startsWith('/r/')?rootByForm.get(byChar.get(ch)?.id)?.id:null}
+  return {text:text.slice(0,i)+ch+text.slice(end),caret:i+ch.length,id:byChar.get(ch)?.id,rootId:(match[0].startsWith('/r/')||match[0].startsWith(';'))?rootByForm.get(byChar.get(ch)?.id)?.id:null}
  }
  function selected(text,start,end){
   const raw=start===end?text.slice(Math.max(0,start-1),start):text.slice(start,end);
@@ -85,7 +101,7 @@ function createModel(data){
   return decode(new TextDecoder('utf-8',{fatal:true}).decode(bytes));
  }
  function gloss(text,ko=false){return Array.from(text,c=>{let g=byChar.get(c);return g?(ko?g.ko_key:g.en):c}).join(' · ').replace(/ · \n · /gu,'\n')}
- return {data,byId,byChar,search,convert,selected,changeForm,encode,decode,hash,readHash,gloss,roots,rootById,rootByForm,rootSearch,rootForm,uniqueRoots,MAX};
+ return {data,byId,byChar,search,convert,selected,changeForm,encode,decode,hash,readHash,gloss,roots,rootById,rootByForm,rootSearch,rootForm,uniqueRoots,candidateSearch,compactByRoot,MAX};
 }
 const api={createModel,norm,initial};if(typeof module!=='undefined'&&module.exports)module.exports=api;else root.YubaeModel=api;
 })(typeof globalThis!=='undefined'?globalThis:this);

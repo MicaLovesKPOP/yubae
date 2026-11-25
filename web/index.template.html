@@ -16,7 +16,7 @@
 <section class="panel editor-panel" aria-labelledby="editor-title">
 <header class="section-heading"><h1 id="editor-title" data-i="write"></h1><span id="draft-state" class="muted" role="status"></span></header>
 <label for="editor" class="sr-only" data-i="message"></label><textarea id="editor" class="glyph" maxlength="3000" spellcheck="false" autocomplete="off" autocorrect="off" rows="4"></textarea>
-<div class="edit-tools actions"><button id="undo" data-i="undo"></button><button id="redo" data-i="redo"></button><button id="space" data-i="space"></button><button id="newline" data-i="newline"></button><button id="backspace" data-i="backspace"></button><button id="clear" data-i="clear"></button><span class="muted" id="count"></span></div>
+<div class="edit-tools actions"><button id="quick-open" type="button" data-i="quickOpen" aria-haspopup="dialog"></button><button id="undo" data-i="undo"></button><button id="redo" data-i="redo"></button><button id="space" data-i="space"></button><button id="newline" data-i="newline"></button><button id="backspace" data-i="backspace"></button><button id="clear" data-i="clear"></button><span class="muted" id="count"></span></div>
 <div class="forms"><div class="forms-heading"><strong data-i="forms"></strong><span id="form-context" class="muted"></span></div><div id="form-buttons" class="actions"></div></div>
 <details class="gloss-box"><summary data-i="gloss"></summary><div id="gloss" class="muted"></div></details>
 <div class="share-row actions"><button id="share" class="primary" data-i="share"></button><button id="png" data-i="png"></button><button id="share-more" aria-expanded="false" aria-controls="copy portable import" data-i="more"></button><button id="copy" class="share-secondary" data-i="copyText"></button><button id="portable" class="share-secondary" data-i="portable"></button><button id="import" class="share-secondary" data-i="import"></button></div>
@@ -33,10 +33,20 @@
 <aside id="detail" class="detail" hidden><div class="detail-top"><span id="detail-glyph" class="glyph"></span><div><strong id="detail-name"></strong><p id="detail-secondary" class="muted"></p><p id="detail-code" class="muted"></p></div></div><p id="detail-note" class="muted"></p><div class="actions"><button id="detail-insert" class="primary" data-i="insert"></button><button id="detail-fav"></button><button id="detail-close" data-i="close"></button></div></aside>
 </section>
 </div>
-<section class="panel help-panel"><details><summary data-i="howTo"></summary><p data-i="instructions"></p><p data-i="keyboardHelp"></p><p><a href="https://github.com/MicaLovesKPOP/yubae/releases/tag/v0.5.0" target="_blank" rel="noopener" data-i="nativeDownload"></a></p></details><details><summary data-i="about"></summary><p data-i="aboutText"></p><p><a href="https://github.com/MicaLovesKPOP/yubae/blob/main/docs/RESEARCH.md" target="_blank" rel="noopener" data-i="sources"></a> · <a href="https://github.com/MicaLovesKPOP/yubae/blob/main/RIGHTS.md" target="_blank" rel="noopener" data-i="rights"></a> · <a href="https://github.com/MicaLovesKPOP/yubae" target="_blank" rel="noopener">GitHub</a></p></details></section>
+<section class="panel help-panel"><details><summary data-i="howTo"></summary><p data-i="instructions"></p><p data-i="keyboardHelp"></p><p><a href="https://github.com/MicaLovesKPOP/yubae/releases/tag/v0.5.1" target="_blank" rel="noopener" data-i="nativeDownload"></a></p></details><details><summary data-i="about"></summary><p data-i="aboutText"></p><p><a href="https://github.com/MicaLovesKPOP/yubae/blob/main/docs/RESEARCH.md" target="_blank" rel="noopener" data-i="sources"></a> · <a href="https://github.com/MicaLovesKPOP/yubae/blob/main/RIGHTS.md" target="_blank" rel="noopener" data-i="rights"></a> · <a href="https://github.com/MicaLovesKPOP/yubae" target="_blank" rel="noopener">GitHub</a></p></details></section>
 </main>
 <footer><span data-i="footer"></span> <a id="offline-download" href="./Yubae_Studio.html" download data-i="offlineFile"></a></footer>
 <div id="toast" role="status" aria-live="polite"></div>
+<dialog id="quick-dialog" class="quick-dialog" aria-labelledby="quick-title">
+ <header class="quick-header"><h2 id="quick-title" data-i="quickTitle"></h2><button type="button" id="quick-close" data-i="cancel"></button></header>
+ <label class="sr-only" for="quick-query" data-i="quickSearch"></label>
+ <input id="quick-query" type="search" role="combobox" aria-expanded="true" aria-controls="quick-results" aria-autocomplete="list" autocomplete="off" spellcheck="false">
+ <p class="muted quick-hint" data-i="quickHint"></p>
+ <div id="quick-count" role="status" class="muted"></div>
+ <div id="quick-results" role="listbox" class="quick-results"></div>
+ <div class="quick-pages actions"><button type="button" id="quick-prev" data-i="quickPrev"></button><span id="quick-page" class="muted"></span><button type="button" id="quick-next" data-i="quickNext"></button></div>
+ <p class="muted quick-hint" data-i="quickKeys"></p>
+ </dialog>
 <dialog id="import-dialog"><form method="dialog"><h2 data-i="import"></h2><p data-i="importHint"></p><label for="import-value" class="sr-only" data-i="import"></label><textarea id="import-value" rows="6" maxlength="24000" spellcheck="false"></textarea><div class="actions"><button value="cancel" data-i="cancel"></button><button type="button" id="import-apply" class="primary" data-i="importApply"></button></div></form></dialog>
 <script type="application/json" id="registry">/*DATA*/</script>
 <script>/*MODEL*/</script><script>/*APP*/</script>

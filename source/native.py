@@ -9,6 +9,7 @@ from lexicon import G, korean_shortcuts, dubeolsik
 from composition import MODS, TRANSFORMS, output_rules
 from writable_roots import load,root_aliases,export_data
 from root_input import MARKER_KEYS
+from compact_codes import compact_codes
 P=Path(__file__).resolve().parent
 O=P.parent
 # Execute only the font-generation section of the existing v0.2 generator. Keep the font
@@ -49,11 +50,14 @@ physical=defaultdict(set)
 for word,id in ko_aliases.items():physical[dubeolsik(word)].add(id)
 ko_physical={code:next(iter(ids)) for code,ids in physical.items() if len(ids)==1}
 aliases={**en_aliases,**ko_aliases,**{'k/'+a:id for a,id in ko_physical.items()}}
-kmn=['c Yubae; stable private encoding v0.2; keyboard v0.5.0.',"store(&VERSION) '15.0'","store(&NAME) 'Exile Zone'","store(&KEYBOARDVERSION) '0.5.0'","store(&TARGETS) 'any'","store(&LAYOUTFILE) 'exile.keyman-touch-layout'","store(&MNEMONICLAYOUT) '1'",'begin Unicode > use(main)','group(main) using keys','c Explicitly delimited mnemonics: /water; /물; /k/anf;.']
+kmn=['c Yubae; stable private encoding v0.2; keyboard v0.5.1.',"store(&VERSION) '15.0'","store(&NAME) 'Exile Zone'","store(&KEYBOARDVERSION) '0.5.1'","store(&TARGETS) 'any'","store(&LAYOUTFILE) 'exile.keyman-touch-layout'","store(&MNEMONICLAYOUT) '1'",'begin Unicode > use(main)','group(main) using keys','c Explicitly delimited mnemonics: /water; /물; /k/anf;.']
 for a,id in sorted(aliases.items(),key=lambda x:(-len(x[0]),x[0])):kmn.append(f"'/{a}' + ';' > U+{byid[id]['cp']:04X}")
 bare_aliases=root_aliases(aliases,roots)
 for a,id in sorted(bare_aliases.items(),key=lambda x:(-len(x[0]),x[0])):
  kmn.append(f"'/{a}' + ';' > U+{text_byid[id]['cp']:04X} dk(active)")
+compact=compact_codes(records,roots)
+for shortcut,ch in sorted(compact.items(),key=lambda kv:-len(kv[0])):
+ kmn.append(f"'{shortcut[:-1]}' + ';' > U+{ord(ch):04X} dk(active)")
 for g in records:
  cp=g['cp']
  if g['id'] in root_by_bare:
@@ -161,21 +165,22 @@ data=O/'data';data.mkdir(exist_ok=True)
 (data/'mnemonics.json').write_text(json.dumps({'/'+a+';':byid[id]['char'] for a,id in aliases.items()},ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
 (data/'ambiguous-ko.json').write_text(json.dumps(ambiguous,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
 export_data(records,roots)
+(data/'compact-mnemonics.json').write_text(json.dumps(compact,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
 (data/'root-mnemonics.json').write_text(json.dumps({'/'+a+';':text_byid[id]['char'] for a,id in bare_aliases.items()},ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
 (data/'composition.json').write_text(json.dumps(TRANSFORMS,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
 
 # Keyman package source: package language is explicitly private, not an assigned language identifier.
 root=ET.Element('Package'); opts=ET.SubElement(root,'Options'); ET.SubElement(opts,'FollowKeyboardVersion').text='True'; info=ET.SubElement(root,'Info')
-ET.SubElement(info,'Name').text='Exile Zone / 유배지어 (unofficial)'; ET.SubElement(info,'Version').text='0.5.0'; ET.SubElement(info,'Copyright').text='Unofficial fan reconstruction of handwritten reference.'
+ET.SubElement(info,'Name').text='Exile Zone / 유배지어 (unofficial)'; ET.SubElement(info,'Version').text='0.5.1'; ET.SubElement(info,'Copyright').text='Unofficial fan reconstruction of handwritten reference.'
 files=ET.SubElement(root,'Files')
 for file in ['exile.kmx','exile.js','exilechart_v050.ttf','welcome.htm']:
  e=ET.SubElement(files,'File'); ET.SubElement(e,'Name').text=file; ET.SubElement(e,'Description').text=file; ET.SubElement(e,'CopyLocation').text='0'
 kb=ET.SubElement(ET.SubElement(root,'Keyboards'),'Keyboard')
-for k,v in [('Name','Exile Zone'),('ID','exile'),('Version','0.5.0'),('OSKFont','exilechart_v050.ttf'),('DisplayFont','exilechart_v050.ttf')]:ET.SubElement(kb,k).text=v
+for k,v in [('Name','Exile Zone'),('ID','exile'),('Version','0.5.1'),('OSKFont','exilechart_v050.ttf'),('DisplayFont','exilechart_v050.ttf')]:ET.SubElement(kb,k).text=v
 ET.SubElement(ET.SubElement(kb,'Languages'),'Language',{'ID':'art-x-exile'}).text='Exile Zone / 유배지어 (unofficial)'
 for tag in ('WebOSKFonts','WebDisplayFonts'):ET.SubElement(ET.SubElement(kb,tag),'Font',{'Filename':'exilechart_v050.ttf'})
 ET.indent(root); ET.ElementTree(root).write(B/'exile.kps',encoding='utf-8',xml_declaration=True)
-(B/'welcome.htm').write_text('''<!doctype html><meta charset="utf-8"><title>Yubae / 유배지어</title><h1>Exile Zone — unofficial keyboard</h1><p>Tap a root to write its bare shape. Apply a documented marker from the persistent modifier row (— ◦ ´ ` ◦◦), or hold a root for complete forms. OK commits; hold a modifier for literal punctuation. 한국어: 어근을 입력한 뒤 표지를 선택하세요. 뜻 미확인 어근도 입력할 수 있습니다. Desktop: /water; inserts the legacy word, /r/water; inserts the bare root; then - . ' backtick or : applies an available form. Use OK on the touch keyboard or move the text cursor away and back to commit without adding a character. Unsupported punctuation stays literal. The keyboard uses a trial mapping; real-device acceptance is pending. Ordinary text stays ordinary. The keyboard uses private-use characters U+E000–E09F, not official Unicode. Select Exile Chart in font-aware desktop applications. Other mobile apps may show missing glyphs. Cry is not yet available. No network access or prediction in the keyboard rules.</p><h2>Font check</h2><style>@font-face{font-family:ExileTest;src:url(exilechart_v050.ttf) format('truetype')} .sample{font-family:ExileTest,sans-serif;font-size:36px;line-height:1.5}</style><p>These five characters should be distinct symbols, not boxes:</p><div class="sample">&#xE00A; &#xE00E; &#xE039; &#xE047; &#xE012;</div><p>If they are visible here but not in the keyboard or editor, report that distinction. Switch to readable Korean or English labels if needed.</p>''',encoding='utf-8')
+(B/'welcome.htm').write_text('''<!doctype html><meta charset="utf-8"><title>Yubae / 유배지어</title><h1>Exile Zone — unofficial keyboard</h1><p>Tap a root to write its bare shape. Apply a documented marker from the persistent modifier row (— ◦ ´ ` ◦◦), or hold a root for complete forms. OK commits; hold a modifier for literal punctuation. 한국어: 어근을 입력한 뒤 표지를 선택하세요. 뜻 미확인 어근도 입력할 수 있습니다. Desktop: /water; inserts the legacy word, /r/water; or ;wa; inserts the bare root; then - . ' backtick or : applies an available form. Use OK on the touch keyboard or move the text cursor away and back to commit without adding a character. Unsupported punctuation stays literal. The keyboard uses a trial mapping; real-device acceptance is pending. Ordinary text stays ordinary. The keyboard uses private-use characters U+E000–E09F, not official Unicode. Select Exile Chart in font-aware desktop applications. Other mobile apps may show missing glyphs. Cry is not yet available. No network access or prediction in the keyboard rules.</p><h2>Font check</h2><style>@font-face{font-family:ExileTest;src:url(exilechart_v050.ttf) format('truetype')} .sample{font-family:ExileTest,sans-serif;font-size:36px;line-height:1.5}</style><p>These five characters should be distinct symbols, not boxes:</p><div class="sample">&#xE00A; &#xE00E; &#xE039; &#xE047; &#xE012;</div><p>If they are visible here but not in the keyboard or editor, report that distinction. Switch to readable Korean or English labels if needed.</p>''',encoding='utf-8')
 
 assert len(G)==93 and {g['cp'] for g in G}==set(range(0xE000,0xE05D))
 assert len(en_aliases)==142,len(en_aliases)

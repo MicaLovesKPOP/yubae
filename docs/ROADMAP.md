@@ -27,3 +27,6 @@ Studio alpha.2 currently implements the two-stage picker with 83 provisional gra
 
 ## Writable-root implementation milestone
 Studio alpha.3 and native 0.5.0 now implement one-tap bare-root entry, optional postfix composition and shared encoding/font. 83 groups, 160 symbols, 608 legacy shortcuts plus 610 root aliases. Next: real Korean/English mobile and desktop device acceptance (including punctuation, context reset and keyboard ergonomics), ChromeOS integration, then improve native root candidate selection. Separately audit authentic root/marker geometry and ordinal forms. Do not change original codepoints or add unsupported lexical meanings.
+
+## Fast root selection milestone
+Studio alpha.4 candidate dialog and native 0.5.1 compact code trial implemented and regression-tested. Next: real Korean and English user acceptance; compare candidate, compact-code and possible persistent direct-key modes on actual tasks. Preserve existing compatibility. Prioritize authentic glyph/root/ordinal audit and native device acceptance over additional speculative shortcut schemes.

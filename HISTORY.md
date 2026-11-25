@@ -12,3 +12,5 @@
 - 0.1.0: gloss composer.
 
 - Native 0.5.0 / Studio 0.5.0-alpha.3: writable bare roots (67 added without changing the 93 legacy encodings/outlines), shared font, optional postfix modifiers, persistent native modifier row, 610 root aliases, portable-message compatibility, browser and compiled-rule regression checks.
+
+- Native 0.5.1 / Studio 0.5.0-alpha.4: 83 optional compact root codes; F2 bilingual candidate picker with keyboard and touch navigation; all previous 1,218 shortcuts and 160 text symbols preserved.

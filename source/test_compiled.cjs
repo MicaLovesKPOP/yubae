@@ -4,6 +4,7 @@ const fs=require('fs'),vm=require('vm'),assert=require('node:assert/strict'),pat
 const B=path.join(__dirname,'native'),D=path.join(__dirname,'..','data');
 const read=f=>JSON.parse(fs.readFileSync(path.join(D,f),'utf8'));
 const lex=read('text-registry.json'),legacy=read('lexicon.json'),mn=read('mnemonics.json'),rm=read('root-mnemonics.json'),roots=read('writable-roots.json'),markers=read('modifier-keys.json'),amb=read('ambiguous-ko.json'),comps=read('composition.json');
+const compact=read('compact-mnemonics.json');
 const by=new Map(lex.map(g=>[g.id,g])),cp=id=>by.get(id).char,source=fs.readFileSync(path.join(B,'exile.js'),'utf8');
 let keyboard;
 const eq=(a,b)=>typeof a==='object'&&typeof b==='object'&&a&&b?a.t===b.t&&a.d===b.d:a===b;
@@ -23,8 +24,20 @@ const key=g=>'U_'+g.cp.toString(16).toUpperCase();
 assert.equal(legacy.length,93);assert.equal(lex.length,160);assert.equal(Object.keys(mn).length,608);assert.equal(roots.length,83);
 for(const g of lex){const t=ctx('x');touch(t,key(g));assert.equal(visible(t),'x'+g.char,g.id)}
 for(const [shortcut,expected] of Object.entries(mn)){const t=ctx('prefix '+shortcut.slice(0,-1));assert.equal(physical(t,';'),1,shortcut);assert.equal(visible(t),'prefix '+expected,shortcut);assert(t.tokens.every(v=>typeof v==='string'))}
-for(const [shortcut,expected] of Object.entries(rm)){const t=ctx('prefix '+shortcut.slice(0,-1));assert.equal(physical(t,';'),1,shortcut);assert.equal(visible(t),'prefix '+expected,shortcut);assert.equal(t.tokens.at(-1).t,'d')}
+for(const [shortcut,expected] of Object.entries({...rm,...compact})){const t=ctx('prefix '+shortcut.slice(0,-1));assert.equal(physical(t,';'),1,shortcut);assert.equal(visible(t),'prefix '+expected,shortcut);assert.equal(t.tokens.at(-1).t,'d')}
 for(const raw of ['someone','water','cry','/cry','/wrong','/somewater','ordinary text',...Object.keys(amb).map(k=>'/'+k)]){const t=ctx(raw);physical(t,';');assert.equal(visible(t),raw+';')}
+assert.equal(Object.keys(compact).length,83);
+for(const [shortcut,expected] of Object.entries(compact)){
+ const t=ctx('prefix '+shortcut.slice(0,-1));physical(t,';');
+ assert.equal(visible(t),'prefix '+expected);
+ const r=roots.find(r=>cp(r.bare_id)===expected);
+ for(const [k,m] of Object.entries(markers)){
+  const u=ctx(shortcut.slice(0,-1));physical(u,';');physical(u,k);
+  const f=r.forms.find(f=>f.kind===m);
+  assert.equal(visible(u),f?cp(f.id):expected+k,shortcut+k)
+ }
+}
+for(const raw of [';zz','wa',';wa ',';ww',';']){const t=ctx(raw);physical(t,';');assert.equal(visible(t),raw+';')}
 let cases=0;
 for(const r of roots)for(const [k,m] of Object.entries(markers)){
  const bare=by.get(r.bare_id),f=r.forms.find(x=>x.kind===m),target=f?cp(f.id):null;
@@ -58,4 +71,4 @@ for(const p of ['phone','tablet']){
   assert.equal(seen.size,10);assert.equal(bare.size,83);assert.equal(all.size,160)
  }
 }
-console.log('PASS compiled native: 160 codepoints, 608 legacy shortcuts, '+Object.keys(rm).length+' root aliases, '+cases+' root/marker pairs with punctuation, explicit modifiers, literal long-press, commit, successive roots, all 40 bilingual touch layouts.');
+console.log('PASS compiled native: 160 codepoints, 608 legacy shortcuts, '+Object.keys(rm).length+' root aliases, '+Object.keys(compact).length+' compact root codes, '+cases+' root/marker pairs with punctuation, explicit modifiers, literal long-press, commit, successive roots, all 40 bilingual touch layouts.');
