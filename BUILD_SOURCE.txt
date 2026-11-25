@@ -1,1 +1,1 @@
-Studio 0.5.0-alpha.5; source commit 7336109d886db4eaa1a1f467a59d8897261c4fa8
+Studio 0.5.0-alpha.6; source commit fa51dc28d45b8d4bf99a0431044b530a52efa3c6
