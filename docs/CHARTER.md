@@ -28,3 +28,6 @@ The project owner controls publication policy, licensing, budgets and external r
 
 ## Release bar
 A change to encoding must never silently reinterpret old text. All generators consume the same lexicon; compare previous codepoints and shapes, verify rendering, input rules, accessible UI, and actual-device acceptance per supported platform. A compile is not device verification. Alpha and stable releases are separate; no automatic promotion. Daily usability outranks cosmetic polish. New unverified forms remain excluded from the default canonical keyboard until reviewed.
+
+## Root-first input principle
+All graphical characters are modeled as roots with a finite registry of documented complete forms. The standard picker interaction is root selection followed by a consistent modifier choice, including unmodified only where it has a documented meaning. No unsupported combination or bare component is emitted. Maintain this across Studio and native layouts; keep already encoded full forms and direct shortcuts compatible. See docs/ENCODING.md.

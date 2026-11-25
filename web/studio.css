@@ -29,3 +29,19 @@ textarea,input[type=search]{width:100%;border:1px solid var(--line);background:v
  .categories{margin:9px 0}
  .categories button{min-height:38px}
 }
+
+.root-choices{border:1px solid var(--line);border-radius:10px;padding:9px;margin:8px 0;background:var(--bg)}
+.root-heading{display:flex;align-items:center;justify-content:space-between;gap:8px;font-size:.9rem}
+#root-title{display:flex;align-items:center;gap:6px}
+#root-title .root-preview{height:28px;width:28px}
+.root-heading button{min-height:30px;padding:3px 7px;font-size:.78rem}
+#root-status{font-size:.78rem;margin:3px 0 7px}
+.modifier-grid{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:4px}
+.modifier-key{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;min-height:72px;padding:4px 2px;min-width:0}
+.modifier-label,.modifier-key .word{font-size:.68rem;overflow-wrap:anywhere;text-align:center}
+.modifier-key .glyph{font-size:1.65rem;line-height:1}
+.modifier-empty{font-size:1.3rem;line-height:1.5}
+.root-preview{display:block;width:36px;height:36px;flex-shrink:0}
+.root-key .root-count{position:absolute;bottom:4px;right:5px;color:var(--muted);font-size:.66rem}
+.root-key[aria-pressed=true]{outline:2px solid var(--focus);outline-offset:-2px}
+@media(max-width:420px){.modifier-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.modifier-key{min-height:58px}.root-choices{padding:7px}}

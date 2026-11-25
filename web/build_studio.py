@@ -1,23 +1,28 @@
 # SPDX-License-Identifier: GPL-3.0-or-later
 """Generate a self-contained offline app and deployable static PWA from the native registry."""
 from pathlib import Path
-import json,base64,hashlib,struct,zlib,math,zipfile,io,shutil
+import json,base64,hashlib,struct,zlib,math,zipfile,io,shutil,sys
 from fontTools.ttLib import TTFont
 P=Path(__file__).resolve().parent;ROOT=P.parent;D=ROOT/'data';N=ROOT/'source'/'native';OUT=ROOT/'dist';SITE=OUT/'site'
-VERSION='0.5.0-alpha.1'
+VERSION='0.5.0-alpha.2'
 SHARE_BASE='https://micaloveskpop.github.io/yubae/'
 def read_json(name):return json.loads((D/name).read_text(encoding='utf-8'))
 def read(name):return (P/name).read_text(encoding='utf-8')
 lex=read_json('lexicon.json');mn=read_json('mnemonics.json');comps=read_json('composition.json');baseline=read_json('encoding-v1.json')
 assert {g['id']:g['cp'] for g in lex}==baseline
 assert all(g['char']==chr(g['cp']) for g in lex)
+sys.path.insert(0,str(ROOT/'source'))
+from root_registry import make_registry
+roots=make_registry()
+assert {x['id'] for r in roots for x in r['forms']}==set(baseline)
+(D/'root-registry.json').write_text(json.dumps(roots,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
 # Use the exact font packaged in Keyman, not a separate interpretation.
 with zipfile.ZipFile(N/'exile.kmp') as z:
  assert z.testzip() is None
  meta=json.loads(z.read('kmp.json'))
  font=z.read(meta['keyboards'][0]['oskFont'])
 f=TTFont(io.BytesIO(font));assert set(f.getBestCmap())=={32,*baseline.values()}
-data={'version':VERSION,'encoding':'yubae-private-v1','shareBase':SHARE_BASE,'lexicon':lex,'mnemonics':mn,'composition':comps}
+data={'version':VERSION,'encoding':'yubae-private-v1','shareBase':SHARE_BASE,'lexicon':lex,'mnemonics':mn,'composition':comps,'roots':roots}
 fontcss="@font-face{font-family:Yubae;src:url(data:font/ttf;base64,"+base64.b64encode(font).decode('ascii')+") format('truetype');font-weight:400;font-style:normal;font-display:block;}"
 template=read('index.template.html');css=read('studio.css');model=read('model.js');app=read('studio.js')
 assert '</script' not in model.lower()+app.lower()
@@ -66,4 +71,4 @@ lic=SITE/'LICENSES';lic.mkdir(exist_ok=True)
 for p in (ROOT/'LICENSES').glob('*'):
  if p.is_file():shutil.copy2(p,lic/p.name)
 (OUT/'STUDIO_SHA256SUMS.txt').write_text(hashlib.sha256((OUT/'Yubae_Studio.html').read_bytes()).hexdigest()+'  Yubae_Studio.html\n',encoding='ascii')
-print(f'Built Studio {VERSION}: {len(lex)} shared glyphs, {len(mn)} shortcuts, {len(comps)} form records; cache {hashid}.')
+print(f'Built Studio {VERSION}: {len(lex)} shared glyphs, {len(mn)} shortcuts, {len(comps)} form records, {len(roots)} picker roots; cache {hashid}.')

@@ -8,6 +8,15 @@ function initial(s){return Array.from(norm(s),c=>{const x=c.codePointAt(0)-0xac0
 function createModel(data){
  const byId=new Map(data.lexicon.map(g=>[g.id,g])),byChar=new Map(data.lexicon.map(g=>[g.char,g]));
  const mn=data.mnemonics, forms=data.composition;
+ const roots=data.roots||[], rootById=new Map(roots.map(r=>[r.id,r])), rootByForm=new Map();
+ for(const r of roots)for(const f of r.forms){if(rootByForm.has(f.id)||!byId.has(f.id))throw Error('root registry');rootByForm.set(f.id,r)}
+ function uniqueRoots(gs){const seen=new Set();return gs.map(g=>{const r=rootByForm.get(g.id);if(!r||seen.has(r.id))return null;seen.add(r.id);return {root:r,match:g}}).filter(Boolean)}
+ function rootSearch(q,cat='all',favorites=[]){
+  const expanded=cat==='favorites'?Array.from(new Set(favorites.flatMap(id=>(rootByForm.get(id)?.forms||[]).map(f=>f.id)))):favorites;
+  return uniqueRoots(search(q,cat,expanded))
+ }
+ function rootForm(rootId,kind){const r=rootById.get(rootId);const form=r?.forms.find(f=>f.kind===kind);return form?byId.get(form.id):null}
+
  function search(q,cat='all',favorites=[]){
   const terms=String(q).normalize('NFC').trim().split(/\s+/u).filter(Boolean);
   const whole=norm(q), isJamo=/^[ㄱ-ㅎ]+$/u.test(whole);
@@ -76,7 +85,7 @@ function createModel(data){
   return decode(new TextDecoder('utf-8',{fatal:true}).decode(bytes));
  }
  function gloss(text,ko=false){return Array.from(text,c=>{let g=byChar.get(c);return g?(ko?g.ko_key:g.en):c}).join(' · ').replace(/ · \n · /gu,'\n')}
- return {data,byId,byChar,search,convert,selected,changeForm,encode,decode,hash,readHash,gloss,MAX};
+ return {data,byId,byChar,search,convert,selected,changeForm,encode,decode,hash,readHash,gloss,roots,rootById,rootByForm,rootSearch,rootForm,uniqueRoots,MAX};
 }
 const api={createModel,norm,initial};if(typeof module!=='undefined'&&module.exports)module.exports=api;else root.YubaeModel=api;
 })(typeof globalThis!=='undefined'?globalThis:this);

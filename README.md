@@ -14,13 +14,13 @@ The 93 glyphs are vector reconstructions of a supplied handwritten chart, not an
 - 142 English, 233 Hangul and 233 Dubeolsik mnemonics; exact matches only.
 - Grammar page: replace the preceding glyph with a known noun/verb/adjective/adverb/colour form. Unsupported combinations do nothing.
 - Android input and display verified with v0.3.2; v0.4.0 is compiled and adapter-tested but awaits device testing.
-- Yubae Studio 0.5.0-alpha.1 is a bilingual browser composer/PWA with portable messages. Chromebook native extension remains experimental.
+- Yubae Studio 0.5.0-alpha.2 is a bilingual browser composer/PWA with portable messages. Chromebook native extension remains experimental.
 
 ## Use Yubae Studio
 
-**[Open Yubae Studio](https://micaloveskpop.github.io/yubae/)** — browser companion, no account required. Compose with the existing provisional glyphs, search Korean/English (including Korean initial consonants), change documented forms, save local drafts and share images or message links. On a supported browser, install it using the browser menu / Install button; the app works offline after its initial load. Link contents are readable by anyone who receives them. For the standalone HTML version use the offline download in Studio.
+**[Open Yubae Studio](https://micaloveskpop.github.io/yubae/)** — browser companion, no account required. Compose with the existing provisional glyphs, search Korean/English (including Korean initial consonants), construct complete characters from roots and documented modifiers, change documented forms, save local drafts and share images or message links. On a supported browser, install it using the browser menu / Install button; the app works offline after its initial load. Link contents are readable by anyone who receives them. For the standalone HTML version use the offline download in Studio.
 
-Studio alpha 0.5.0-alpha.1 and native keyboard alpha 0.4.0 share the same glyph map. Browser automation validates the Studio model, desktop/mobile layouts and offline/update lifecycle. Physical device installation, native OS acceptance and the complete primary-source language audit remain outstanding.
+Studio alpha 0.5.0-alpha.2 and native keyboard alpha 0.4.0 share the same glyph map. Browser automation validates the Studio model, desktop/mobile layouts and offline/update lifecycle. Physical device installation, native OS acceptance and the complete primary-source language audit remain outstanding.
 
 ## Install the public alpha
 

@@ -21,3 +21,6 @@ Primary-source audit is the critical path: view the 30-minute Korean masterclass
 
 ## Studio milestone 0.5.0-alpha.1
 Implemented bilingual composition, Korean initial-consonant search, documented form previews, recent/favourites, draft recovery, PNG, portable tokens and message links. Browser regression, mobile viewport, offline and update tests passed. Next highest-value work: primary-source audit and actual Android/iOS Studio acceptance; review native Korean candidate entry; keep web/native encoding aligned. Do not add provisional shapes merely to fill missing IDs.
+
+## Root-first decision
+Studio alpha.2 implements a uniform two-stage picker and a shared graphic root registry (83 provisional groups; 93 complete forms preserved). Next native milestone: use the same registry to render root-only picker keys and fixed modifier choices without emitting incomplete roots. Investigate UI-only root font mapping with a separate OSK font (never semantic text codepoints), consistent return/navigation, learner labels and real Android validation. Audit source-backed root identity, especially AND/live and other similar forms, and normalize numeral 3/4 geometry after comparing the intended design grid. No speculative glyph expansion.

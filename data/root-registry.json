@@ -1,0 +1,1917 @@
+[
+  {
+    "id": "0",
+    "representative": "0",
+    "preview": {
+      "path": "M20 21 H80 V81 H20 Z",
+      "fill": ""
+    },
+    "forms": [
+      {
+        "kind": "none",
+        "id": "0",
+        "upper_marker": "none",
+        "lower_modifier": null,
+        "evidence": "chart-documented-provisional",
+        "verification": "needs-primary-review"
+      }
+    ],
+    "bare_writable": true,
+    "categories": [
+      "Numbers"
+    ]
+  },
+  {
+    "id": "1",
+    "representative": "1",
+    "preview": {
+      "path": "M26 30 H73 V72 L55 57",
+      "fill": ""
+    },
+    "forms": [
+      {
+        "kind": "none",
+        "id": "1",
+        "upper_marker": "none",
+        "lower_modifier": null,
+        "evidence": "chart-documented-provisional",
+        "verification": "needs-primary-review"
+      }
+    ],
+    "bare_writable": true,
+    "categories": [
+      "Numbers"
+    ]
+  },
+  {
+    "id": "2",
+    "representative": "2",
+    "preview": {
+      "path": "M34 25 L18 49 80 38 64 80",
+      "fill": ""
+    },
+    "forms": [
+      {
+        "kind": "none",
+        "id": "2",
+        "upper_marker": "none",
+        "lower_modifier": null,
+        "evidence": "chart-documented-provisional",
+        "verification": "needs-primary-review"
+      }
+    ],
+    "bare_writable": true,
+    "categories": [
+      "Numbers"
+    ]
+  },
+  {
+    "id": "3",
+    "representative": "3",
+    "preview": {
+      "path": "M25 25 L76 49 25 75 M75 23 L26 47 76 72",
+      "fill": ""
+    },
+    "forms": [
+      {
+        "kind": "none",
+        "id": "3",
+        "upper_marker": "none",
+        "lower_modifier": null,
+        "evidence": "chart-documented-provisional",
+        "verification": "needs-primary-review"
+      }
+    ],
+    "bare_writable": true,
+    "categories": [
+      "Numbers"
+    ]
+  },
+  {
+    "id": "4",
+    "representative": "4",
+    "preview": {
+      "path": "M20 29 L53 74 M39 28 L72 74 M53 29 L20 74 M72 29 L39 74",
+      "fill": ""
+    },
+    "forms": [
+      {
+        "kind": "none",
+        "id": "4",
+        "upper_marker": "none",
+        "lower_modifier": null,
+        "evidence": "chart-documented-provisional",
+        "verification": "needs-primary-review"
+      }
+    ],
+    "bare_writable": true,
+    "categories": [
+      "Numbers"
+    ]
+  },
+  {
+    "id": "5",
+    "representative": "5",
+    "preview": {
+      "path": "M20 25 L79 20 67 42 M49 23 V83",
+      "fill": ""
+    },
+    "forms": [
+      {
+        "kind": "none",
+        "id": "5",
+        "upper_marker": "none",
+        "lower_modifier": null,
+        "evidence": "chart-documented-provisional",
+        "verification": "needs-primary-review"
+      }
+    ],
+    "bare_writable": true,
+    "categories": [
+      "Numbers"
+    ]
+  },
+  {
+    "id": "6",
+    "representative": "6",
+    "preview": {
+      "path": "M22 29 L17 51 82 43 74 72 M50 19 V86",
+      "fill": ""
+    },
+    "forms": [
+      {
+        "kind": "none",
+        "id": "6",
+        "upper_marker": "none",
+        "lower_modifier": null,
+        "evidence": "chart-documented-provisional",
+        "verification": "needs-primary-review"
+      }
+    ],
+    "bare_writable": true,
+    "categories": [
+      "Numbers"
+    ]
+  },
+  {
+    "id": "7",
+    "representative": "7",
+    "preview": {
+      "path": "M50 18 V84 M22 72 L18 52 H79 L69 72",
+      "fill": ""
+    },
+    "forms": [
+      {
+        "kind": "none",
+        "id": "7",
+        "upper_marker": "none",
+        "lower_modifier": null,
+        "evidence": "chart-documented-provisional",
+        "verification": "needs-primary-review"
+      }
+    ],
+    "bare_writable": true,
+    "categories": [
+      "Numbers"
+    ]
+  },
+  {
+    "id": "8",
+    "representative": "8",
+    "preview": {
+      "path": "M78 23 H20 V82 H77 V38",
+      "fill": ""
+    },
+    "forms": [
+      {
+        "kind": "none",
+        "id": "8",
+        "upper_marker": "none",
+        "lower_modifier": null,
+        "evidence": "chart-documented-provisional",
+        "verification": "needs-primary-review"
+      }
+    ],
+    "bare_writable": true,
+    "categories": [
+      "Numbers"
+    ]
+  },
+  {
+    "id": "9",
+    "representative": "9",
+    "preview": {
+      "path": "M20 37 L78 27 20 65 M48 19 V87",
+      "fill": ""
+    },
+    "forms": [
+      {
+        "kind": "none",
+        "id": "9",
+        "upper_marker": "none",
+        "lower_modifier": null,
+        "evidence": "chart-documented-provisional",
+        "verification": "needs-primary-review"
+      }
+    ],
+    "bare_writable": true,
+    "categories": [
+      "Numbers"
+    ]
+  },
+  {
+    "id": "human",
+    "representative": "human",
+    "preview": {
+      "path": "M50 28 L77 80 H23 Z",
+      "fill": ""
+    },
+    "forms": [
+      {
+        "kind": "noun",
+        "id": "human",
+        "upper_marker": "noun",
+        "lower_modifier": null,
+        "evidence": "chart-documented-provisional",
+        "verification": "needs-primary-review"
+      }
+    ],
+    "bare_writable": false,
+    "categories": [
+      "People"
+    ]
+  },
+  {
+    "id": "head",
+    "representative": "head",
+    "preview": {
+      "path": "M50 30 L73 53 50 76 27 53 Z",
+      "fill": ""
+    },
+    "forms": [
+      {
+        "kind": "noun",
+        "id": "head",
+        "upper_marker": "noun",
+        "lower_modifier": null,
+        "evidence": "chart-documented-provisional",
+        "verification": "needs-primary-review"
+      }
+    ],
+    "bare_writable": false,
+    "categories": [
+      "People"
+    ]
+  },
+  {
+    "id": "has",
+    "representative": "has",
+    "preview": {
+      "path": "M39 28 V83 M61 28 V83",
+      "fill": ""
+    },
+    "forms": [
+      {
+        "kind": "verb",
+        "id": "has",
+        "upper_marker": "verb",
+        "lower_modifier": null,
+        "evidence": "chart-documented-provisional",
+        "verification": "needs-primary-review"
+      }
+    ],
+    "bare_writable": false,
+    "categories": [
+      "Actions"
+    ]
+  },
+  {
+    "id": "hole",
+    "representative": "hole",
+    "preview": {
+      "path": "M25 55 a25 25 0 1 0 50 0 a25 25 0 1 0 -50 0 M47.5 55 a2.5 2.5 0 1 0 5.0 0 a2.5 2.5 0 1 0 -5.0 0",
+      "fill": ""
+    },
+    "forms": [
+      {
+        "kind": "noun",
+        "id": "hole",
+        "upper_marker": "noun",
+        "lower_modifier": null,
+        "evidence": "chart-documented-provisional",
+        "verification": "needs-primary-review"
+      }
+    ],
+    "bare_writable": false,
+    "categories": [
+      "World"
+    ]
+  },
+  {
+    "id": "meal",
+    "representative": "food",
+    "preview": {
+      "path": "M25 35 H75 L68 75 H32 Z M12 55 H88",
+      "fill": ""
+    },
+    "forms": [
+      {
+        "kind": "noun",
+        "id": "food",
+        "upper_marker": "noun",
+        "lower_modifier": null,
+        "evidence": "chart-documented-provisional",
+        "verification": "needs-primary-review"
+      },
+      {
+        "kind": "verb",
+        "id": "eat",
+        "upper_marker": "verb",
+        "lower_modifier": null,
+        "evidence": "chart-documented-provisional",
+        "verification": "needs-primary-review"
+      }
+    ],
+    "bare_writable": false,
+    "categories": [
+      "World",
+      "Actions"
+    ]
+  },
+  {
+    "id": "bottom",
+    "representative": "bottom",
+    "preview": {
+      "path": "M22 27 V80 H78 V27 M40 63 a10 10 0 1 0 20 0 a10 10 0 1 0 -20 0",
+      "fill": ""
+    },
+    "forms": [
+      {
+        "kind": "adjective",
+        "id": "bottom",
+        "upper_marker": "adjective",
+        "lower_modifier": null,
+        "evidence": "chart-documented-provisional",
+        "verification": "needs-primary-review"
+      }
+    ],
+    "bare_writable": false,
+    "categories": [
+      "Space"
+    ]
+  },
+  {
+    "id": "or",
+    "representative": "or",
+    "preview": {
+      "path": "M26 29 L50 80 76 29",
+      "fill": ""
+    },
+    "forms": [
+      {
+        "kind": "none",
+        "id": "or",
+        "upper_marker": "none",
+        "lower_modifier": null,
+        "evidence": "chart-documented-provisional",
+        "verification": "needs-primary-review"
+      }
+    ],
+    "bare_writable": true,
+    "categories": [
+      "Grammar"
+    ]
+  },
+  {
+    "id": "and",
+    "representative": "and",
+    "preview": {
+      "path": "M26 76 L50 26 76 76",
+      "fill": ""
+    },
+    "forms": [
+      {
+        "kind": "none",
+        "id": "and",
+        "upper_marker": "none",
+        "lower_modifier": null,
+        "evidence": "chart-documented-provisional",
+        "verification": "needs-primary-review"
+      }
+    ],
+    "bare_writable": true,
+    "categories": [
+      "Grammar"
+    ]
+  },
+  {
+    "id": "speak",
+    "representative": "speak",
+    "preview": {
+      "path": "M33 28 H67 V84 H33 Z M14 45 L50 66 86 38",
+      "fill": ""
+    },
+    "forms": [
+      {
+        "kind": "verb",
+        "id": "speak",
+        "upper_marker": "verb",
+        "lower_modifier": null,
+        "evidence": "chart-documented-provisional",
+        "verification": "needs-primary-review"
+      }
+    ],
+    "bare_writable": false,
+    "categories": [
+      "Actions"
+    ]
+  },
+  {
+    "id": "above",
+    "representative": "above",
+    "preview": {
+      "path": "M50 28 L78 56 50 84 22 56 Z M22 56 H78",
+      "fill": "M50 28 L78 56 H22 Z"
+    },
+    "forms": [
+      {
+        "kind": "adjective",
+        "id": "above",
+        "upper_marker": "adjective",
+        "lower_modifier": null,
+        "evidence": "chart-documented-provisional",
+        "verification": "needs-primary-review"
+      }
+    ],
+    "bare_writable": false,
+    "categories": [
+      "Space"
+    ]
+  },
+  {
+    "id": "see",
+    "representative": "see",
+    "preview": {
+      "path": "M18 69 L72 31 M18 69 L83 80 M51 46 V74",
+      "fill": ""
+    },
+    "forms": [
+      {
+        "kind": "verb",
+        "id": "see",
+        "upper_marker": "verb",
+        "lower_modifier": null,
+        "evidence": "chart-documented-provisional",
+        "verification": "needs-primary-review"
+      }
+    ],
+    "bare_writable": false,
+    "categories": [
+      "Actions"
+    ]
+  },
+  {
+    "id": "left",
+    "representative": "left",
+    "preview": {
+      "path": "M50 28 L78 56 50 84 22 56 Z M50 28 V84",
+      "fill": "M50 28 L22 56 50 84 Z"
+    },
+    "forms": [
+      {
+        "kind": "adjective",
+        "id": "left",
+        "upper_marker": "adjective",
+        "lower_modifier": null,
+        "evidence": "chart-documented-provisional",
+        "verification": "needs-primary-review"
+      }
+    ],
+    "bare_writable": false,
+    "categories": [
+      "Space"
+    ]
+  },
+  {
+    "id": "right",
+    "representative": "right",
+    "preview": {
+      "path": "M50 28 L78 56 50 84 22 56 Z M50 28 V84",
+      "fill": "M50 28 L78 56 50 84 Z"
+    },
+    "forms": [
+      {
+        "kind": "adjective",
+        "id": "right",
+        "upper_marker": "adjective",
+        "lower_modifier": null,
+        "evidence": "chart-documented-provisional",
+        "verification": "needs-primary-review"
+      }
+    ],
+    "bare_writable": false,
+    "categories": [
+      "Space"
+    ]
+  },
+  {
+    "id": "hear",
+    "representative": "hear",
+    "preview": {
+      "path": "M25 65 V30 H67 Q86 68 54 85 H42 M48.5 58 a3.5 3.5 0 1 0 7.0 0 a3.5 3.5 0 1 0 -7.0 0",
+      "fill": ""
+    },
+    "forms": [
+      {
+        "kind": "verb",
+        "id": "hear",
+        "upper_marker": "verb",
+        "lower_modifier": null,
+        "evidence": "chart-documented-provisional",
+        "verification": "needs-primary-review"
+      }
+    ],
+    "bare_writable": false,
+    "categories": [
+      "Actions"
+    ]
+  },
+  {
+    "id": "small",
+    "representative": "small",
+    "preview": {
+      "path": "M25 31 V81 H75 V31 M46 60 a4 4 0 1 0 8 0 a4 4 0 1 0 -8 0",
+      "fill": ""
+    },
+    "forms": [
+      {
+        "kind": "adjective",
+        "id": "small",
+        "upper_marker": "adjective",
+        "lower_modifier": null,
+        "evidence": "chart-documented-provisional",
+        "verification": "needs-primary-review"
+      }
+    ],
+    "bare_writable": false,
+    "categories": [
+      "Properties"
+    ]
+  },
+  {
+    "id": "plural",
+    "representative": "plural",
+    "preview": {
+      "path": "M22 39 C58 2 87 42 66 71 C50 94 16 76 37 60 Q53 50 67 63",
+      "fill": ""
+    },
+    "forms": [
+      {
+        "kind": "none",
+        "id": "plural",
+        "upper_marker": "none",
+        "lower_modifier": null,
+        "evidence": "chart-documented-provisional",
+        "verification": "needs-primary-review"
+      }
+    ],
+    "bare_writable": true,
+    "categories": [
+      "Grammar"
+    ]
+  },
+  {
+    "id": "death",
+    "representative": "kill",
+    "preview": {
+      "path": "M22 82 L50 29 78 82 M15 58 H85",
+      "fill": ""
+    },
+    "forms": [
+      {
+        "kind": "verb",
+        "id": "kill",
+        "upper_marker": "verb",
+        "lower_modifier": null,
+        "evidence": "chart-documented-provisional",
+        "verification": "needs-primary-review"
+      },
+      {
+        "kind": "adjective",
+        "id": "dead",
+        "upper_marker": "adjective",
+        "lower_modifier": null,
+        "evidence": "chart-documented-provisional",
+        "verification": "needs-primary-review"
+      }
+    ],
+    "bare_writable": false,
+    "categories": [
+      "Actions",
+      "Properties"
+    ]
+  },
+  {
+    "id": "big",
+    "representative": "big",
+    "preview": {
+      "path": "M20 28 V85 H70 M80 28 V85 M49 29 L73 53 49 77 25 53 Z",
+      "fill": ""
+    },
+    "forms": [
+      {
+        "kind": "adjective",
+        "id": "big",
+        "upper_marker": "adjective",
+        "lower_modifier": null,
+        "evidence": "chart-documented-provisional",
+        "verification": "needs-primary-review"
+      }
+    ],
+    "bare_writable": false,
+    "categories": [
+      "Properties"
+    ]
+  },
+  {
+    "id": "exists-not",
+    "representative": "exists-not",
+    "preview": {
+      "path": "M38 27 V85 M62 27 V85 M17 76 L83 32",
+      "fill": ""
+    },
+    "forms": [
+      {
+        "kind": "verb",
+        "id": "exists-not",
+        "upper_marker": "verb",
+        "lower_modifier": null,
+        "evidence": "chart-documented-provisional",
+        "verification": "needs-primary-review"
+      }
+    ],
+    "bare_writable": false,
+    "categories": [
+      "Actions"
+    ]
+  },
+  {
+    "id": "bird",
+    "representative": "bird",
+    "preview": {
+      "path": "M50 22 L61 33 50 44 39 33 Z M12 56 L88 47 M15 56 V72 M34 53 V72 M50 52 V88 M69 50 V70 M86 48 L80 69",
+      "fill": ""
+    },
+    "forms": [
+      {
+        "kind": "noun",
+        "id": "bird",
+        "upper_marker": "noun",
+        "lower_modifier": null,
+        "evidence": "chart-documented-provisional",
+        "verification": "needs-primary-review"
+      }
+    ],
+    "bare_writable": false,
+    "categories": [
+      "Nature"
+    ]
+  },
+  {
+    "id": "can",
+    "representative": "can",
+    "preview": {
+      "path": "M22 47 L50 20 78 47 M22 79 L50 52 78 79",
+      "fill": ""
+    },
+    "forms": [
+      {
+        "kind": "none",
+        "id": "can",
+        "upper_marker": "none",
+        "lower_modifier": null,
+        "evidence": "chart-documented-provisional",
+        "verification": "needs-primary-review"
+      }
+    ],
+    "bare_writable": true,
+    "categories": [
+      "Grammar"
+    ]
+  },
+  {
+    "id": "fruit",
+    "representative": "fruit",
+    "preview": {
+      "path": "M46 40 L72 25 39 29 78 54 51 83 23 63 43 43",
+      "fill": ""
+    },
+    "forms": [
+      {
+        "kind": "noun",
+        "id": "fruit",
+        "upper_marker": "noun",
+        "lower_modifier": null,
+        "evidence": "chart-documented-provisional",
+        "verification": "needs-primary-review"
+      }
+    ],
+    "bare_writable": false,
+    "categories": [
+      "Nature"
+    ]
+  },
+  {
+    "id": "cow",
+    "representative": "cow",
+    "preview": {
+      "path": "M25 58 a25 25 0 1 0 50 0 a25 25 0 1 0 -50 0 M12 36 Q24 64 50 47 Q80 50 88 27 M38 67 a3 3 0 1 0 6 0 a3 3 0 1 0 -6 0 M56 67 a3 3 0 1 0 6 0 a3 3 0 1 0 -6 0",
+      "fill": ""
+    },
+    "forms": [
+      {
+        "kind": "noun",
+        "id": "cow",
+        "upper_marker": "noun",
+        "lower_modifier": null,
+        "evidence": "chart-documented-provisional",
+        "verification": "needs-primary-review"
+      }
+    ],
+    "bare_writable": false,
+    "categories": [
+      "Nature"
+    ]
+  },
+  {
+    "id": "grass",
+    "representative": "grass",
+    "preview": {
+      "path": "M20 79 L43 31 65 79 M38 75 L72 28 Q85 50 86 81",
+      "fill": ""
+    },
+    "forms": [
+      {
+        "kind": "noun",
+        "id": "grass",
+        "upper_marker": "noun",
+        "lower_modifier": null,
+        "evidence": "chart-documented-provisional",
+        "verification": "needs-primary-review"
+      }
+    ],
+    "bare_writable": false,
+    "categories": [
+      "Nature"
+    ]
+  },
+  {
+    "id": "spider",
+    "representative": "spider",
+    "preview": {
+      "path": "M14 42 L50 66 86 31 M50 66 V88 M50 29 L64 43 50 57 36 43 Z M25 77 a4 4 0 1 0 8 0 a4 4 0 1 0 -8 0 M68 77 a4 4 0 1 0 8 0 a4 4 0 1 0 -8 0",
+      "fill": ""
+    },
+    "forms": [
+      {
+        "kind": "noun",
+        "id": "spider",
+        "upper_marker": "noun",
+        "lower_modifier": null,
+        "evidence": "chart-documented-provisional",
+        "verification": "needs-primary-review"
+      }
+    ],
+    "bare_writable": false,
+    "categories": [
+      "Nature"
+    ]
+  },
+  {
+    "id": "snake",
+    "representative": "snake",
+    "preview": {
+      "path": "M68 46 C29 27 5 58 44 60 S92 70 59 81 Q30 91 13 72 M76 22 L89 35 76 48 63 35 Z",
+      "fill": ""
+    },
+    "forms": [
+      {
+        "kind": "noun",
+        "id": "snake",
+        "upper_marker": "noun",
+        "lower_modifier": null,
+        "evidence": "chart-documented-provisional",
+        "verification": "needs-primary-review"
+      }
+    ],
+    "bare_writable": false,
+    "categories": [
+      "Nature"
+    ]
+  },
+  {
+    "id": "make",
+    "representative": "make",
+    "preview": {
+      "path": "M14 80 H88 M22 74 L58 52 M53 32 L77 21 91 66 65 77 Z",
+      "fill": ""
+    },
+    "forms": [
+      {
+        "kind": "verb",
+        "id": "make",
+        "upper_marker": "verb",
+        "lower_modifier": null,
+        "evidence": "chart-documented-provisional",
+        "verification": "needs-primary-review"
+      }
+    ],
+    "bare_writable": false,
+    "categories": [
+      "Actions"
+    ]
+  },
+  {
+    "id": "hand",
+    "representative": "hand",
+    "preview": {
+      "path": "M12 33 H31 L28 76 69 80 72 33 H88",
+      "fill": ""
+    },
+    "forms": [
+      {
+        "kind": "noun",
+        "id": "hand",
+        "upper_marker": "noun",
+        "lower_modifier": null,
+        "evidence": "chart-documented-provisional",
+        "verification": "needs-primary-review"
+      }
+    ],
+    "bare_writable": false,
+    "categories": [
+      "People"
+    ]
+  },
+  {
+    "id": "foot",
+    "representative": "foot",
+    "preview": {
+      "path": "M12 79 H32 V31 H69 V79 H88",
+      "fill": ""
+    },
+    "forms": [
+      {
+        "kind": "noun",
+        "id": "foot",
+        "upper_marker": "noun",
+        "lower_modifier": null,
+        "evidence": "chart-documented-provisional",
+        "verification": "needs-primary-review"
+      }
+    ],
+    "bare_writable": false,
+    "categories": [
+      "People"
+    ]
+  },
+  {
+    "id": "body",
+    "representative": "body",
+    "preview": {
+      "path": "M12 47 C34 16 66 39 48 59 C27 92 103 77 84 43 Q80 37 74 42",
+      "fill": ""
+    },
+    "forms": [
+      {
+        "kind": "noun",
+        "id": "body",
+        "upper_marker": "noun",
+        "lower_modifier": null,
+        "evidence": "chart-documented-provisional",
+        "verification": "needs-primary-review"
+      }
+    ],
+    "bare_writable": false,
+    "categories": [
+      "People"
+    ]
+  },
+  {
+    "id": "egg",
+    "representative": "egg",
+    "preview": {
+      "path": "M50 25 C19 25 14 85 50 85 S81 25 50 25 Z M35 52 L52 45 41 60 59 60 55 73",
+      "fill": ""
+    },
+    "forms": [
+      {
+        "kind": "noun",
+        "id": "egg",
+        "upper_marker": "noun",
+        "lower_modifier": null,
+        "evidence": "chart-documented-provisional",
+        "verification": "needs-primary-review"
+      }
+    ],
+    "bare_writable": false,
+    "categories": [
+      "Nature"
+    ]
+  },
+  {
+    "id": "become",
+    "representative": "become",
+    "preview": {
+      "path": "M19 26 V84 M81 26 V84 M20 55 H70 M57 43 L71 55 57 67",
+      "fill": ""
+    },
+    "forms": [
+      {
+        "kind": "verb",
+        "id": "become",
+        "upper_marker": "verb",
+        "lower_modifier": null,
+        "evidence": "chart-documented-provisional",
+        "verification": "needs-primary-review"
+      }
+    ],
+    "bare_writable": false,
+    "categories": [
+      "Actions"
+    ]
+  },
+  {
+    "id": "minute",
+    "representative": "minute",
+    "preview": {
+      "path": "M28 61 a22 22 0 1 0 44 0 a22 22 0 1 0 -44 0 M50 29 V61",
+      "fill": ""
+    },
+    "forms": [
+      {
+        "kind": "noun",
+        "id": "minute",
+        "upper_marker": "noun",
+        "lower_modifier": null,
+        "evidence": "chart-documented-provisional",
+        "verification": "needs-primary-review"
+      }
+    ],
+    "bare_writable": false,
+    "categories": [
+      "Time"
+    ]
+  },
+  {
+    "id": "hour",
+    "representative": "hour",
+    "preview": {
+      "path": "M28 61 a22 22 0 1 0 44 0 a22 22 0 1 0 -44 0 M50 28 V61 H66",
+      "fill": ""
+    },
+    "forms": [
+      {
+        "kind": "noun",
+        "id": "hour",
+        "upper_marker": "noun",
+        "lower_modifier": null,
+        "evidence": "chart-documented-provisional",
+        "verification": "needs-primary-review"
+      }
+    ],
+    "bare_writable": false,
+    "categories": [
+      "Time"
+    ]
+  },
+  {
+    "id": "colour",
+    "representative": "colour",
+    "preview": {
+      "path": "M33 54 a4 4 0 1 0 8 0 a4 4 0 1 0 -8 0 M59 54 a4 4 0 1 0 8 0 a4 4 0 1 0 -8 0",
+      "fill": ""
+    },
+    "forms": [
+      {
+        "kind": "noun",
+        "id": "colour",
+        "upper_marker": "noun",
+        "lower_modifier": null,
+        "evidence": "chart-documented-provisional",
+        "verification": "needs-primary-review"
+      }
+    ],
+    "bare_writable": false,
+    "categories": [
+      "Properties"
+    ]
+  },
+  {
+    "id": "ocean",
+    "representative": "ocean",
+    "preview": {
+      "path": "M16 44 Q34 23 48 43 T82 37 M16 69 Q34 48 48 68 T82 62",
+      "fill": ""
+    },
+    "forms": [
+      {
+        "kind": "noun",
+        "id": "ocean",
+        "upper_marker": "noun",
+        "lower_modifier": null,
+        "evidence": "chart-documented-provisional",
+        "verification": "needs-primary-review"
+      },
+      {
+        "kind": "colour",
+        "id": "blue",
+        "upper_marker": "noun",
+        "lower_modifier": "colour",
+        "evidence": "chart-documented-provisional",
+        "verification": "needs-primary-review"
+      }
+    ],
+    "bare_writable": false,
+    "categories": [
+      "Nature",
+      "Properties"
+    ]
+  },
+  {
+    "id": "fire",
+    "representative": "fire",
+    "preview": {
+      "path": "M50 29 C24 58 25 79 52 73 Q64 68 60 54 C85 43 86 73 70 83",
+      "fill": ""
+    },
+    "forms": [
+      {
+        "kind": "noun",
+        "id": "fire",
+        "upper_marker": "noun",
+        "lower_modifier": null,
+        "evidence": "chart-documented-provisional",
+        "verification": "needs-primary-review"
+      },
+      {
+        "kind": "colour",
+        "id": "red",
+        "upper_marker": "noun",
+        "lower_modifier": "colour",
+        "evidence": "chart-documented-provisional",
+        "verification": "needs-primary-review"
+      }
+    ],
+    "bare_writable": false,
+    "categories": [
+      "Nature",
+      "Properties"
+    ]
+  },
+  {
+    "id": "salt",
+    "representative": "salt",
+    "preview": {
+      "path": "M50 24 L63 37 50 50 37 37 Z M50 60 L63 73 50 86 37 73 Z M22 44 L33 55 22 66 11 55 Z M78 44 L89 55 78 66 67 55 Z",
+      "fill": "M22 44 L33 55 22 66 11 55 Z M78 44 L89 55 78 66 67 55 Z"
+    },
+    "forms": [
+      {
+        "kind": "noun",
+        "id": "salt",
+        "upper_marker": "noun",
+        "lower_modifier": null,
+        "evidence": "chart-documented-provisional",
+        "verification": "needs-primary-review"
+      },
+      {
+        "kind": "colour",
+        "id": "white",
+        "upper_marker": "noun",
+        "lower_modifier": "colour",
+        "evidence": "chart-documented-provisional",
+        "verification": "needs-primary-review"
+      }
+    ],
+    "bare_writable": false,
+    "categories": [
+      "World",
+      "Properties"
+    ]
+  },
+  {
+    "id": "tree",
+    "representative": "tree",
+    "preview": {
+      "path": "M50 26 L80 55 H20 Z M50 55 V87",
+      "fill": ""
+    },
+    "forms": [
+      {
+        "kind": "noun",
+        "id": "tree",
+        "upper_marker": "noun",
+        "lower_modifier": null,
+        "evidence": "chart-documented-provisional",
+        "verification": "needs-primary-review"
+      }
+    ],
+    "bare_writable": false,
+    "categories": [
+      "Nature"
+    ]
+  },
+  {
+    "id": "addition",
+    "representative": "sum",
+    "preview": {
+      "path": "M18 51 a19 19 0 1 0 38 0 a19 19 0 1 0 -38 0 M43 63 a19 19 0 1 0 38 0 a19 19 0 1 0 -38 0",
+      "fill": ""
+    },
+    "forms": [
+      {
+        "kind": "noun",
+        "id": "sum",
+        "upper_marker": "noun",
+        "lower_modifier": null,
+        "evidence": "chart-documented-provisional",
+        "verification": "needs-primary-review"
+      },
+      {
+        "kind": "verb",
+        "id": "add",
+        "upper_marker": "verb",
+        "lower_modifier": null,
+        "evidence": "chart-documented-provisional",
+        "verification": "needs-primary-review"
+      }
+    ],
+    "bare_writable": false,
+    "categories": [
+      "Numbers"
+    ]
+  },
+  {
+    "id": "purple",
+    "representative": "purple",
+    "preview": {
+      "path": "M31 26 L14 53 34 71 50 55 66 71 86 53 69 26",
+      "fill": ""
+    },
+    "forms": [
+      {
+        "kind": "colour",
+        "id": "purple",
+        "upper_marker": "noun",
+        "lower_modifier": "colour",
+        "evidence": "chart-documented-provisional",
+        "verification": "needs-primary-review"
+      }
+    ],
+    "bare_writable": false,
+    "categories": [
+      "Properties"
+    ]
+  },
+  {
+    "id": "minus",
+    "representative": "minus",
+    "preview": {
+      "path": "M70 35 C43 11 10 57 38 77 Q49 85 59 82 Q31 65 70 35 Z",
+      "fill": ""
+    },
+    "forms": [
+      {
+        "kind": "verb",
+        "id": "minus",
+        "upper_marker": "verb",
+        "lower_modifier": null,
+        "evidence": "chart-documented-provisional",
+        "verification": "needs-primary-review"
+      }
+    ],
+    "bare_writable": false,
+    "categories": [
+      "Numbers"
+    ]
+  },
+  {
+    "id": "water",
+    "representative": "water",
+    "preview": {
+      "path": "M50 28 C43 45 25 55 34 70 C40 86 63 86 69 69 C75 54 56 43 50 28 Z",
+      "fill": ""
+    },
+    "forms": [
+      {
+        "kind": "noun",
+        "id": "water",
+        "upper_marker": "noun",
+        "lower_modifier": null,
+        "evidence": "chart-documented-provisional",
+        "verification": "needs-primary-review"
+      }
+    ],
+    "bare_writable": false,
+    "categories": [
+      "Nature"
+    ]
+  },
+  {
+    "id": "sand",
+    "representative": "sand",
+    "preview": {
+      "path": "M22 34 L77 73 M15 48 L65 84 M49 26 L13 76 M72 29 L35 84",
+      "fill": ""
+    },
+    "forms": [
+      {
+        "kind": "noun",
+        "id": "sand",
+        "upper_marker": "noun",
+        "lower_modifier": null,
+        "evidence": "chart-documented-provisional",
+        "verification": "needs-primary-review"
+      }
+    ],
+    "bare_writable": false,
+    "categories": [
+      "World"
+    ]
+  },
+  {
+    "id": "glass",
+    "representative": "glass",
+    "preview": {
+      "path": "M36 28 V80 M64 28 V80 M17 45 H83 M17 65 H83",
+      "fill": ""
+    },
+    "forms": [
+      {
+        "kind": "noun",
+        "id": "glass",
+        "upper_marker": "noun",
+        "lower_modifier": null,
+        "evidence": "chart-documented-provisional",
+        "verification": "needs-primary-review"
+      },
+      {
+        "kind": "colour",
+        "id": "transparent",
+        "upper_marker": "noun",
+        "lower_modifier": "colour",
+        "evidence": "chart-documented-provisional",
+        "verification": "needs-primary-review"
+      }
+    ],
+    "bare_writable": false,
+    "categories": [
+      "World",
+      "Properties"
+    ]
+  },
+  {
+    "id": "path",
+    "representative": "path",
+    "preview": {
+      "path": "M34 34 L16 72 M60 34 L85 72",
+      "fill": ""
+    },
+    "forms": [
+      {
+        "kind": "noun",
+        "id": "path",
+        "upper_marker": "noun",
+        "lower_modifier": null,
+        "evidence": "chart-documented-provisional",
+        "verification": "needs-primary-review"
+      }
+    ],
+    "bare_writable": false,
+    "categories": [
+      "Space"
+    ]
+  },
+  {
+    "id": "charcoal",
+    "representative": "charcoal",
+    "preview": {
+      "path": "M31 39 H69 L83 73 H17 Z",
+      "fill": ""
+    },
+    "forms": [
+      {
+        "kind": "noun",
+        "id": "charcoal",
+        "upper_marker": "noun",
+        "lower_modifier": null,
+        "evidence": "chart-documented-provisional",
+        "verification": "needs-primary-review"
+      },
+      {
+        "kind": "colour",
+        "id": "black",
+        "upper_marker": "noun",
+        "lower_modifier": "colour",
+        "evidence": "chart-documented-provisional",
+        "verification": "needs-primary-review"
+      }
+    ],
+    "bare_writable": false,
+    "categories": [
+      "World",
+      "Properties"
+    ]
+  },
+  {
+    "id": "day",
+    "representative": "day",
+    "preview": {
+      "path": "M26 56 a24 24 0 1 0 48 0 a24 24 0 1 0 -48 0 M21 56 a5 5 0 1 0 10 0 a5 5 0 1 0 -10 0 M69 56 a5 5 0 1 0 10 0 a5 5 0 1 0 -10 0",
+      "fill": "M70 56 a4 4 0 1 0 8 0 a4 4 0 1 0 -8 0"
+    },
+    "forms": [
+      {
+        "kind": "noun",
+        "id": "day",
+        "upper_marker": "noun",
+        "lower_modifier": null,
+        "evidence": "chart-documented-provisional",
+        "verification": "needs-primary-review"
+      }
+    ],
+    "bare_writable": false,
+    "categories": [
+      "Time"
+    ]
+  },
+  {
+    "id": "earth",
+    "representative": "earth",
+    "preview": {
+      "path": "M13 35 H87 V78 H13 Z M50 37 L69 56 50 75 31 56 Z",
+      "fill": ""
+    },
+    "forms": [
+      {
+        "kind": "noun",
+        "id": "earth",
+        "upper_marker": "noun",
+        "lower_modifier": null,
+        "evidence": "chart-documented-provisional",
+        "verification": "needs-primary-review"
+      }
+    ],
+    "bare_writable": false,
+    "categories": [
+      "Nature"
+    ]
+  },
+  {
+    "id": "sun",
+    "representative": "sun",
+    "preview": {
+      "path": "M24 30 V51 Q24 80 50 83 Q76 80 76 51 V30 M31 68 L50 48 69 68",
+      "fill": ""
+    },
+    "forms": [
+      {
+        "kind": "noun",
+        "id": "sun",
+        "upper_marker": "noun",
+        "lower_modifier": null,
+        "evidence": "chart-documented-provisional",
+        "verification": "needs-primary-review"
+      }
+    ],
+    "bare_writable": false,
+    "categories": [
+      "Nature"
+    ]
+  },
+  {
+    "id": "orbit",
+    "representative": "orbit",
+    "preview": {
+      "path": "M27 57 a23 23 0 1 0 46 0 a23 23 0 1 0 -46 0 M22 32 L44 49",
+      "fill": ""
+    },
+    "forms": [
+      {
+        "kind": "verb",
+        "id": "orbit",
+        "upper_marker": "verb",
+        "lower_modifier": null,
+        "evidence": "chart-documented-provisional",
+        "verification": "needs-primary-review"
+      }
+    ],
+    "bare_writable": false,
+    "categories": [
+      "Actions"
+    ]
+  },
+  {
+    "id": "end",
+    "representative": "end",
+    "preview": {
+      "path": "M18 56 H82 M39 31 L67 56 39 81 M82 26 V85",
+      "fill": ""
+    },
+    "forms": [
+      {
+        "kind": "adverb",
+        "id": "end",
+        "upper_marker": "adverb",
+        "lower_modifier": null,
+        "evidence": "chart-documented-provisional",
+        "verification": "needs-primary-review"
+      }
+    ],
+    "bare_writable": false,
+    "categories": [
+      "Space"
+    ]
+  },
+  {
+    "id": "god",
+    "representative": "god",
+    "preview": {
+      "path": "M25 31 H75 L25 79 H75 Z",
+      "fill": ""
+    },
+    "forms": [
+      {
+        "kind": "noun",
+        "id": "god",
+        "upper_marker": "noun",
+        "lower_modifier": null,
+        "evidence": "chart-documented-provisional",
+        "verification": "needs-primary-review"
+      },
+      {
+        "kind": "adjective",
+        "id": "divine",
+        "upper_marker": "adjective",
+        "lower_modifier": null,
+        "evidence": "chart-documented-provisional",
+        "verification": "needs-primary-review"
+      }
+    ],
+    "bare_writable": false,
+    "categories": [
+      "People",
+      "Properties"
+    ]
+  },
+  {
+    "id": "moon",
+    "representative": "moon",
+    "preview": {
+      "path": "M25 55 a25 25 0 1 0 50 0 a25 25 0 1 0 -50 0 M59 31 C28 36 32 77 64 72",
+      "fill": ""
+    },
+    "forms": [
+      {
+        "kind": "noun",
+        "id": "moon",
+        "upper_marker": "noun",
+        "lower_modifier": null,
+        "evidence": "chart-documented-provisional",
+        "verification": "needs-primary-review"
+      }
+    ],
+    "bare_writable": false,
+    "categories": [
+      "Nature"
+    ]
+  },
+  {
+    "id": "shadow",
+    "representative": "shadow",
+    "preview": {
+      "path": "M20 29 H51 V81 H20 Z M51 53 H75 V81 H51 Z",
+      "fill": "M51 53 H75 V81 H51 Z"
+    },
+    "forms": [
+      {
+        "kind": "noun",
+        "id": "shadow",
+        "upper_marker": "noun",
+        "lower_modifier": null,
+        "evidence": "chart-documented-provisional",
+        "verification": "needs-primary-review"
+      },
+      {
+        "kind": "verb",
+        "id": "cover",
+        "upper_marker": "verb",
+        "lower_modifier": null,
+        "evidence": "chart-documented-provisional",
+        "verification": "needs-primary-review"
+      }
+    ],
+    "bare_writable": false,
+    "categories": [
+      "World",
+      "Actions"
+    ]
+  },
+  {
+    "id": "you",
+    "representative": "you",
+    "preview": {
+      "path": "M25 30 V56 Q25 82 50 82 Q75 82 75 56 V30",
+      "fill": ""
+    },
+    "forms": [
+      {
+        "kind": "noun",
+        "id": "you",
+        "upper_marker": "noun",
+        "lower_modifier": null,
+        "evidence": "chart-documented-provisional",
+        "verification": "needs-primary-review"
+      }
+    ],
+    "bare_writable": false,
+    "categories": [
+      "People"
+    ]
+  },
+  {
+    "id": "daytime",
+    "representative": "daytime",
+    "preview": {
+      "path": "M26 56 a24 24 0 1 0 48 0 a24 24 0 1 0 -48 0 M21 56 a5 5 0 1 0 10 0 a5 5 0 1 0 -10 0",
+      "fill": ""
+    },
+    "forms": [
+      {
+        "kind": "noun",
+        "id": "daytime",
+        "upper_marker": "noun",
+        "lower_modifier": null,
+        "evidence": "chart-documented-provisional",
+        "verification": "needs-primary-review"
+      }
+    ],
+    "bare_writable": false,
+    "categories": [
+      "Time"
+    ]
+  },
+  {
+    "id": "night",
+    "representative": "night",
+    "preview": {
+      "path": "M26 56 a24 24 0 1 0 48 0 a24 24 0 1 0 -48 0 M69 56 a5 5 0 1 0 10 0 a5 5 0 1 0 -10 0",
+      "fill": "M70 56 a4 4 0 1 0 8 0 a4 4 0 1 0 -8 0"
+    },
+    "forms": [
+      {
+        "kind": "noun",
+        "id": "night",
+        "upper_marker": "noun",
+        "lower_modifier": null,
+        "evidence": "chart-documented-provisional",
+        "verification": "needs-primary-review"
+      }
+    ],
+    "bare_writable": false,
+    "categories": [
+      "Time"
+    ]
+  },
+  {
+    "id": "test",
+    "representative": "test",
+    "preview": {
+      "path": "M34 28 L15 52 50 85 85 52 66 28 M46 55 a4 4 0 1 0 8 0 a4 4 0 1 0 -8 0",
+      "fill": ""
+    },
+    "forms": [
+      {
+        "kind": "noun",
+        "id": "test",
+        "upper_marker": "noun",
+        "lower_modifier": null,
+        "evidence": "chart-documented-provisional",
+        "verification": "needs-primary-review"
+      }
+    ],
+    "bare_writable": false,
+    "categories": [
+      "World"
+    ]
+  },
+  {
+    "id": "live",
+    "representative": "live",
+    "preview": {
+      "path": "M25 78 L50 30 75 78",
+      "fill": ""
+    },
+    "forms": [
+      {
+        "kind": "verb",
+        "id": "live",
+        "upper_marker": "verb",
+        "lower_modifier": null,
+        "evidence": "chart-documented-provisional",
+        "verification": "needs-primary-review"
+      }
+    ],
+    "bare_writable": false,
+    "categories": [
+      "Actions"
+    ]
+  },
+  {
+    "id": "number",
+    "representative": "number",
+    "preview": {
+      "path": "M50 31 L77 77 H23 Z M45.5 31 a4.5 4.5 0 1 0 9.0 0 a4.5 4.5 0 1 0 -9.0 0 M72.5 77 a4.5 4.5 0 1 0 9.0 0 a4.5 4.5 0 1 0 -9.0 0 M18.5 77 a4.5 4.5 0 1 0 9.0 0 a4.5 4.5 0 1 0 -9.0 0",
+      "fill": "M45.5 31 a4.5 4.5 0 1 0 9.0 0 a4.5 4.5 0 1 0 -9.0 0 M72.5 77 a4.5 4.5 0 1 0 9.0 0 a4.5 4.5 0 1 0 -9.0 0 M18.5 77 a4.5 4.5 0 1 0 9.0 0 a4.5 4.5 0 1 0 -9.0 0"
+    },
+    "forms": [
+      {
+        "kind": "noun",
+        "id": "number",
+        "upper_marker": "noun",
+        "lower_modifier": null,
+        "evidence": "chart-documented-provisional",
+        "verification": "needs-primary-review"
+      }
+    ],
+    "bare_writable": false,
+    "categories": [
+      "Numbers"
+    ]
+  },
+  {
+    "id": "magic-square",
+    "representative": "magic-square",
+    "preview": {
+      "path": "M18 28 H82 V85 H18 Z M39 42 H61 L39 68 H61 Z M14 28 a4 4 0 1 0 8 0 a4 4 0 1 0 -8 0 M78 28 a4 4 0 1 0 8 0 a4 4 0 1 0 -8 0 M78 85 a4 4 0 1 0 8 0 a4 4 0 1 0 -8 0 M14 85 a4 4 0 1 0 8 0 a4 4 0 1 0 -8 0",
+      "fill": "M14 28 a4 4 0 1 0 8 0 a4 4 0 1 0 -8 0 M78 28 a4 4 0 1 0 8 0 a4 4 0 1 0 -8 0 M78 85 a4 4 0 1 0 8 0 a4 4 0 1 0 -8 0 M14 85 a4 4 0 1 0 8 0 a4 4 0 1 0 -8 0"
+    },
+    "forms": [
+      {
+        "kind": "noun",
+        "id": "magic-square",
+        "upper_marker": "noun",
+        "lower_modifier": null,
+        "evidence": "chart-documented-provisional",
+        "verification": "needs-primary-review"
+      }
+    ],
+    "bare_writable": false,
+    "categories": [
+      "Numbers"
+    ]
+  },
+  {
+    "id": "horizontal",
+    "representative": "horizontal",
+    "preview": {
+      "path": "M19 55 L81 55 M14.5 55 a4.5 4.5 0 1 0 9.0 0 a4.5 4.5 0 1 0 -9.0 0 M76.5 55 a4.5 4.5 0 1 0 9.0 0 a4.5 4.5 0 1 0 -9.0 0",
+      "fill": "M14.5 55 a4.5 4.5 0 1 0 9.0 0 a4.5 4.5 0 1 0 -9.0 0 M76.5 55 a4.5 4.5 0 1 0 9.0 0 a4.5 4.5 0 1 0 -9.0 0"
+    },
+    "forms": [
+      {
+        "kind": "adjective",
+        "id": "horizontal",
+        "upper_marker": "adjective",
+        "lower_modifier": null,
+        "evidence": "chart-documented-provisional",
+        "verification": "needs-primary-review"
+      }
+    ],
+    "bare_writable": false,
+    "categories": [
+      "Space"
+    ]
+  },
+  {
+    "id": "vertical",
+    "representative": "vertical",
+    "preview": {
+      "path": "M50 27 L50 85 M45.5 27 a4.5 4.5 0 1 0 9.0 0 a4.5 4.5 0 1 0 -9.0 0 M45.5 85 a4.5 4.5 0 1 0 9.0 0 a4.5 4.5 0 1 0 -9.0 0",
+      "fill": "M45.5 27 a4.5 4.5 0 1 0 9.0 0 a4.5 4.5 0 1 0 -9.0 0 M45.5 85 a4.5 4.5 0 1 0 9.0 0 a4.5 4.5 0 1 0 -9.0 0"
+    },
+    "forms": [
+      {
+        "kind": "adjective",
+        "id": "vertical",
+        "upper_marker": "adjective",
+        "lower_modifier": null,
+        "evidence": "chart-documented-provisional",
+        "verification": "needs-primary-review"
+      }
+    ],
+    "bare_writable": false,
+    "categories": [
+      "Space"
+    ]
+  },
+  {
+    "id": "diagonal",
+    "representative": "diagonal",
+    "preview": {
+      "path": "M23 81 L77 30 M18.5 81 a4.5 4.5 0 1 0 9.0 0 a4.5 4.5 0 1 0 -9.0 0 M72.5 30 a4.5 4.5 0 1 0 9.0 0 a4.5 4.5 0 1 0 -9.0 0",
+      "fill": "M18.5 81 a4.5 4.5 0 1 0 9.0 0 a4.5 4.5 0 1 0 -9.0 0 M72.5 30 a4.5 4.5 0 1 0 9.0 0 a4.5 4.5 0 1 0 -9.0 0"
+    },
+    "forms": [
+      {
+        "kind": "adjective",
+        "id": "diagonal",
+        "upper_marker": "adjective",
+        "lower_modifier": null,
+        "evidence": "chart-documented-provisional",
+        "verification": "needs-primary-review"
+      }
+    ],
+    "bare_writable": false,
+    "categories": [
+      "Space"
+    ]
+  },
+  {
+    "id": "pass",
+    "representative": "pass",
+    "preview": {
+      "path": "M20 25 V48 H76 L61 34 M20 83 V62 H79 L62 77",
+      "fill": ""
+    },
+    "forms": [
+      {
+        "kind": "verb",
+        "id": "pass",
+        "upper_marker": "verb",
+        "lower_modifier": null,
+        "evidence": "chart-documented-provisional",
+        "verification": "needs-primary-review"
+      }
+    ],
+    "bare_writable": false,
+    "categories": [
+      "Actions"
+    ]
+  },
+  {
+    "id": "poison",
+    "representative": "poison",
+    "preview": {
+      "path": "M15 42 H85 L50 84 15 42 M50 26 V84",
+      "fill": ""
+    },
+    "forms": [
+      {
+        "kind": "noun",
+        "id": "poison",
+        "upper_marker": "noun",
+        "lower_modifier": null,
+        "evidence": "chart-documented-provisional",
+        "verification": "needs-primary-review"
+      }
+    ],
+    "bare_writable": false,
+    "categories": [
+      "World"
+    ]
+  },
+  {
+    "id": "spear",
+    "representative": "spear",
+    "preview": {
+      "path": "M22 81 L78 30 M78 81 L22 30 M13 25 L34 32 22 43 Z M87 25 L66 32 78 43 Z",
+      "fill": "M13 25 L34 32 22 43 Z M87 25 L66 32 78 43 Z"
+    },
+    "forms": [
+      {
+        "kind": "noun",
+        "id": "spear",
+        "upper_marker": "noun",
+        "lower_modifier": null,
+        "evidence": "chart-documented-provisional",
+        "verification": "needs-primary-review"
+      }
+    ],
+    "bare_writable": false,
+    "categories": [
+      "World"
+    ]
+  },
+  {
+    "id": "then",
+    "representative": "then",
+    "preview": {
+      "path": "M13 58 L87 48 M59 24 L87 48 64 80",
+      "fill": ""
+    },
+    "forms": [
+      {
+        "kind": "none",
+        "id": "then",
+        "upper_marker": "none",
+        "lower_modifier": null,
+        "evidence": "chart-documented-provisional",
+        "verification": "needs-primary-review"
+      }
+    ],
+    "bare_writable": true,
+    "categories": [
+      "Grammar"
+    ]
+  },
+  {
+    "id": "place",
+    "representative": "place",
+    "preview": {
+      "path": "M50 26 V83 M13 45 L50 83 87 45 M29 41 L50 83 69 41",
+      "fill": ""
+    },
+    "forms": [
+      {
+        "kind": "noun",
+        "id": "place",
+        "upper_marker": "noun",
+        "lower_modifier": null,
+        "evidence": "chart-documented-provisional",
+        "verification": "needs-primary-review"
+      }
+    ],
+    "bare_writable": false,
+    "categories": [
+      "Space"
+    ]
+  },
+  {
+    "id": "floor",
+    "representative": "floor",
+    "preview": {
+      "path": "M50 26 V80 M30 54 L50 80 70 54 M14 84 H86",
+      "fill": ""
+    },
+    "forms": [
+      {
+        "kind": "noun",
+        "id": "floor",
+        "upper_marker": "noun",
+        "lower_modifier": null,
+        "evidence": "chart-documented-provisional",
+        "verification": "needs-primary-review"
+      }
+    ],
+    "bare_writable": false,
+    "categories": [
+      "Space"
+    ]
+  },
+  {
+    "id": "dwell",
+    "representative": "dwell",
+    "preview": {
+      "path": "M17 26 V83 H83 V26 M34 63 L50 35 66 63",
+      "fill": ""
+    },
+    "forms": [
+      {
+        "kind": "verb",
+        "id": "dwell",
+        "upper_marker": "verb",
+        "lower_modifier": null,
+        "evidence": "chart-documented-provisional",
+        "verification": "needs-primary-review"
+      }
+    ],
+    "bare_writable": false,
+    "categories": [
+      "Actions"
+    ]
+  },
+  {
+    "id": "in",
+    "representative": "in",
+    "preview": {
+      "path": "M19 35 C15 86 49 97 53 51 C56 11 90 19 80 78",
+      "fill": ""
+    },
+    "forms": [
+      {
+        "kind": "none",
+        "id": "in",
+        "upper_marker": "none",
+        "lower_modifier": null,
+        "evidence": "chart-documented-provisional",
+        "verification": "needs-primary-review"
+      }
+    ],
+    "bare_writable": true,
+    "categories": [
+      "Grammar"
+    ]
+  }
+]
